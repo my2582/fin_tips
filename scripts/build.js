@@ -49,9 +49,10 @@ function normalizeKey(s) {
 
 // 엑셀의 신규 표시값 파싱
 function toBool(v) {
-  const s = String(v ?? '').trim();
-  return /^(y|yes|1|true|t|신규|new)$/i.test(s);
+    const s = String(v || "").trim().toLowerCase();
+    return ["new", "y", "yes", "true", "1", "✅", "✔"].includes(s);
 }
+
 
 // 기본 프로모 문구(파일 없을 때)
 function readPromo() {
@@ -75,6 +76,7 @@ function findContentSheet(wb) {
   }
   throw new Error('엑셀 시트에서 3행 헤더가 요구 형식과 일치하는 시트를 못 찾음');
 }
+
 
 // 엑셀 → DATA 구조 변환
 function readExcelToData() {
@@ -154,8 +156,8 @@ function readExcelToData() {
     const data = readExcelToData();
     log(`  sections=${data.sections.length}, items=${data.sections.reduce((s, v) => s + v.items.length, 0)}`);
 
-    // 싱가포르 시간으로 빌드 시각
-    const nowStr = new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' });
+    // 한국 시간으로 빌드 시각
+    const nowStr = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
 
     // 데이터 주입
     let out = html.replace('DATA_PLACEHOLDER', safeJson(data));
