@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Local environment files
+.env
+*.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# 기타 임시 파일
+*.tmp

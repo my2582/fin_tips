@@ -1,0 +1,9 @@
+[build]
+  command = "node scripts/build.js"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/track"
+  to = "/.netlify/functions/track"
+  status = 200

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>금융 꿀Tip단지</title>
+  <meta name="description" content="세미나 Q&A와 바로 실행 Tip을 한 곳에 모은 금융 꿀Tip단지">
+  <meta property="og:title" content="금융 꿀Tip단지">
+  <meta property="og:description" content="세미나 Q&A와 바로 실행 Tip을 한 곳에 모은 꿀Tip단지">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Your Name">
+  <style>
+    :root { --bg:#0f172a; --fg:#e5e7eb; --muted:#9ca3af; --card:#111827; --accent:#38bdf8; --chip:#1f2937; --ok:#10b981; }
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--fg); font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    .wrap{ max-width:780px; margin:0 auto; padding:16px; }
+    header{ display:grid; gap:12px; padding:16px; background:linear-gradient(180deg,#0b1220,#0f172a); border-radius:16px; border:1px solid #1f2937; }
+    h1{ margin:0; font-size:22px; line-height:1.3; }
+    .sub{ font-size:12px; color:var(--muted); }
+    .promo{ white-space:pre-wrap; color:var(--muted); font-size:14px; }
+    .toolbar{ display:grid; grid-template-columns:1fr auto auto; gap:8px; align-items:center; padding-top:4px; }
+    .search{ width:100%; padding:12px 14px; border-radius:12px; border:1px solid #374151; background:#0b1220; color:var(--fg); font-size:15px; }
+    .counter{ font-size:12px; color:var(--muted); padding:0 8px; }
+    details.section{ background:var(--card); border:1px solid #1f2937; border-radius:14px; padding:0; overflow:hidden; }
+    details + details{ margin-top:12px; }
+    summary{ cursor:pointer; list-style:none; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+    summary::-webkit-details-marker{ display:none; }
+    .title{ font-weight:600; }
+    .datetime{ font-size:12px; color:var(--muted); }
+    .badge{ background:var(--chip); padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted); }
+    .items{ display:grid; gap:10px; padding:12px; }
+    .card{ background:#0b1220; border:1px solid #1f2937; border-radius:12px; padding:12px; display:grid; gap:8px; }
+    .qline{ display:flex; align-items:baseline; gap:8px; }
+    .qno{ font-weight:700; font-feature-settings:'tnum' 1,'lnum' 1; }
+    .qtext{ font-size:15px; line-height:1.5; }
+    .askers{ font-size:12px; color:var(--muted); }
+    .answer{ font-size:14px; line-height:1.55; white-space:pre-wrap; }
+    .tip{ font-size:13px; padding:8px 10px; border-radius:10px; background:#052e2b; border:1px solid #064e3b; }
+    .tip::before{ content:"바로 실행 Tip"; display:inline-block; margin-right:8px; font-weight:600; color:var(--ok); }
+    .footer{ text-align:center; color:var(--muted); font-size:12px; padding:20px 0 10px; }
+    .owner{ margin-top:6px; font-size:12px; color:var(--muted); }
+    .owner a{ color:var(--accent); text-decoration:none; }
+    @media (min-width:640px){ header{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>💡 금융 꿀Tip단지</h1>
+      <div class="sub">Maintained by 염민수 · <a href="mailto:nlfelix@gmail.com">nlfelix@gmail.com</a></div>
+      <div class="promo" id="promo"></div>
+      <div class="toolbar">
+        <input id="search" class="search" placeholder="질문·답변·Tip 검색" />
+        <div class="counter" id="visits"></div>
+        <div class="counter" id="counter"></div>
+      </div>
+    </header>
+    <main id="container" style="margin-top:14px; display:grid; gap:12px;"></main>
+    <div class="footer">
+      <div>모바일에서 쉽게 보이도록 최적화된 버전 • 업데이트 계속 예정</div>
+      <div class="owner">Owner: Yeom Minsu · <a href="mailto:nlfelix@gmail.com">nlfelix@gmail.com</a></div>
+      <div id="last-updated" style="margin-top:8px; font-size:12px; color:var(--muted);">
+        마지막 업데이트: {{LAST_UPDATED}}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DATA = DATA_PLACEHOLDER; // 빌드 시 주입
+
+    function el(tag, cls, text) {
+      const e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text !== undefined) e.textContent = text;
+      return e;
+    }
+
+    function render(sections, term="") {
+      const root = document.getElementById('container');
+      root.innerHTML = "";
+      let visibleItemCount = 0;
+
+      document.getElementById('promo').textContent = (DATA.promo || '').replace(/\r\n?/g, '\n');
+
+      sections.forEach(sec => {
+        const items = sec.items.filter(it => {
+          const hay = (sec.title + " " + sec.datetime + " " + it.q + " " + it.a + " " + (it.tip||"")).toLowerCase();
+          return hay.includes(term.toLowerCase());
+        });
+        if (items.length === 0) return;
+
+        const details = el('details', 'section');
+        details.open = true;
+
+        const summary = el('summary');
+        const left = el('div');
+        left.appendChild(el('div', 'title', sec.title));
+        left.appendChild(el('div', 'datetime', sec.datetime));
+        summary.appendChild(left);
+        summary.appendChild(el('span', 'badge', `질문 ${items.length}개`));
+        details.appendChild(summary);
+
+        const itemsWrap = el('div', 'items');
+        items.forEach(it => {
+          const card = el('div', 'card');
+          const qline = el('div', 'qline');
+          qline.appendChild(el('span', 'qno', `Q${it.no}.`));
+          qline.appendChild(el('div', 'qtext', it.q));
+          card.appendChild(qline);
+          const askers = el('div', 'askers', `질문자 수: ${it.askers}`);
+          card.appendChild(askers);
+          const answer = el('div', 'answer');
+          answer.textContent = it.a;
+          card.appendChild(answer);
+          if ((it.tip || "").trim().length > 0) {
+            const tip = el('div', 'tip', it.tip);
+            card.appendChild(tip);
+          }
+          itemsWrap.appendChild(card);
+          visibleItemCount += 1;
+        });
+
+        details.appendChild(itemsWrap);
+        root.appendChild(details);
+      });
+
+      document.getElementById('counter').textContent = visibleItemCount > 0 ? `결과 ${visibleItemCount}건` : '';
+    }
+
+    const input = document.getElementById('search');
+    input.addEventListener('input', (e) => render(DATA.sections, e.target.value));
+    render(DATA.sections);
+
+    (async () => {
+      try {
+        const res = await fetch('/api/track', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ path: location.pathname || '/' })
+        });
+        if (!res.ok) throw new Error('track failed');
+        const data = await res.json();
+        const el = document.getElementById('visits');
+        if (el && typeof data.total === 'number') {
+          el.textContent = `방문 ${data.total.toLocaleString()}회`;
+        }
+      } catch {}
+    })();
+  </script>
+</body>
+</html>
