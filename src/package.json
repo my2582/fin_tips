@@ -1,0 +1,12 @@
+{
+    "name": "fin_tips",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+      "build": "node scripts/build.js"
+    },
+    "dependencies": {
+      "@netlify/blobs": "^6.0.0",
+      "xlsx": "^0.18.5"
+    }
+  }
