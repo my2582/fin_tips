@@ -23,7 +23,7 @@ const REQUIRED_HEADERS = [
   '바로 실행가능한 팁',
 ];
 // NEW 표시용(엑셀에 있으면 사용, 없어도 무시됨)
-const NEW_HEADER = '신규';
+const NEW_HEADER = 'NEW';
 
 // ===== Utils =====
 function log(s) { process.stdout.write(String(s) + '\n'); }
