@@ -181,5 +181,62 @@
     input.addEventListener('input', (e) => render(DATA.sections, e.target.value));
     render(DATA.sections);
   </script>
+
+  <script>
+    (function() {
+      const endpoint = '/api/track';
+      const storageKey = 'ft_client_id';
+      function getCid() {
+        try {
+          let cid = localStorage.getItem(storageKey);
+          if (!cid) {
+            cid = 'cid.' + Math.random().toString(36).slice(2) + '.' + Date.now();
+            localStorage.setItem(storageKey, cid);
+          }
+          return cid;
+        } catch (_) {
+          return 'cid.' + Math.random().toString(36).slice(2) + '.' + Date.now();
+        }
+      }
+      function payload(base) {
+        return {
+          cid: getCid(),
+          page: location.href,
+          title: document.title,
+          referrer: document.referrer || '',
+          lang: navigator.language || '',
+          tz: Intl.DateTimeFormat().resolvedOptions().timeZone || '',
+          screen: (screen && (screen.width + 'x' + screen.height)) || '',
+          ...base,
+        };
+      }
+      function send(data) {
+        const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+        if (navigator.sendBeacon && navigator.sendBeacon(endpoint, blob)) return;
+        try {
+          fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), keepalive: true });
+        } catch (_) {}
+      }
+      // page_view
+      send(payload({ event_name: 'page_view' }));
+
+      // search event (throttled)
+      const input = document.getElementById('search');
+      if (input) {
+        let t = 0;
+        input.addEventListener('input', (e) => {
+          const now = Date.now();
+          if (now - t < 1000) return; // throttle 1s
+          t = now;
+          const q = String(e.target.value || '').slice(0, 200);
+          if (!q) return; // only send non-empty
+          send(payload({
+            event_name: 'search',
+            params: { search_term: q }
+          }));
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
