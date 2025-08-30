@@ -4,6 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>금융 꿀Tip단지</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBJWQ0KHB8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FBJWQ0KHB8', {
+      cookie_domain: 'fintips.netlify.app',
+      send_page_view: true
+    });
+  </script>
+
   <meta name="description" content="세미나 Q&A와 바로 실행 Tip을 한 곳에 모은 금융 꿀Tip단지">
   <meta property="og:title" content="금융 꿀Tip단지">
   <meta property="og:description" content="세미나 Q&A와 바로 실행 Tip을 한 곳에 모은 꿀Tip단지">
@@ -61,6 +74,7 @@
     .footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px 0 10px; }
     .owner { margin-top: 6px; font-size: 12px; color: var(--muted); }
     .owner a { color: var(--accent); text-decoration: none; }
+    .disclaimer { margin-top: 14px; font-size: 11px; line-height: 1.6; color: var(--muted); border-top: 1px solid #1f2937; padding-top: 12px; text-align: left; }
     @media (min-width: 640px) {
       header { grid-template-columns: 1fr; }
     }
@@ -82,12 +96,16 @@
     <div class="footer">
       <div>모바일에서 쉽게 보이도록 최적화된 버전 • 업데이트 계속 예정</div>
       <div class="owner">Owner: Yeom Minsu · <a href="mailto:nlfelix@gmail.com">nlfelix@gmail.com</a></div>
+      <div class="disclaimer">
+        <strong>면책조항</strong><br>
+        본 자료는 일반적인 정보 제공을 위한 것이며, 어떠한 경우에도 투자권유, 투자자문 또는 법적·세무적 조언에 해당하지 않습니다. 제공된 정보의 정확성·완전성을 보장하지 않으며, 본 자료를 신뢰하여 행해진 어떠한 행위 또는 투자 결과에 대해서도 책임을 지지 않습니다. 투자 결정과 그에 따른 손익의 책임은 전적으로 투자자 본인에게 있습니다. 시장 상황, 제도 및 세법은 예고 없이 변경될 수 있으며, 과거의 성과는 미래의 수익을 보장하지 않습니다.
+      </div>
     </div>
   </div>
 
   <script>
     // ====== DATA (빌드 시 치환됩니다) ======
-    const DATA = {"promo":"남들이 뭘 고민하는지, 무슨 질문을 하는지 궁금하셨죠?\n1:1 세션 참석자분으로부터 받은 피드백을 참고하여 금융 꿀Tip단지를 만들었습니다.\n여기에 답변까지 합쳐서 모아둡니다. 앞으로 계속 채워갈 생각입니다.","sections":[{"title":"온라인 2차 사전질문","datetime":"2025년 8월 10일","items":[{"no":1,"q":"싱가포르에 은이나 구리 ETF가 있나요?","a":"상장돼 있지 않습니다. https://www.sgx.com/securities/etf-screener 가셔서 Asset class를 Commodity로 두면 원자재 관련 ETF가 '금'만 나옵니다.","tip":"","isNew":true,"askers":1},{"no":2,"q":"커버하는 국가가 제일 많은 IBKR에서조차 한국 개별주식 거래가 안 되는 이유는?","a":"현재 국내 증권사의 계열사 또는 대주주만 한국 주식거래용 계좌개설을 할 수 있기 때문입니다. 그렇지만 현재 규제완화 중으로, 앞으로 가능해질 수 있습니다. 참고: https://www.kocis.go.kr/koreanet/view.do?seq=1051073","tip":"","isNew":true,"askers":1}]},{"title":"오프라인 1:1 세션 1차","datetime":"2025년 7월 - 8월","items":[{"no":1,"q":"여유 자금의 지나친 안전자산 중심배분(80%+)에서 벗어나는 법","a":"질문자의 상황상 세미나의 단기(A), 중기(B), 장기(C) 배분에서 A=3개월 월급, C의 Maximum은 전체 금융자산의 70%. 안전자산 중심에서 의미있게 벗어나려면? 전체 주식시장 또는 투자전략을 사길 권장.","tip":"","isNew":false,"askers":1},{"no":2,"q":"한국의 원화자산 투자","a":"TDF 권장. 이유는 원화자산 투자에 신경을 줄이면서 동시에 전체 주식시장/채권시장 투자 가능하기 때문 (TDF란 나이 들어갈수록 주식비중 줄여주는 펀드 상품)","tip":"","isNew":false,"askers":1},{"no":3,"q":"싱가포르 달러로 원화 환전 시 환차익을 보는데, 한국 계좌/싱가포르 계좌간 적당한 투자비율은?","a":"환 시장을 보고 원화 신규 투자처 고민에 시간을 투자하는 것은 권장하지 않음. 환차익을 보고 원화로 투자하는 것은 효율적인 시간 활용이 아니고 장기간 이익보는 거래는 불가능한데다 송금 금액도 크지 않아 차익의 크기도 크지 않을 것이기 때문임.","tip":"","isNew":false,"askers":1}]},{"title":"온라인 1차","datetime":"2025.7.24 밤9 - 10시","items":[{"no":1,"q":"\"나의\" 재테크 전략, 어떻게 하면 좋을까요?","a":"(1) 자산관리의 가장 중요한 원칙: 시간에 대한 적절한 보상을 받아야 마땅하다는 것.\n(2) 자산증식의 핵심은 수익률(in % return)이 아닌 수익금(in amount)\n(3) \"나의(개인화된)\" 자산관리의 시작은 시간과 amount에 대한 고민에서 시작 - 실행은 오히려 쉬움","tip":"초단기채권펀드(MMF)만 사도 싱가포르 은행 이자 0.05%보다 수십 배 더 이자 나옵니다.","isNew":false,"askers":11},{"no":2,"q":"싱가포르 세금 시스템에 대해 알고 싶어요.","a":"(1) 싱가포르 상장주식, 미국 상장주식: 양도차익에 대한 세금이 없어요.\n(2) 싱가포르 주식에서 나오는 배당: 세금 없어요.\n(3) 미국 주식, 미국 상장ETF에서 나오는 배당: 배당액의 30% 떼요. 예) 1천불 투자, 50불 배당 -> 15불 세금\n(4) 영국에 상장된 미국투자ETF (\"UCITS\")에서 나오는 배당: 배당액의 15%만 떼요. 예) 위와 동일 -> 7.5불 세금","tip":"","isNew":false,"askers":2},{"no":3,"q":"싱가포르에서의 한국주식 투자방법","a":"한국증권사의 앱을 사용해야 합니다. 다른 나라 앱으로는 거래 안 돼요.","tip":"","isNew":false,"askers":2},{"no":4,"q":"국민연금 어떻게 하죠?","a":"최소금액 납부를 권장합니다. 왜냐하면 싱가포르 거주자는 한국 입장에서는 저소득층으로 분류되기 때문에 혜택이 크기 때문","tip":"","isNew":false,"askers":2},{"no":5,"q":"한국에서 싱가포르로의 자산이전","a":"별도 문의 시 해당 분야 전문가 소개 가능","tip":"","isNew":false,"askers":1}]}]};
+    const DATA = {"promo":"남들이 뭘 고민하는지, 무슨 질문을 하는지 궁금하셨죠?\n1:1 세션 참석자분으로부터 받은 피드백을 참고하여 금융 꿀Tip단지를 만들었습니다.\n여기에 답변까지 합쳐서 모아둡니다. 앞으로 계속 채워갈 생각입니다.","sections":[{"title":"온라인 2차","datetime":"2025년 8월 28일","items":[{"no":1,"q":"55세에 CPF에서 무슨 일이 일어나나요?","a":"RA(Retirement Account) 자동 생성되며 SA→OA 순으로 FRS($213,000)까지 채웁니다. FRS 충족 시 65세부터 월 $1,700 평생 수령하는 CPF LIFE가 시작됩니다. 참고) https://www.cpf.gov.sg/service/article/how-much-cpf-payouts-can-i-get-every-month","tip":"전략 예시) OA 최소화, SA 극대화, 연 $8,000 탑업으로 절세와 4% 복리 효과를 동시에 누리세요. 단, OA로 주택 매수를 할 경우 다른 전략이 필요합니다.","isNew":true,"askers":5},{"no":2,"q":"귀국 시 CPF 환급은 어떻게 하나요?","a":"PR 포기 시 CPF 자동 폐쇄되며 12주 내 송금됩니다. 인출금액에 과세되지 않습니다. 해외 진행 시 공증/아포스티유 필요하므로 귀국 직전 싱가포르 내에서 처리가 유리합니다. 참고) https://www.cpf.gov.sg/member/account-services/account-closure/closing-your-account-when-you-leave-singapore","tip":"귀국 직전 싱가포르 내에서 CPF 환급 절차를 완료하세요.","isNew":true,"askers":3},{"no":3,"q":"CPF/SRS 절세 효과가 정말 확정 수익인가요?","a":"맞습니다. \"불입액 × 본인의 소득세 한계 세율\"만큼 소득세가 줄어듭니다.  $1,000당 $70~$220 절세 가능합니다. 소득이 높을수록 CPF Top-up과 SRS 추가 불입의 절세율이 더 커집니다. 단, 외국인은 하단 7번 \"비영주권자 SRS 활용법\"도 꼭 읽어 주세요.","tip":"본인 한계세율 확인하고 절세하세요. 소득공제 가능한 한도는 연간 CPF $8,000, SRS는 외국인 $35,700, PR $15,300입니다.","isNew":true,"askers":3},{"no":4,"q":"주식 매도 타이밍을 어떻게 잡아야 하나요?","a":"Schwab 연구에 따르면 20년간 매년 최고점에서만 투자해도 현금 보유자보다 3.2배 더 벌었습니다. 마켓 타이밍이 아니라 시장에 오래 남아있는 것이 성과를 결정합니다. 참고) https://www.schwab.com/learn/story/does-market-timing-work","tip":"매도할 때는 재진입 계획을 반드시 세우고, 본인만의 '잠 못 이루는 기준선'을 정하세요.","isNew":true,"askers":2},{"no":5,"q":"싱가포르 주식시장만으로 포트폴리오 구성 가능한가요?","a":"어렵습니다. 은행주 50% + 리츠 16%로 구성된 배당형 시장이라 성장 포트폴리오 구성이 어렵습니다. 성장을 원한다면 글로벌 주식·ETF 병행이 필요합니다.","tip":"싱가포르 시장과 함께 글로벌 주식 ETF로 분산투자하세요.","isNew":true,"askers":2},{"no":6,"q":"CPF IS 투자상품 vs CPF 기본 이자율 중 뭐가 좋나요?","a":"충격적인 사실입니다. CPF IS 펀드 평균 수익률이 3년 연환산 2.01%로 CPF 기본 이자율(OA 2.5%, SA/MA 4%)보다 낮습니다. 참고) https://imas.org.sg/wp-content/uploads/2025/06/IMAS_Q12025_Performance_RiskMonitoring-report_Final.pdf","tip":"투자상품에 대해 잘 모른다면 CPF IS 투자보다는 안정적인 CPF 기본 이자율(특히 SA/MA 4%)을 선택하세요.","isNew":true,"askers":1},{"no":7,"q":"비영주권자 SRS 활용법은?","a":"미래는 알 수 없으므로 우선 SRS 계좌 개설하고 소액(100불이라도) 넣어 두면 좋습니다. 외국인 특별 혜택으로 SRS 10년 보유 후 전액 일시불로 인출하면, 인출액의 50%에 대해서만 과세됩니다. 외국인은 연간 최대 $35,700 소득공제 가능하나 최소 10년의 유동성 제약 있으므로 과욕 금물입니다. 그 이전에 인출하면 5% 패널티가 있습니다. 한계세율이 높은 고소득자일수록 고려해 볼만 합니다. 참고) https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/special-tax-schemes/tax-on-srs-withdrawals","tip":"사회초년생은 유동성 우선, SRS 납입 과욕하지 마세요.","isNew":true,"askers":1},{"no":8,"q":"싱가포르 단/중/장기 투자 플랜은?","a":"자산관리의 가장 중요한 원칙, \"내 돈을 중간에 다른 용도로 쓰지 않기로 한 시간에 대한 적절한 보상을 받아야 마땅함\"에 의거하여, 단기(0-2년): MMF 2-3%, 중기(2-7년): 채권펀드/리츠 4-6%, 장기(7년+): 글로벌 주식 8-10%  또는 투자전략 가입으로 나누어 전략을 세우세요. 목적에 따라 이렇게 3개의 '버킷'으로 시간을 나누어 접근하는 것이 핵심입니다. 참고) https://arkifinance.com","tip":"목표와 상황별로 자산을 버킷으로 나누어 기간별 투자 전략을 세우세요.","isNew":true,"askers":1},{"no":9,"q":"한국 vs 싱가포르 세금 차이는?","a":"싱가포르는 상장주식 양도차익에 대한 과세가 없고, 상속/증여세 면세인 반면 한국은 해외주식 22% 분리과세, 상속/증여세 10~50%입니다. 미국 주식 배당은 싱가포르 30% vs 한국 15% + 금융소득 2천만원 초과 시 종합과세입니다.","tip":"싱가포르의 낮은 세율을 활용하되 세부 사항은 세무 전문가와 반드시 상담하세요.","isNew":true,"askers":1}]},{"title":"온라인 2차 사전질문","datetime":"2025년 8월 10일","items":[{"no":1,"q":"싱가포르에 은이나 구리 ETF가 있나요?","a":"상장돼 있지 않습니다. https://www.sgx.com/securities/etf-screener 가셔서 Asset class를 Commodity로 두면 원자재 관련 ETF가 '금'만 나옵니다.","tip":"","isNew":false,"askers":1},{"no":2,"q":"커버하는 국가가 제일 많은 IBKR에서조차 한국 개별주식 거래가 안 되는 이유는?","a":"현재 국내 증권사의 계열사 또는 대주주만 한국 주식거래용 계좌개설을 할 수 있기 때문입니다. 그렇지만 현재 규제완화 중으로, 앞으로 가능해질 수 있습니다. 참고: https://www.kocis.go.kr/koreanet/view.do?seq=1051073","tip":"","isNew":false,"askers":1}]},{"title":"오프라인 1:1 세션 1차","datetime":"2025년 7월 - 8월","items":[{"no":1,"q":"여유 자금의 지나친 안전자산 중심배분(80%+)에서 벗어나는 법","a":"질문자의 상황상 세미나의 단기(A), 중기(B), 장기(C) 배분에서 A=3개월 월급, C의 Maximum은 전체 금융자산의 70%. 안전자산 중심에서 의미있게 벗어나려면? 전체 주식시장 또는 투자전략을 사길 권장.","tip":"","isNew":false,"askers":1},{"no":2,"q":"한국의 원화자산 투자","a":"TDF 권장. 이유는 원화자산 투자에 신경을 줄이면서 동시에 전체 주식시장/채권시장 투자 가능하기 때문 (TDF란 나이 들어갈수록 주식비중 줄여주는 펀드 상품)","tip":"","isNew":false,"askers":1},{"no":3,"q":"싱가포르 달러로 원화 환전 시 환차익을 보는데, 한국 계좌/싱가포르 계좌간 적당한 투자비율은?","a":"환 시장을 보고 원화 신규 투자처 고민에 시간을 투자하는 것은 권장하지 않음. 환차익을 보고 원화로 투자하는 것은 효율적인 시간 활용이 아니고 장기간 이익보는 거래는 불가능한데다 송금 금액도 크지 않아 차익의 크기도 크지 않을 것이기 때문임.","tip":"","isNew":false,"askers":1}]},{"title":"온라인 1차","datetime":"2025.7.24 밤9 - 10시","items":[{"no":1,"q":"\"나의\" 재테크 전략, 어떻게 하면 좋을까요?","a":"(1) 자산관리의 가장 중요한 원칙: 시간에 대한 적절한 보상을 받아야 마땅하다는 것.\n(2) 자산증식의 핵심은 수익률(in % return)이 아닌 수익금(in amount)\n(3) \"나의(개인화된)\" 자산관리의 시작은 시간과 amount에 대한 고민에서 시작 - 실행은 오히려 쉬움","tip":"초단기채권펀드(MMF)만 사도 싱가포르 은행 이자 0.05%보다 수십 배 더 이자 나옵니다.","isNew":false,"askers":11},{"no":2,"q":"싱가포르 세금 시스템에 대해 알고 싶어요.","a":"(1) 싱가포르 상장주식, 미국 상장주식: 양도차익에 대한 세금이 없어요.\n(2) 싱가포르 주식에서 나오는 배당: 세금 없어요.\n(3) 미국 주식, 미국 상장ETF에서 나오는 배당: 배당액의 30% 떼요. 예) 1천불 투자, 50불 배당 -> 15불 세금\n(4) 영국에 상장된 미국투자ETF (\"UCITS\")에서 나오는 배당: 배당액의 15%만 떼요. 예) 위와 동일 -> 7.5불 세금","tip":"싱가포르의 낮은 세율을 활용하되 세부 사항은 세무 전문가와 반드시 상담하세요.","isNew":false,"askers":2},{"no":3,"q":"싱가포르에서의 한국주식 투자방법","a":"한국증권사의 앱을 사용해야 합니다. 다른 나라 앱으로는 거래 안 돼요.","tip":"","isNew":false,"askers":2},{"no":4,"q":"국민연금 어떻게 하죠?","a":"최소금액 납부를 권장합니다. 왜냐하면 싱가포르 거주자는 한국 입장에서는 저소득층으로 분류되기 때문에 혜택이 크기 때문","tip":"","isNew":false,"askers":2},{"no":5,"q":"한국에서 싱가포르로의 자산이전","a":"별도 문의 시 해당 분야 전문가 소개 가능","tip":"","isNew":false,"askers":1}]}]};
     // ====== /DATA ======
 
     // 안전한 HTML 변환 + 링크 + 줄바꿈 유지
@@ -230,10 +248,20 @@
           t = now;
           const q = String(e.target.value || '').slice(0, 200);
           if (!q) return; // only send non-empty
+          
+          // Keep existing tracking
           send(payload({
             event_name: 'search',
             params: { search_term: q }
           }));
+          
+          // Add GA4 tracking
+          if (typeof gtag === 'function') {
+            gtag('event', 'search', {
+              search_term: q,
+              engagement_time_msec: 1000
+            });
+          }
         });
       }
     })();
