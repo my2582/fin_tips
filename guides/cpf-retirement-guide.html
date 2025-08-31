@@ -84,17 +84,17 @@
               <div class="flex items-center space-x-4">
                 <a href="../index.html" class="flex items-center space-x-2 text-red-600 hover:text-red-800 transition-colors">
                     <i class="fas fa-arrow-left"></i>
-                    <span class="font-semibold">메인으로</span>
+                    <span class="font-semibold">홈</span>
                 </a>
                 <div class="flex flex-wrap gap-1 text-sm">
                     <a href="#section-0" class="nav-link px-2 py-1 rounded transition-colors">커버</a>
                     <a href="#section-1" class="nav-link px-2 py-1 rounded transition-colors">개요</a>
-                    <a href="#section-2" class="nav-link px-2 py-1 rounded transition-colors">계좌</a>
-                    <a href="#section-3" class="nav-link px-2 py-1 rounded transition-colors">FRS</a>
-                    <a href="#section-4" class="nav-link px-2 py-1 rounded transition-colors">달성</a>
-                    <a href="#section-5" class="nav-link px-2 py-1 rounded transition-colors">인출</a>
-                    <a href="#section-6" class="nav-link px-2 py-1 rounded transition-colors">SRS</a>
-                    <a href="#section-7" class="nav-link px-2 py-1 rounded transition-colors">실행</a>
+
+                    <a href="#section-2" class="nav-link px-2 py-1 rounded transition-colors">FRS</a>
+                    <a href="#section-2" class="nav-link px-2 py-1 rounded transition-colors">달성</a>
+                    <a href="#section-3" class="nav-link px-2 py-1 rounded transition-colors">인출</a>
+                    <a href="#section-4" class="nav-link px-2 py-1 rounded transition-colors">SRS</a>
+                    <a href="#section-5" class="nav-link px-2 py-1 rounded transition-colors">실행</a>
                 </div>
               </div>
             </div>
@@ -183,11 +183,11 @@
                         <ul class="space-y-3 text-gray-700">
                             <li class="flex items-start">
                                 <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
-                                <span>OA, SA, Medisave 3개 계좌</span>
+                                <span>OA, SA, MA 3개 계좌</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
-                                <span>자유로운 투자 및 사용</span>
+                                <span>OA 2.5%, SA/MA 4.0%</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
@@ -212,7 +212,7 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-star text-red-600 text-xs mt-2 mr-3"></i>
-                                <span>인출 조건 변화</span>
+                                <span>FRS 금액 초과분 인출 가능</span>
                             </li>
                         </ul>
                     </div>
@@ -237,114 +237,11 @@
             </div>
         </section>
 
-        <!-- Section 2: 계좌 구조 변화 -->
-        <section id="section-2" class="min-h-screen bg-gray-50">
-            <div class="section-divider">
-                <div class="section-number">2</div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto px-6 py-16">
-                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">계좌 구조 변화 상세</h2>
-                
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
-                        <i class="fas fa-exchange-alt text-purple-600 mr-3"></i>
-                        자금 이동 과정
-                    </h3>
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-center justify-between bg-blue-50 p-6 rounded-lg">
-                            <div class="text-center">
-                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                                    <i class="fas fa-piggy-bank text-2xl"></i>
-                                </div>
-                                <h4 class="font-bold text-blue-900">SA (Special Account)</h4>
-                                <p class="text-sm text-gray-600">4% 복리</p>
-                            </div>
-                            <i class="fas fa-arrow-right text-2xl text-gray-400 mx-4"></i>
-                            <div class="text-center">
-                                <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                                    <i class="fas fa-home text-2xl"></i>
-                                </div>
-                                <h4 class="font-bold text-red-900">RA (Retirement Account)</h4>
-                                <p class="text-sm text-gray-600">은퇴 전용 계좌</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6">
-                            <h4 class="font-bold text-yellow-800 mb-3">이동 우선순위</h4>
-                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                                <li>SA 계좌 전액이 먼저 RA로 이동</li>
-                                <li>SA 잔액이 FRS에 못 미치면 OA에서 부족분 이동</li>
-                                <li>총합이 FRS를 넘으면 초과분은 OA에 잔류</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
-                        <i class="fas fa-calculator text-green-600 mr-3"></i>
-                        실제 계산 예시
-                    </h3>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="bg-green-50 rounded-lg p-6">
-                            <h4 class="font-bold text-green-900 mb-4">Case A: FRS 달성</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between">
-                                    <span>SA 잔액:</span>
-                                    <span class="font-semibold">$150,000</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>OA 잔액:</span>
-                                    <span class="font-semibold">$100,000</span>
-                                </div>
-                                <div class="border-t border-green-300 pt-2">
-                                    <div class="flex justify-between">
-                                        <span>RA로 이동:</span>
-                                        <span class="font-bold text-green-700">$213,000</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>OA 잔류:</span>
-                                        <span class="font-semibold">$37,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-orange-50 rounded-lg p-6">
-                            <h4 class="font-bold text-orange-900 mb-4">Case B: FRS 미달</h4>
-                            <div class="space-y-2 text-sm">
-                                <div class="flex justify-between">
-                                    <span>SA 잔액:</span>
-                                    <span class="font-semibold">$80,000</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>OA 잔액:</span>
-                                    <span class="font-semibold">$50,000</span>
-                                </div>
-                                <div class="border-t border-orange-300 pt-2">
-                                    <div class="flex justify-between">
-                                        <span>RA로 이동:</span>
-                                        <span class="font-bold text-orange-700">$130,000</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>부족분:</span>
-                                        <span class="font-semibold text-red-600">$83,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 3: FRS/BRS/ERS 이해 -->
-        <section id="section-3" class="min-h-screen">
+        <section id="section-2" class="min-h-screen">
             <div class="section-divider">
-                <div class="section-number">3</div>
+                <div class="section-number">2</div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6 py-16">
@@ -450,147 +347,139 @@
         </section>
 
         <!-- Section 4: FRS 달성 전략 -->
-        <section id="section-4" class="min-h-screen bg-gray-50">
+        <section id="section-3" class="min-h-screen bg-gray-50">
             <div class="section-divider">
-                <div class="section-number">4</div>
+                <div class="section-number">3</div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6 py-16">
-                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">FRS 달성 전략</h2>
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">55세 RA 생성 시 자금 이동</h2>
                 
-                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
-                        <i class="fas fa-rocket text-blue-600 mr-3"></i>
-                        Top-up 전략과 계산법
-                    </h3>
-                    
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="space-y-6">
-                            <div class="bg-blue-50 p-6 rounded-lg">
-                                <h4 class="font-bold text-blue-900 mb-4">연간 Top-up 한도</h4>
-                                <div class="space-y-2">
-                                    <div class="flex justify-between">
-                                        <span>본인 계좌:</span>
-                                        <span class="font-bold text-blue-700">$8,000</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>가족 계좌:</span>
-                                        <span class="font-bold text-blue-700">$8,000</span>
-                                    </div>
-                                    <div class="border-t border-blue-200 pt-2">
-                                        <div class="flex justify-between font-bold">
-                                            <span>총 한도:</span>
-                                            <span class="text-blue-800">$16,000</span>
-                                        </div>
-                                    </div>
+                <div class="mb-8">
+                    <p class="text-gray-700 text-base">FRS는 매년 인플레이션에 맞춰 상향 조정됩니다. 현재 FRS $213,000이지만 10년 후 FRS $280,000로 예상됩니다.</p>
+                </div>
+                
+                <!-- Cases Comparison -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <!-- Case A -->
+                    <div class="bg-yellow-100 border border-yellow-400 rounded-xl p-6">
+                        <h3 class="font-bold text-xl text-yellow-900 mb-4">Case A — 부족(Below FRS)</h3>
+                        <div class="text-sm text-gray-600 mb-4">10년 후 FRS = $280K</div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-medium mb-3 text-base">Before 55</h4>
+                            <div class="space-y-2">
+                                <div class="bg-purple-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">SA</span>
+                                    <span class="font-bold text-sm">$65K</span>
                                 </div>
-                            </div>
-                            
-                            <div class="bg-green-50 p-6 rounded-lg">
-                                <h4 class="font-bold text-green-900 mb-4">절세 효과</h4>
-                                <p class="text-sm text-green-700 mb-3">
-                                    Top-up 금액은 100% 소득공제 가능
-                                </p>
-                                <div class="space-y-2 text-sm">
-                                    <div class="flex justify-between">
-                                        <span>소득세율 15%:</span>
-                                        <span class="font-semibold">$1,000당 $150 절세</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>소득세율 20%:</span>
-                                        <span class="font-semibold">$1,000당 $200 절세</span>
-                                    </div>
+                                <div class="bg-blue-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">OA</span>
+                                    <span class="font-bold text-sm">$180K</span>
                                 </div>
+                                <div class="bg-green-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">MA</span>
+                                    <span class="font-bold text-sm">$84K</span>
+                                </div>
+                                <div class="text-xs text-gray-600 mt-2">OA+SA = $245K (&lt; $280K)</div>
                             </div>
                         </div>
                         
-                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
-                            <h4 class="font-bold text-orange-900 mb-4">
-                                <i class="fas fa-calculator mr-2"></i>
-                                실전 계산 예시
-                            </h4>
-                            
-                            <div class="space-y-4 text-sm">
-                                <div class="bg-white p-4 rounded border">
-                                    <div class="font-semibold mb-2">현재 상황</div>
-                                    <div class="space-y-1">
-                                        <div>나이: 50세</div>
-                                        <div>현재 SA+OA: $150,000</div>
-                                        <div>FRS 목표: $213,000</div>
-                                        <div class="font-bold text-red-600">부족분: $63,000</div>
-                                    </div>
+                        <div class="flex justify-center my-4">
+                            <i class="fas fa-arrow-down text-2xl text-gray-400"></i>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium mb-3 text-base">After 55</h4>
+                            <div class="space-y-2">
+                                <div class="bg-red-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">RA</span>
+                                    <span class="font-bold text-sm">$245K (87.5% of FRS)</span>
                                 </div>
-                                
-                                <div class="bg-white p-4 rounded border">
-                                    <div class="font-semibold mb-2">Top-up 계획</div>
-                                    <div class="space-y-1">
-                                        <div>연간 본인 Top-up: $8,000</div>
-                                        <div>5년간 총 Top-up: $40,000</div>
-                                        <div>4% 복리 효과: 약 $6,000</div>
-                                        <div class="font-bold text-green-600">55세 예상 잔액: $196,000</div>
-                                    </div>
+                                <div class="bg-blue-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">OA</span>
+                                    <span class="font-bold text-sm">$0 (모두 이체됨)</span>
                                 </div>
-                                
-                                <div class="bg-orange-100 p-3 rounded">
-                                    <div class="font-bold text-orange-800">
-                                        남은 부족분: $17,000
-                                    </div>
-                                    <div class="text-xs text-orange-600 mt-1">
-                                        추가 Top-up 또는 투자 수익 필요
-                                    </div>
+                                <div class="bg-green-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">MA</span>
+                                    <span class="font-bold text-sm">$84K (변화 없음)</span>
+                                </div>
+                                <div class="bg-white border border-yellow-500 rounded-md p-3 mt-3">
+                                    <div class="font-medium text-sm">즉시 인출 가능: <span class="font-bold">최대 $5K</span></div>
+                                    <div class="text-xs text-gray-600">(FRS 미달이므로 초과 인출 불가)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case B -->
+                    <div class="bg-green-100 border border-green-400 rounded-xl p-6">
+                        <h3 class="font-bold text-xl text-green-900 mb-4">Case B — 충분(Above FRS)</h3>
+                        <div class="text-sm text-gray-600 mb-4">10년 후 FRS = $280K</div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-medium mb-3 text-base">Before 55</h4>
+                            <div class="space-y-2">
+                                <div class="bg-purple-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">SA</span>
+                                    <span class="font-bold text-sm">$80K</span>
+                                </div>
+                                <div class="bg-blue-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">OA</span>
+                                    <span class="font-bold text-sm">$240K</span>
+                                </div>
+                                <div class="bg-green-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">MA</span>
+                                    <span class="font-bold text-sm">$100K</span>
+                                </div>
+                                <div class="text-xs text-gray-600 mt-2">OA+SA = $320K (&gt; $280K)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-center my-4">
+                            <i class="fas fa-arrow-down text-2xl text-gray-400"></i>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium mb-3 text-base">After 55</h4>
+                            <div class="space-y-2">
+                                <div class="bg-red-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">RA</span>
+                                    <span class="font-bold text-sm">$280K (100% of FRS)</span>
+                                </div>
+                                <div class="bg-blue-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">OA</span>
+                                    <span class="font-bold text-sm">$40K (FRS 초과분)</span>
+                                </div>
+                                <div class="bg-green-100 rounded p-3 flex justify-between items-center">
+                                    <span class="text-sm font-medium">MA</span>
+                                    <span class="font-bold text-sm">$100K (변화 없음)</span>
+                                </div>
+                                <div class="bg-white border border-green-500 rounded-md p-3 mt-3">
+                                    <div class="font-medium text-sm">즉시 인출 가능: <span class="font-bold">$40K</span></div>
+                                    <div class="text-xs text-gray-600">(FRS 초과분 인출 가능)</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white rounded-2xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                        <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
-                        Top-up 전략 팁
-                    </h3>
-                    
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-blue-500 pl-4">
-                                <h4 class="font-bold text-blue-900">1. 타이밍 최적화</h4>
-                                <p class="text-sm text-gray-600">
-                                    55세 이전에 Top-up하면 SA 계좌에서 4% 복리 혜택을 받을 수 있습니다.
-                                </p>
-                            </div>
-                            
-                            <div class="border-l-4 border-green-500 pl-4">
-                                <h4 class="font-bold text-green-900">2. 가족 계좌 활용</h4>
-                                <p class="text-sm text-gray-600">
-                                    배우자나 부모 계좌에 Top-up하여 연간 한도를 2배로 늘릴 수 있습니다.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-purple-500 pl-4">
-                                <h4 class="font-bold text-purple-900">3. 세금 계획</h4>
-                                <p class="text-sm text-gray-600">
-                                    소득이 높은 연도에 Top-up하면 더 큰 절세 효과를 얻을 수 있습니다.
-                                </p>
-                            </div>
-                            
-                            <div class="border-l-4 border-orange-500 pl-4">
-                                <h4 class="font-bold text-orange-900">4. 현금 유동성</h4>
-                                <p class="text-sm text-gray-600">
-                                    Top-up은 55세 이후에만 인출 가능하므로 현금 유동성을 고려하세요.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Key Rules -->
+                <div class="bg-gray-100 border border-gray-300 rounded-xl p-6">
+                    <h3 class="font-bold text-lg mb-4">핵심 규칙 & 주의사항</h3>
+                    <ul class="text-gray-700 list-disc pl-5 space-y-2">
+                        <li><span class="font-medium">이전 순서:</span> SA → RA 먼저, 부족분 OA → RA</li>
+                        <li><span class="font-medium">인출 규칙:</span> 누구나 $5K는 55세부터 인출 가능, FRS 충족 시 초과분 인출 가능</li>
+                        <li><span class="font-medium">MA는 별개:</span> RA 이전과 관계없이 BHS 범위 내 유지</li>
+                    </ul>
+                    <div class="text-sm text-gray-500 mt-4 text-right">2025년 8월 28일 제2차 금융세미나 중</div>
                 </div>
             </div>
         </section>
-
         <!-- Section 5: 인출 옵션 & 타이밍 -->
-        <section id="section-5" class="min-h-screen">
+        <section id="section-4" class="min-h-screen">
             <div class="section-divider">
-                <div class="section-number">5</div>
+                <div class="section-number">4</div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6 py-16">
@@ -693,7 +582,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
-                                    <span>인플레이션 보정</span>
+                                    <span>인플레이션 보정 옵션 존재(Escalating Plan)</span>
                                 </li>
                             </ul>
                         </div>
@@ -726,9 +615,9 @@
         </section>
 
         <!-- Section 6: SRS vs CPF 비교 -->
-        <section id="section-6" class="min-h-screen bg-gray-50">
+        <section id="section-5" class="min-h-screen bg-gray-50">
             <div class="section-divider">
-                <div class="section-number">6</div>
+                <div class="section-number">5</div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6 py-16">
@@ -784,19 +673,12 @@
                     <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
                         <h4 class="text-xl font-bold text-blue-900 mb-4">
                             <i class="fas fa-user-tie text-blue-600 mr-2"></i>
-                            외국인/EP 홀더 전략
+                            외국인 전략
                         </h4>
                         <p class="text-gray-700 mb-4">
-                            SRS를 주력으로 활용하되, 별도 투자도 병행하여 유동성 확보
+                            절세목적으로 SRS 활용을 고려하되 엄밀히 말해 과세이연 혜택을 받고, 매우 긴 자금 묶임이 발생하므로 신중히 고려하고, 별도 투자도 병행하여 유동성 확보
                         </p>
-                        <div class="bg-blue-100 rounded-lg p-4">
-                            <h5 class="font-semibold text-blue-800 mb-2">추천 배분:</h5>
-                            <ul class="text-sm text-blue-700 space-y-1">
-                                <li>• SRS: 연 $35,700 (소득공제 최대 활용)</li>
-                                <li>• 별도 투자: 유동성 자금 (주식, ETF, 부동산 등)</li>
-                                <li>• 현금: 응급자금 (월 생활비 6개월분)</li>
-                            </ul>
-                        </div>
+
                     </div>
                     
                     <div class="bg-red-50 rounded-xl p-6 border border-red-200">
@@ -807,23 +689,16 @@
                         <p class="text-gray-700 mb-4">
                             CPF Top-up을 최우선으로, 여유 자금으로 SRS 병행
                         </p>
-                        <div class="bg-red-100 rounded-lg p-4">
-                            <h5 class="font-semibold text-red-800 mb-2">추천 배분:</h5>
-                            <ul class="text-sm text-red-700 space-y-1">
-                                <li>• 1순위: CPF Top-up $8,000 (본인) + $8,000 (가족)</li>
-                                <li>• 2순위: SRS $15,300 (추가 절세 원할 경우)</li>
-                                <li>• 3순위: 별도 투자 (고수익 추구시)</li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 7: 요약 및 실전 액션 -->
-        <section id="section-7" class="min-h-screen">
+        <section id="section-6" class="min-h-screen">
             <div class="section-divider">
-                <div class="section-number">7</div>
+                <div class="section-number">6</div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6 py-16">
