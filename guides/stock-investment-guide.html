@@ -54,12 +54,14 @@
         padding: 1rem 2rem;
     }
     .nav-link {
-        padding: 0.5rem 1rem;
-        margin: 0 0.25rem;
+        padding: 0.375rem 0.75rem;
+        margin: 0 0.125rem;
         border-radius: 6px;
         text-decoration: none;
         color: #6b7280;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        white-space: nowrap;
         transition: all 0.2s;
     }
     .nav-link:hover, .nav-link.active {
@@ -315,10 +317,10 @@
           <i class="fas fa-arrow-left"></i>
           <span class="font-semibold">메인으로</span>
         </a>
-        <div class="flex">
+        <div class="flex flex-wrap gap-1">
           <a href="#cover" class="nav-link">커버</a>
-          <a href="#performance" class="nav-link">성과비교</a>
-          <a href="#timing" class="nav-link">매도타이밍</a>
+          <a href="#performance" class="nav-link">성과</a>
+          <a href="#timing" class="nav-link">매도</a>
           <a href="#rules" class="nav-link">투자룰</a>
           <a href="#summary" class="nav-link">요약</a>
         </div>
