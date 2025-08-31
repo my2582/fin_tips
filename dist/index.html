@@ -134,8 +134,8 @@
     
     <!-- CTA Section -->
     <section class="cta-section">
-      <h2 class="cta-title">🎯 싱가포르 금융 완전정복 가이드</h2>
-      <p class="cta-subtitle">실전 경험을 바탕으로 만든 5가지 필수 가이드로 금융 목표를 달성하세요</p>
+      <h2 class="cta-title">🎯 싱가포르 금융 실전 가이드</h2>
+      <p class="cta-subtitle">실전 경험을 바탕으로 만든 2가지 핵심 가이드로 금융 목표를 달성하세요</p>
       
       <button class="cta-primary" onclick="openGuideModal()">
         📚 꿀Tip 가이드 보기 (무료)
@@ -182,9 +182,6 @@
           </li>
           <li class="guide-nav-item">
             <a href="#guide-cpf55-guide" class="guide-nav-link" onclick="showGuide('cpf55-guide', this)">55세 CPF 변화 가이드</a>
-          </li>
-          <li class="guide-nav-item">
-            <a href="#guide-tax-save-guide" class="guide-nav-link" onclick="showGuide('tax-save-guide', this)">CPF·SRS 절세 가이드</a>
           </li>
         </ul>
       </nav>
@@ -374,14 +371,15 @@
         filename: '금융_꿀Tip단지_가이드02_CPF55세변화.html',
         slug: 'cpf55_guide',
         arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=cpf55_guide&expert_referral=yeom_minsu'
-      },
-      'tax-save-guide': {
-        title: 'CPF·SRS 절세 가이드',
-        description: '소득구간별 절세 효과($1,000당 $70~$220)와 CPF·SRS 실전 활용법. 세금 혜택을 최대한 활용하는 전략을 제공합니다.',
-        filename: '금융_꿀Tip단지_가이드03_절세전략.html',
-        slug: 'tax_save_guide',
-        arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=tax_save_guide&expert_referral=yeom_minsu'
       }
+      // Guide 3 will be added later
+      // 'tax-save-guide': {
+      //   title: 'CPF·SRS 절세 가이드',
+      //   description: '소득구간별 절세 효과($1,000당 $70~$220)와 CPF·SRS 실전 활용법. 세금 혜택을 최대한 활용하는 전략을 제공합니다.',
+      //   filename: '금융_꿀Tip단지_가이드03_절세전략.html',
+      //   slug: 'tax_save_guide',
+      //   arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=tax_save_guide&expert_referral=yeom_minsu'
+      // }
     };
 
     // Current active guide
@@ -438,8 +436,7 @@
       // Open guide in new tab
       const guideUrls = {
         'stock-guide': '/guides/stock-investment-guide.html',
-        'cpf55-guide': '/guides/guide2-cover.html', 
-        'tax-save-guide': '/guides/guide3-cover.html'
+        'cpf55-guide': '/guides/guide2-cover.html'
       };
       
       const url = guideUrls[guideId];
