@@ -75,8 +75,47 @@
     .owner { margin-top: 6px; font-size: 12px; color: var(--muted); }
     .owner a { color: var(--accent); text-decoration: none; }
     .disclaimer { margin-top: 14px; font-size: 11px; line-height: 1.6; color: var(--muted); border-top: 1px solid #1f2937; padding-top: 12px; text-align: left; }
+    
+    /* CTA Section Styles */
+    .cta-section { margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #1e293b, #0f172a); border: 1px solid #334155; border-radius: 16px; }
+    .cta-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: var(--fg); }
+    .cta-subtitle { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .cta-primary { width: 100%; padding: 16px 24px; background: linear-gradient(135deg, #0ea5e9, #0284c7); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; margin-bottom: 16px; }
+    .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(14, 165, 233, 0.4); }
+    .cta-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: #1e293b; color: var(--accent); border: 1px solid #334155; border-radius: 10px; text-decoration: none; font-size: 14px; font-weight: 500; transition: all 0.3s ease; margin: 4px; }
+    .cta-secondary:hover { background: #334155; transform: translateY(-1px); }
+    .cta-tertiary { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: transparent; color: var(--muted); border: 1px solid #374151; border-radius: 8px; text-decoration: none; font-size: 13px; transition: all 0.3s ease; margin: 4px; }
+    .cta-tertiary:hover { color: var(--accent); border-color: var(--accent); }
+    
+    /* Guide Modal Styles */
+    .guide-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; overflow-y: auto; }
+    .guide-modal.show { display: flex; align-items: flex-start; justify-content: center; padding: 20px; }
+    .guide-content { background: var(--bg); border: 1px solid #334155; border-radius: 16px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; margin-top: 20px; }
+    .guide-header { padding: 20px; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; }
+    .guide-title { font-size: 18px; font-weight: 600; color: var(--fg); }
+    .guide-close { background: none; border: none; color: var(--muted); font-size: 24px; cursor: pointer; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
+    .guide-close:hover { color: var(--fg); }
+    .guide-nav { padding: 0 20px; border-bottom: 1px solid #334155; }
+    .guide-nav-list { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
+    .guide-nav-item { margin: 0; }
+    .guide-nav-link { display: block; padding: 12px 16px; color: var(--muted); text-decoration: none; font-size: 14px; transition: all 0.3s ease; border-bottom: 2px solid transparent; }
+    .guide-nav-link.active, .guide-nav-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .guide-body { padding: 20px; }
+    .guide-item { margin-bottom: 32px; }
+    .guide-item:last-child { margin-bottom: 0; }
+    .guide-item h3 { color: var(--accent); font-size: 16px; margin-bottom: 16px; }
+    .guide-item .guide-description { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+    .guide-item .guide-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .guide-download-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--accent); color: var(--bg); border: none; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+    .guide-download-btn:hover { background: #0284c7; transform: translateY(-1px); }
+    
     @media (min-width: 640px) {
       header { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .guide-nav-list { flex-direction: column; }
+      .guide-nav-link { border-bottom: none; border-left: 2px solid transparent; }
+      .guide-nav-link.active, .guide-nav-link:hover { border-left-color: var(--accent); border-bottom-color: transparent; }
     }
   </style>
 </head>
@@ -92,6 +131,32 @@
         <div class="counter" id="counter"></div>
       </div>
     </header>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="cta-title">🎯 싱가포르 금융 완전정복 가이드</h2>
+      <p class="cta-subtitle">실전 경험을 바탕으로 만든 5가지 필수 가이드로 금융 목표를 달성하세요</p>
+      
+      <button class="cta-primary" onclick="openGuideModal()">
+        📚 꿀Tip 가이드 보기 (무료)
+      </button>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_cpf_srs'); return false;">
+          🏦 Arki Finance 방문
+        </a>
+        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_rookie90'); return false;">
+          💼 투자 전문가 상담
+        </a>
+      </div>
+      
+      <div>
+        <a href="https://www.linkedin.com/company/arkifinance" class="cta-tertiary" onclick="trackCTA('tertiary', 'linkedin_follow')" target="_blank" rel="noopener">
+          💼 LinkedIn 팔로우
+        </a>
+      </div>
+    </section>
+
     <main id="container" style="margin-top:14px; display:grid; gap:12px;"></main>
     <div class="footer">
       <div>모바일에서 쉽게 보이도록 최적화된 버전 • 업데이트 계속 예정</div>
@@ -99,6 +164,38 @@
       <div class="disclaimer">
         <strong>면책조항</strong><br>
         본 자료는 일반적인 정보 제공을 위한 것이며, 어떠한 경우에도 투자권유, 투자자문 또는 법적·세무적 조언에 해당하지 않습니다. 제공된 정보의 정확성·완전성을 보장하지 않으며, 본 자료를 신뢰하여 행해진 어떠한 행위 또는 투자 결과에 대해서도 책임을 지지 않습니다. 투자 결정과 그에 따른 손익의 책임은 전적으로 투자자 본인에게 있습니다. 시장 상황, 제도 및 세법은 예고 없이 변경될 수 있으며, 과거의 성과는 미래의 수익을 보장하지 않습니다.
+      </div>
+    </div>
+  </div>
+
+  <!-- Guide Modal -->
+  <div class="guide-modal" id="guideModal">
+    <div class="guide-content">
+      <div class="guide-header">
+        <h2 class="guide-title">📚 금융 꿀Tip 가이드</h2>
+        <button class="guide-close" onclick="closeGuideModal()">&times;</button>
+      </div>
+      <nav class="guide-nav">
+        <ul class="guide-nav-list">
+          <li class="guide-nav-item">
+            <a href="#guide-cpf-srs" class="guide-nav-link active" onclick="showGuide('cpf-srs', this)">CPF & SRS 완전정복</a>
+          </li>
+          <li class="guide-nav-item">
+            <a href="#guide-rookie90" class="guide-nav-link" onclick="showGuide('rookie90', this)">신입 90일 체크리스트</a>
+          </li>
+          <li class="guide-nav-item">
+            <a href="#guide-pr-roadmap" class="guide-nav-link" onclick="showGuide('pr-roadmap', this)">PR 로드맵</a>
+          </li>
+          <li class="guide-nav-item">
+            <a href="#guide-cpf50plus" class="guide-nav-link" onclick="showGuide('cpf50plus', this)">CPF 50+ 환급</a>
+          </li>
+          <li class="guide-nav-item">
+            <a href="#guide-equity-rules" class="guide-nav-link" onclick="showGuide('equity-rules', this)">주식투자 5원칙</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="guide-body" id="guideBody">
+        <!-- Guide content will be loaded here -->
       </div>
     </div>
   </div>
@@ -265,6 +362,233 @@
         });
       }
     })();
+  </script>
+
+  <script>
+    // Guide data
+    const GUIDES = {
+      'cpf-srs': {
+        title: 'CPF & SRS 완전정복 가이드',
+        description: 'CPF와 SRS를 활용한 은퇴 준비 완벽 가이드입니다. 세금 혜택부터 투자 전략까지 모든 것을 담았습니다.',
+        filename: 'SG_FinTips_Guide01_CPF_SRS_Complete.pdf',
+        slug: 'cpf_srs',
+        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=cpf_srs&expert_referral=yeom_minsu'
+      },
+      'rookie90': {
+        title: '신입 90일 체크리스트',
+        description: '싱가포르 이민 후 첫 90일 동안 반드시 해야 할 금융 업무들을 단계별로 안내합니다.',
+        filename: 'SG_FinTips_Guide02_Rookie90_Checklist.pdf',
+        slug: 'rookie90',
+        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=rookie90&expert_referral=yeom_minsu'
+      },
+      'pr-roadmap': {
+        title: 'PR 취득 로드맵',
+        description: '영주권 취득을 위한 체계적인 준비 과정과 필요한 금융 조건들을 상세히 설명합니다.',
+        filename: 'SG_FinTips_Guide03_PR_Roadmap.pdf',
+        slug: 'pr_roadmap',
+        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=pr_roadmap&expert_referral=yeom_minsu'
+      },
+      'cpf50plus': {
+        title: 'CPF 50+ 환급 가이드',
+        description: '50세 이후 CPF 환급 조건과 절차, 최적 타이밍에 대한 실전 가이드입니다.',
+        filename: 'SG_FinTips_Guide04_CPF_50plus_Refund.pdf',
+        slug: 'cpf50plus',
+        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=cpf50plus&expert_referral=yeom_minsu'
+      },
+      'equity-rules': {
+        title: '주식투자 5가지 원칙',
+        description: '싱가포르에서의 안전하고 효율적인 주식 투자를 위한 핵심 원칙들을 정리했습니다.',
+        filename: 'SG_FinTips_Guide05_Equity_Rules.pdf',
+        slug: 'equity_rules',
+        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=equity_rules&expert_referral=yeom_minsu'
+      }
+    };
+
+    // Current active guide
+    let currentGuide = 'cpf-srs';
+
+    // Modal functions
+    function openGuideModal() {
+      document.getElementById('guideModal').classList.add('show');
+      showGuide(currentGuide);
+      trackCTA('primary', 'guide_modal_open');
+    }
+
+    function closeGuideModal() {
+      document.getElementById('guideModal').classList.remove('show');
+    }
+
+    function showGuide(guideId, linkElement) {
+      currentGuide = guideId;
+      const guide = GUIDES[guideId];
+      
+      // Update active nav link
+      document.querySelectorAll('.guide-nav-link').forEach(link => {
+        link.classList.remove('active');
+      });
+      if (linkElement) {
+        linkElement.classList.add('active');
+      }
+
+      // Update guide content
+      const guideBody = document.getElementById('guideBody');
+      guideBody.innerHTML = `
+        <div class="guide-item">
+          <h3>${guide.title}</h3>
+          <p class="guide-description">${guide.description}</p>
+          <div class="guide-actions">
+            <button class="guide-download-btn" onclick="downloadGuide('${guideId}')">
+              📥 PDF 다운로드
+            </button>
+            <a href="${guide.arki_link}" class="cta-secondary" onclick="trackCTA('secondary', '${guide.slug}')" target="_blank" rel="noopener">
+              🏦 Arki Finance 방문
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // Download function (simulated - would need actual PDF files)
+    function downloadGuide(guideId) {
+      const guide = GUIDES[guideId];
+      
+      // Track download event
+      trackEbookDownload(guide.slug, guide.filename);
+      
+      // In production, this would trigger actual file download
+      alert(`"${guide.title}" PDF 다운로드가 곧 시작됩니다.\n\n파일명: ${guide.filename}\n\n실제 구현 시에는 PDF 파일이 다운로드됩니다.`);
+    }
+
+    // CTA tracking function
+    function trackCTA(ctaType, campaign) {
+      // GA4 tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_click', {
+          cta_type: ctaType,
+          campaign: campaign,
+          engagement_time_msec: 1000
+        });
+      }
+
+      // Custom tracking (existing endpoint)
+      const payload = {
+        cid: getCidForTracking(),
+        page: location.href,
+        title: document.title,
+        event_name: 'cta_click',
+        params: {
+          cta_type: ctaType,
+          campaign: campaign
+        }
+      };
+      sendTrackingData(payload);
+
+      // Handle actual link navigation for secondary CTAs
+      if (ctaType === 'secondary' && GUIDES[currentGuide]) {
+        const guide = GUIDES[currentGuide];
+        if (campaign.startsWith('arki_')) {
+          setTimeout(() => {
+            window.open(guide.arki_link, '_blank', 'noopener,noreferrer');
+          }, 100);
+        }
+      }
+    }
+
+    // Ebook download tracking
+    function trackEbookDownload(slug, filename) {
+      // GA4 tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'ebook_download', {
+          guide_slug: slug,
+          file_name: filename,
+          engagement_time_msec: 1000
+        });
+      }
+
+      // Custom tracking
+      const payload = {
+        cid: getCidForTracking(),
+        page: location.href,
+        title: document.title,
+        event_name: 'ebook_download',
+        params: {
+          guide_slug: slug,
+          file_name: filename
+        }
+      };
+      sendTrackingData(payload);
+    }
+
+    // Form submit tracking (for future use)
+    function trackFormSubmit(formType, formData) {
+      // GA4 tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', {
+          form_type: formType,
+          engagement_time_msec: 1000
+        });
+      }
+
+      // Custom tracking
+      const payload = {
+        cid: getCidForTracking(),
+        page: location.href,
+        title: document.title,
+        event_name: 'form_submit',
+        params: {
+          form_type: formType,
+          ...formData
+        }
+      };
+      sendTrackingData(payload);
+    }
+
+    // Helper functions for tracking
+    function getCidForTracking() {
+      try {
+        let cid = localStorage.getItem('ft_client_id');
+        if (!cid) {
+          cid = 'cid.' + Math.random().toString(36).slice(2) + '.' + Date.now();
+          localStorage.setItem('ft_client_id', cid);
+        }
+        return cid;
+      } catch (_) {
+        return 'cid.' + Math.random().toString(36).slice(2) + '.' + Date.now();
+      }
+    }
+
+    function sendTrackingData(data) {
+      const endpoint = '/api/track';
+      const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+      if (navigator.sendBeacon && navigator.sendBeacon(endpoint, blob)) return;
+      try {
+        fetch(endpoint, { 
+          method: 'POST', 
+          headers: { 'Content-Type': 'application/json' }, 
+          body: JSON.stringify(data), 
+          keepalive: true 
+        });
+      } catch (_) {}
+    }
+
+    // Close modal on outside click
+    document.getElementById('guideModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeGuideModal();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeGuideModal();
+      }
+    });
+
+    // Initialize default guide content
+    document.addEventListener('DOMContentLoaded', function() {
+      showGuide('cpf-srs');
+    });
   </script>
 </body>
 </html>
