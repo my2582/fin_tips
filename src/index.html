@@ -350,6 +350,14 @@
               engagement_time_msec: 1000
             });
           }
+          
+          // Enhanced tracking: Search performed
+          if (typeof trackUserScore === 'function') {
+            trackUserScore('search_performed', 8, {
+              search_term: q.substring(0, 50), // Limit for privacy
+              search_length: q.length
+            });
+          }
         });
       }
     })();
@@ -390,6 +398,12 @@
       document.getElementById('guideModal').classList.add('show');
       showGuide(currentGuide);
       trackCTA('primary', 'guide_modal_open');
+      
+      // Enhanced tracking: Guide modal opened
+      trackUserScore('guide_modal_open', 15, {
+        modal_type: 'guide_selection',
+        available_guides: Object.keys(GUIDES).length
+      });
     }
 
     function closeGuideModal() {
@@ -433,6 +447,13 @@
       // Track view event
       trackEbookDownload(guide.slug, guide.filename);
       
+      // Enhanced tracking: Guide downloaded
+      trackUserScore('guide_download', 25, {
+        guide_id: guideId,
+        guide_type: guide.slug,
+        guide_title: guide.title
+      });
+      
       // Open guide in new tab
       const guideUrls = {
         'stock-guide': '/guides/stock-investment-guide.html',
@@ -470,6 +491,22 @@
         }
       };
       sendTrackingData(payload);
+
+      // Enhanced tracking: CTA clicked with scoring
+      let score = 0;
+      if (ctaType === 'primary') {
+        score = 15; // Modal open, guide interest
+      } else if (ctaType === 'secondary') {
+        score = 100; // Arki Finance visit - highest value action
+      } else if (ctaType === 'tertiary') {
+        score = 30; // LinkedIn follow - social engagement
+      }
+      
+      trackUserScore(`cta_click_${ctaType}`, score, {
+        cta_type: ctaType,
+        campaign: campaign,
+        guide_context: currentGuide
+      });
 
       // Handle actual link navigation for secondary CTAs
       if (ctaType === 'secondary' && GUIDES[currentGuide]) {
@@ -559,6 +596,172 @@
       } catch (_) {}
     }
 
+    // ===== ENHANCED USER JOURNEY TRACKING =====
+    
+    // User engagement scoring system
+    function trackUserScore(action, score, additionalData = {}) {
+      try {
+        let userScore = parseInt(localStorage.getItem('user_engagement_score') || '0');
+        let sessionScore = parseInt(sessionStorage.getItem('session_engagement_score') || '0');
+        
+        userScore += score;
+        sessionScore += score;
+        
+        localStorage.setItem('user_engagement_score', userScore.toString());
+        sessionStorage.setItem('session_engagement_score', sessionScore.toString());
+        
+        const userSegment = getUserSegment(userScore);
+        const sessionSegment = getSessionSegment(sessionScore);
+        
+        // Track to GA4
+        if (typeof gtag === 'function') {
+          gtag('event', 'user_engagement_score', {
+            action: action,
+            score: score,
+            total_score: userScore,
+            session_score: sessionScore,
+            user_segment: userSegment,
+            session_segment: sessionSegment,
+            engagement_time_msec: 1000,
+            ...additionalData
+          });
+        }
+        
+        // Custom tracking
+        const payload = {
+          cid: getCidForTracking(),
+          page: location.href,
+          title: document.title,
+          event_name: 'user_engagement_score',
+          params: {
+            action: action,
+            score: score,
+            total_score: userScore,
+            session_score: sessionScore,
+            user_segment: userSegment,
+            session_segment: sessionSegment,
+            ...additionalData
+          }
+        };
+        sendTrackingData(payload);
+        
+        // Check for segment upgrade
+        checkSegmentUpgrade(userSegment, sessionSegment);
+        
+        return { userSegment, sessionSegment, userScore, sessionScore };
+      } catch (error) {
+        console.error('Error tracking user score:', error);
+        return null;
+      }
+    }
+    
+    // User segmentation based on total engagement score
+    function getUserSegment(score) {
+      if (score >= 200) return 'hot_lead';      // Guide completion + Arki visit + multiple actions
+      if (score >= 100) return 'warm_lead';     // Guide completion or Arki visit
+      if (score >= 50) return 'interested';     // Guide download + some interaction
+      if (score >= 20) return 'engaged';        // Modal opened + some interaction
+      return 'visitor';                         // Basic interaction only
+    }
+    
+    // Session segmentation based on current session score
+    function getSessionSegment(score) {
+      if (score >= 150) return 'hot_session';   // High engagement in current session
+      if (score >= 75) return 'warm_session';   // Moderate engagement
+      if (score >= 25) return 'active_session'; // Some engagement
+      return 'passive_session';                 // Low engagement
+    }
+    
+    // Check for segment upgrades and trigger events
+    function checkSegmentUpgrade(currentSegment, sessionSegment) {
+      const lastSegment = localStorage.getItem('last_user_segment');
+      
+      if (lastSegment !== currentSegment) {
+        localStorage.setItem('last_user_segment', currentSegment);
+        
+        // Track segment upgrade
+        if (typeof gtag === 'function') {
+          gtag('event', 'user_segment_upgrade', {
+            previous_segment: lastSegment || 'new_user',
+            new_segment: currentSegment,
+            session_segment: sessionSegment
+          });
+        }
+        
+        // Trigger personalized actions based on segment
+        triggerSegmentActions(currentSegment, sessionSegment);
+      }
+    }
+    
+    // Trigger actions based on user segment
+    function triggerSegmentActions(userSegment, sessionSegment) {
+      // Hot lead actions
+      if (userSegment === 'hot_lead' && sessionSegment === 'hot_session') {
+        // Could trigger a special offer popup, priority support, etc.
+        console.log('🔥 Hot Lead detected! Consider priority engagement.');
+      }
+      
+      // Warm lead actions  
+      else if (userSegment === 'warm_lead') {
+        // Could show additional guides, newsletter signup, etc.
+        console.log('🔥 Warm Lead detected! Consider additional content offers.');
+      }
+    }
+    
+    // Enhanced page view tracking with context
+    function trackEnhancedPageView(pageContext = {}) {
+      const visitCount = parseInt(localStorage.getItem('visit_count') || '0') + 1;
+      const sessionPageViews = parseInt(sessionStorage.getItem('session_page_views') || '0') + 1;
+      
+      localStorage.setItem('visit_count', visitCount.toString());
+      sessionStorage.setItem('session_page_views', sessionPageViews.toString());
+      
+      trackUserScore('page_view', 5, {
+        visit_count: visitCount,
+        session_page_views: sessionPageViews,
+        is_returning_user: visitCount > 1,
+        ...pageContext
+      });
+    }
+    
+    // Initialize enhanced tracking when page loads
+    function initializeEnhancedTracking() {
+      // Track enhanced page view
+      trackEnhancedPageView({
+        page_type: 'landing',
+        referrer_domain: document.referrer ? new URL(document.referrer).hostname : 'direct'
+      });
+      
+      // Track time on page
+      let timeOnPage = 0;
+      const timeTrackingInterval = setInterval(() => {
+        timeOnPage += 10;
+        
+        // Track milestone engagements
+        if (timeOnPage === 30) { // 30 seconds
+          trackUserScore('time_engagement_30s', 10, { time_on_page: 30 });
+        } else if (timeOnPage === 60) { // 1 minute
+          trackUserScore('time_engagement_1min', 15, { time_on_page: 60 });
+        } else if (timeOnPage === 120) { // 2 minutes
+          trackUserScore('time_engagement_2min', 20, { time_on_page: 120 });
+        }
+      }, 10000); // Check every 10 seconds
+      
+      // Clear interval on page unload
+      window.addEventListener('beforeunload', () => {
+        clearInterval(timeTrackingInterval);
+        
+        // Track session end
+        if (typeof gtag === 'function') {
+          gtag('event', 'session_end', {
+            time_on_page: timeOnPage,
+            final_score: sessionStorage.getItem('session_engagement_score') || '0',
+            final_segment: getUserSegment(parseInt(localStorage.getItem('user_engagement_score') || '0'))
+          });
+        }
+      });
+    }
+
     // Close modal on outside click
     document.getElementById('guideModal').addEventListener('click', function(e) {
       if (e.target === this) {
@@ -576,6 +779,27 @@
     // Initialize default guide content
     document.addEventListener('DOMContentLoaded', function() {
       showGuide('stock-guide');
+      
+      // Initialize enhanced tracking system
+      if (typeof initializeEnhancedTracking === 'function') {
+        initializeEnhancedTracking();
+      }
+    });
+    
+    // Listen for guide completion messages from child windows
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'guide_completion') {
+        const { guideId, score, totalScore } = event.data;
+        
+        // Update local tracking with completion data
+        trackUserScore('guide_completion_return', score, {
+          guide_id: guideId,
+          completed_in_new_window: true,
+          total_score_after_completion: totalScore
+        });
+        
+        console.log(`🎉 Guide ${guideId} completed! New total score: ${totalScore}`);
+      }
     });
   </script>
 </body>

@@ -318,6 +318,38 @@
                 'guide_id': 'guide2',
                 'completion_page': 'page8'
             });
+            
+            // Enhanced tracking: Guide completion with high score
+            gtag('event', 'user_engagement_score', {
+                'action': 'guide_completion',
+                'score': 50,
+                'guide_id': 'guide2',
+                'guide_name': 'CPF 55세 변화 실전가이드',
+                'completion_page': 'page8',
+                'user_segment': 'interested_min', // At least interested segment
+                'engagement_time_msec': 2000
+            });
+        }
+        
+        // Store completion in localStorage for parent window tracking
+        try {
+            if (window.opener && !window.opener.closed) {
+                // If opened from main site, update parent tracking
+                let userScore = parseInt(localStorage.getItem('user_engagement_score') || '0');
+                userScore += 50; // Guide completion bonus
+                localStorage.setItem('user_engagement_score', userScore.toString());
+                
+                // Send message to parent window if available
+                window.opener.postMessage({
+                    type: 'guide_completion',
+                    guideId: 'guide2',
+                    score: 50,
+                    totalScore: userScore
+                }, '*');
+            }
+        } catch (error) {
+            // Ignore cross-origin errors
+            console.log('Guide completion tracked locally');
         }
     </script>
 </body>

@@ -1,0 +1,24 @@
+서버가 포트 8080에서 실행 중입니다...
+웹사이트: http://0.0.0.0:8080
+31/Aug/2025 05:08:28 - "GET / HTTP/1.1" 200 -
+31/Aug/2025 05:08:28 - code 501, message Unsupported method ('POST')
+31/Aug/2025 05:08:28 - "POST /api/track HTTP/1.1" 501 -
+31/Aug/2025 05:08:28 - code 404, message File not found
+31/Aug/2025 05:08:28 - "GET /favicon.ico HTTP/1.1" 404 -
+서버가 포트 8080에서 실행 중입니다...
+웹사이트: http://0.0.0.0:8080
+31/Aug/2025 10:31:15 - "GET / HTTP/1.1" 200 -
+31/Aug/2025 10:31:15 - code 501, message Unsupported method ('POST')
+31/Aug/2025 10:31:15 - "POST /api/track HTTP/1.1" 501 -
+31/Aug/2025 10:31:15 - code 404, message File not found
+31/Aug/2025 10:31:15 - "GET /favicon.ico HTTP/1.1" 404 -
+서버가 포트 8080에서 실행 중입니다...
+웹사이트: http://0.0.0.0:8080
+31/Aug/2025 10:53:47 - "GET / HTTP/1.1" 200 -
+31/Aug/2025 10:53:47 - code 501, message Unsupported method ('POST')
+31/Aug/2025 10:53:47 - "POST /api/track HTTP/1.1" 501 -
+31/Aug/2025 10:53:47 - code 404, message File not found
+31/Aug/2025 10:53:47 - "GET /favicon.ico HTTP/1.1" 404 -
+31/Aug/2025 10:54:01 - "GET /guides/stock-investment-guide.html HTTP/1.1" 200 -
+31/Aug/2025 10:54:02 - code 404, message File not found
+31/Aug/2025 10:54:02 - "GET /favicon.ico HTTP/1.1" 404 -
