@@ -16,19 +16,9 @@
             top: 40px;
             right: 40px;
             color: #f0f0f0;
-            font-size: 6rem;
+            font-size: 66px;
             font-weight: 900;
             opacity: 0.6;
-            z-index: 1;
-        }
-        .red-bar {
-            background-color: #DC2626;
-            height: 14px;
-            width: 88px;
-        }
-        .title-highlight {
-            color: #DC2626;
-            font-weight: 800;
         }
         .bottom-texture {
             position: absolute;
@@ -36,13 +26,25 @@
             left: 0;
             right: 0;
             height: 320px;
-            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
             z-index: 1;
         }
         .content {
             position: relative;
             z-index: 2;
+        }
+        .red-bar {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            height: 14px;
+            width: 88px;
+            border-radius: 7px;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+        .title-highlight {
+            color: #DC2626;
+            font-weight: 900;
+            text-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
         }
         .year-badge {
             background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
@@ -63,104 +65,67 @@
             font-weight: 600;
             margin-left: 12px;
             font-size: 1.1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(55, 65, 81, 0.3);
         }
         .author-info {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 20px;
-            border: 1px solid #E5E7EB;
+            padding: 24px;
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         .author-line {
             display: flex;
             align-items: center;
             margin-bottom: 8px;
-            transition: all 0.3s ease;
-        }
-        .author-line:hover {
-            transform: translateX(4px);
+            color: #374151;
         }
         .author-url {
-            color: #4B5563;
+            color: #6B7280;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
         }
         .author-url:hover {
             color: #DC2626;
+            text-shadow: 0 1px 3px rgba(220, 38, 38, 0.2);
         }
-        .main-title {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .cta-button {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        .guide-preview {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(220, 38, 38, 0.1) 100%);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
         }
     </style>
-
-    <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-
-        // Track guide start
-        gtag('event', 'guide_start', {
-            'guide_name': 'CPF·SRS 절세 가이드',
-            'guide_id': 'guide3',
-            'page': 'cover'
-        });
-    </script>
 </head>
-<body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
-    <!-- Header Navigation -->
-    <header class="bg-white shadow-sm border-b border-gray-200 relative z-10">
+<body class="bg-gradient-to-br from-gray-50 to-slate-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-red-100">
         <div class="max-w-4xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="../src/index.html" class="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
-                    <i class="fas fa-arrow-left text-xl mr-3"></i>
-                    <span class="font-semibold">메인으로 돌아가기</span>
+                <a href="../src/index.html" class="flex items-center space-x-3 text-red-600 hover:text-red-800 transition-colors">
+                    <i class="fas fa-arrow-left text-xl"></i>
+                    <span class="font-semibold">메인으로</span>
                 </a>
-                <div class="text-sm text-gray-500">
-                    Guide 3 of 3
-                </div>
+                <div class="text-sm text-gray-500">Guide 3</div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="relative min-h-screen">
-        <!-- Background Elements -->
+    <!-- Main Cover Content -->
+    <main class="min-h-screen relative overflow-hidden">
         <div class="guide-number">03</div>
         <div class="bottom-texture"></div>
         
-        <!-- Content -->
         <div class="content max-w-4xl mx-auto px-6 py-16 flex flex-col justify-between min-h-screen">
             <!-- Top Section -->
             <div class="top-section pt-20">
                 <div class="red-bar mb-8"></div>
-                <h1 class="main-title">
+                <h1 class="text-6xl font-black leading-tight mb-8">
                     <span class="title-highlight">CPF·SRS</span><br/>
-                    절세 가이드
+                    <span class="text-gray-900">절세 가이드</span>
                 </h1>
-                <p class="text-2xl text-gray-700 font-medium leading-relaxed">
+                <p class="text-2xl font-medium text-gray-700 leading-relaxed max-w-2xl">
                     싱가포르에서 꼭 알아야 할 CPF Top-up과<br/>
                     SRS 불입을 통한 절세 방법
                 </p>
@@ -168,135 +133,118 @@
 
             <!-- Middle Section -->
             <div class="middle-section my-16">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            직관적인 수치, 실제 전략, 핵심 요약까지<br/>
-                            모두 모바일로 최적화!
-                        </p>
-                        
-                        <div class="author-info">
-                            <div class="author-line">
-                                <i class="fas fa-shield-alt mr-3 text-green-600"></i>
-                                <span class="font-medium">실제 세미나 자료 기반</span>
-                            </div>
-                            <div class="author-line">
-                                <i class="fas fa-user-circle mr-3 text-blue-600"></i>
-                                <span class="font-medium">염민수</span>
-                            </div>
-                            <div class="author-line">
-                                <i class="fas fa-link mr-3 text-purple-600"></i>
-                                <a class="author-url font-medium" href="https://fintips.netlify.app/" target="_blank">
-                                    https://fintips.netlify.app/
-                                </a>
-                            </div>
+                <div class="guide-preview mb-8">
+                    <h2 class="text-xl font-bold text-red-800 mb-4">
+                        <i class="fas fa-calculator mr-2"></i>
+                        이 가이드에서 배울 내용
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>CPF Top-up 절세 메커니즘</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>SRS 불입 최적 전략</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>소득 구간별 절세 효과</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>세무 신고 실전 팁</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Quick Preview -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                            <i class="fas fa-list-check text-green-600 mr-3"></i>
-                            가이드 미리보기
-                        </h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-center">
-                                <i class="fas fa-calculator text-blue-500 mr-3"></i>
-                                <span>절세 효과 계산법</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-chart-line text-green-500 mr-3"></i>
-                                <span>소득 구간별 최적 전략</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-balance-scale text-purple-500 mr-3"></i>
-                                <span>CPF vs SRS 우선순위</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-file-invoice text-orange-500 mr-3"></i>
-                                <span>세무 신고 실무 팁</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-road text-indigo-500 mr-3"></i>
-                                <span>장기 절세 로드맵</span>
-                            </li>
-                        </ul>
+                <p class="text-xl text-gray-600 mb-8">
+                    직관적인 수치, 실제 전략, 핵심 요약까지<br/>
+                    모두 모바일로!
+                </p>
+
+                <div class="author-info">
+                    <div class="author-line">
+                        <i class="fas fa-shield-alt text-red-500 mr-3"></i>
+                        <span class="font-semibold">실제 세미나 자료 기반</span>
+                    </div>
+                    <div class="author-line">
+                        <i class="fas fa-user-circle text-blue-500 mr-3"></i>
+                        <span>작성자: <strong>염민수</strong></span>
+                    </div>
+                    <div class="author-line">
+                        <i class="fas fa-link text-purple-500 mr-3"></i>
+                        <a class="author-url font-medium" href="https://fintips.netlify.app/" target="_blank">
+                            https://fintips.netlify.app/
+                        </a>
+                    </div>
+                    <div class="author-line">
+                        <i class="fas fa-building text-green-500 mr-3"></i>
+                        <a class="author-url font-medium" href="https://arkifinance.com/?utm_source=fintips&utm_medium=guide3&utm_campaign=tax_guide" target="_blank">
+                            Arki Finance
+                        </a>
                     </div>
                 </div>
             </div>
 
             <!-- Bottom Section -->
             <div class="bottom-section mb-20">
-                <div class="flex flex-wrap items-center gap-4 mb-8">
+                <div class="flex flex-wrap items-center mb-6">
                     <div class="year-badge">
                         <i class="fas fa-calendar-alt mr-2"></i>
                         2025 최신판
                     </div>
                     <div class="mobile-badge">
-                        <i class="fas fa-mobile-alt mr-2"></i>
+                        <i class="fas fa-mobile-alt mr-2"></i> 
                         모바일 최적화
                     </div>
                 </div>
-
-                <!-- CTA Section -->
-                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200 mb-8">
-                    <div class="text-center">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                            절세 전략으로 더 많은 자산을 지키세요!
-                        </h3>
-                        <p class="text-gray-600 mb-6">
-                            CPF와 SRS를 활용한 스마트한 절세 방법을 지금 시작하세요
-                        </p>
-                        <a href="guide3-page1.html" class="cta-button">
-                            <i class="fas fa-play mr-2"></i>
-                            가이드 시작하기
-                        </a>
-                    </div>
+                
+                <div class="flex items-center text-gray-500">
+                    <div class="w-12 h-1 bg-red-300 rounded"></div>
+                    <p class="ml-4 text-sm font-medium">금융 꿀Tip단지 가이드 03</p>
                 </div>
 
-                <!-- Footer Info -->
-                <div class="flex items-center justify-between border-t border-gray-200 pt-6">
-                    <div class="flex items-center">
-                        <div class="w-12 h-1 bg-gray-300 rounded"></div>
-                        <p class="ml-4 text-sm text-gray-500 font-medium">금융 꿀Tip단지 가이드 03</p>
-                    </div>
-                    <div class="text-sm text-gray-500">
-                        약 15-20분 소요
-                    </div>
+                <!-- Start Guide Button -->
+                <div class="mt-8">
+                    <a href="guide3-page1.html" 
+                       class="inline-flex items-center px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-play mr-3"></i>
+                        가이드 시작하기
+                    </a>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Secondary CTAs -->
-    <footer class="bg-white border-t border-gray-200 relative z-10">
-        <div class="max-w-4xl mx-auto px-6 py-8">
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Primary CTA -->
-                <div class="text-center">
-                    <h4 class="font-bold text-gray-900 mb-3">전문 상담이 필요하다면?</h4>
-                    <a href="https://arkifinance.com/?utm_source=fintips&utm_medium=guide3&utm_campaign=tax_guide" 
-                       target="_blank"
-                       onclick="gtag('event', 'cta_click', { 'cta_type': 'arki_finance', 'guide_id': 'guide3', 'location': 'footer' });"
-                       class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-block">
-                        <i class="fas fa-external-link-alt mr-2"></i>
-                        Arki Finance 상담받기
-                    </a>
-                </div>
-
-                <!-- Secondary CTA -->
-                <div class="text-center">
-                    <h4 class="font-bold text-gray-900 mb-3">최신 금융 정보를 받아보세요</h4>
-                    <a href="https://linkedin.com/company/arki-finance" 
-                       target="_blank"
-                       onclick="gtag('event', 'cta_click', { 'cta_type': 'linkedin_follow', 'guide_id': 'guide3', 'location': 'footer' });"
-                       class="bg-gray-100 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors font-semibold inline-block">
-                        <i class="fab fa-linkedin mr-2"></i>
-                        LinkedIn 팔로우
-                    </a>
-                </div>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center">
+            <p class="text-gray-600 mb-4">
+                본 가이드는 일반적인 정보 제공 목적이며, 개인별 상황에 맞는 전문 상담을 권장합니다.
+            </p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="../src/index.html" class="hover:text-red-600 transition-colors">메인으로</a>
+                <span>•</span>
+                <a href="../guides/stock-investment-guide.html" class="hover:text-red-600 transition-colors">가이드 1</a>
+                <span>•</span>
+                <a href="../guides/guide2-cover.html" class="hover:text-red-600 transition-colors">가이드 2</a>
+                <span>•</span>
+                <a href="#" class="hover:text-red-600 transition-colors">문의하기</a>
             </div>
         </div>
     </footer>
+
+    <!-- GA4 Tracking -->
+    <script>
+        // Track guide start
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'guide_start', {
+                'guide_name': 'CPF·SRS 절세 가이드',
+                'guide_id': 'guide3',
+                'page_location': window.location.href
+            });
+        }
+    </script>
 </body>
 </html>
