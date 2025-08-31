@@ -57,11 +57,7 @@ function toBool(v) {
 // 기본 프로모 문구(파일 없을 때)
 function readPromo() {
   if (fs.existsSync(PROMO_TXT)) return normalizeText(fs.readFileSync(PROMO_TXT, 'utf8').trim());
-  return normalizeText([
-    '남들이 뭘 고민하는지, 무슨 질문을 하는지 궁금하셨죠?',
-    '1:1 세션 참석자분으로부터 받은 피드백을 참고하여 금융 꿀Tip단지를 만들었습니다.',
-    '여기에 답변까지 합쳐서 모아둡니다. 앞으로 계속 채워갈 생각입니다.'
-  ].join('\n'));
+  return normalizeText('2차 세미나 만족도 5.0/5점! 참가자 100% 추천 의향 달성 🎉\n\'정보가 너무 많아 뭐가 맞는지 모르겠다\'는 고민을 완벽 해결해드립니다.');
 }
 
 // 3행(=index 2) 헤더가 맞는 시트를 자동 탐색
