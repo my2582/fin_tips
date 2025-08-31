@@ -178,10 +178,10 @@
       <nav class="guide-nav">
         <ul class="guide-nav-list">
           <li class="guide-nav-item">
-            <a href="#guide-stock-guide" class="guide-nav-link active" onclick="showGuide('stock-guide', this)">주식투자 원칙 가이드</a>
+            <a href="guides/stock-investment-guide.html" class="guide-nav-link active" onclick="trackGuideClick('stock-guide')">주식투자 원칙 가이드</a>
           </li>
           <li class="guide-nav-item">
-            <a href="#guide-cpf55-guide" class="guide-nav-link" onclick="showGuide('cpf55-guide', this)">55세 CPF 변화 가이드</a>
+            <a href="guides/cpf-retirement-guide.html" class="guide-nav-link" onclick="trackGuideClick('cpf55-guide')">55세 CPF 변화 가이드</a>
           </li>
         </ul>
       </nav>
@@ -539,6 +539,41 @@
         params: {
           guide_slug: slug,
           file_name: filename
+        }
+      };
+      sendTrackingData(payload);
+    }
+
+    // Guide tab click tracking
+    function trackGuideClick(guideId) {
+      const guide = GUIDES[guideId];
+      
+      // GA4 tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'guide_tab_click', {
+          guide_slug: guide.slug,
+          guide_title: guide.title,
+          engagement_time_msec: 1000
+        });
+      }
+
+      // Enhanced user journey tracking
+      trackUserScore('guide_tab_click', 15, {
+        guide_slug: guide.slug,
+        guide_title: guide.title,
+        click_source: 'modal_tab'
+      });
+
+      // Custom tracking
+      const payload = {
+        cid: getCidForTracking(),
+        page: location.href,
+        title: document.title,
+        event_name: 'guide_tab_click',
+        params: {
+          guide_slug: guide.slug,
+          guide_title: guide.title,
+          click_source: 'modal_tab'
         }
       };
       sendTrackingData(payload);
