@@ -122,7 +122,7 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>💡 금융 꿀Tip단지</h1>
+      <h1><a href="/" style="text-decoration: none; color: inherit; cursor: pointer;">💡 금융 꿀Tip단지</a></h1>
       <div class="sub">Maintained by 염민수 · <a href="mailto:nlfelix@gmail.com">nlfelix@gmail.com</a></div>
       <div class="updated" id="updated"></div>
       <div class="promo" id="promo"></div>
@@ -145,8 +145,8 @@
         <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_stock_guide'); return false;">
           🏦 Arki Finance 방문
         </a>
-        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'investment_consultation'); return false;">
-          💼 투자 전문가 상담
+        <a href="#" class="cta-secondary" onclick="openSeminarSurvey(); trackCTA('secondary', 'seminar_survey'); return false;">
+          📋 다음 세미나 주제 제안하기
         </a>
       </div>
       
@@ -368,7 +368,7 @@
     const GUIDES = {
       'stock-guide': {
         title: '타이밍보다 원칙: 개인투자자 주식 가이드',
-        description: 'Schwab 연구 기반 Buy&Hold vs 매도타이밍 전략. 개인투자자를 위한 실전 주식투자 원칙과 3가지 핵심 룰을 제공합니다.',
+        description: 'Buy&Hold vs 매도타이밍 전략 비교분석. 개인투자자를 위한 실전 주식투자 원칙과 3가지 핵심 룰을 제공합니다.',
         filename: '금융_꿀Tip단지_가이드01_주식투자원칙.html',
         slug: 'stock_guide',
         arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=stock_guide&expert_referral=yeom_minsu'
@@ -801,6 +801,21 @@
         console.log(`🎉 Guide ${guideId} completed! New total score: ${totalScore}`);
       }
     });
+    
+    // Seminar survey function - opens Microsoft Forms
+    function openSeminarSurvey() {
+      // TODO: Replace with actual Microsoft Forms URL
+      const formsUrl = 'https://forms.office.com/your-actual-form-url';
+      
+      // For now, show alert with instructions
+      alert(`📋 세미나 주제 제안 설문\n\n다음 세미나에서 다루었으면 하는 주제를 제안해 주세요!\n\n• 이름과 이메일 주소\n• 관심 있는 금융 주제\n• 현재 투자 상황\n• 가장 궁금한 점\n\n곧 Microsoft Forms 링크로 연결됩니다.`);
+      
+      // Track survey interest
+      trackUserScore('seminar_survey_interest', 20, {
+        survey_type: 'seminar_topic_suggestion',
+        user_action: 'survey_clicked'
+      });
+    }
   </script>
 </body>
 </html>
