@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>차익실현, 언제가 적기일까?</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 720px;
+            min-height: 1280px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #ED2E38;
+            height: 8px;
+        }
+        .title-underline {
+            width: 60px;
+            height: 4px;
+            background-color: #ED2E38;
+        }
+        .process-box {
+            border-left: 3px solid #ED2E38;
+            background-color: #FEF2F2;
+            border-radius: 0 4px 4px 0;
+        }
+        .highlight-box {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #FEF2F2;
+            color: #ED2E38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        .flowchart-box {
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        .flowchart-item {
+            position: relative;
+            padding: 8px;
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .flowchart-arrow {
+            display: block;
+            text-align: center;
+            color: #ED2E38;
+            font-size: 16px;
+            margin: 2px 0;
+        }
+        .quote-box {
+            border-left: 4px solid #ED2E38;
+            padding-left: 16px;
+            margin: 14px 0;
+        }
+        /* Increased font sizes by 10% */
+        .text-3xl {
+            font-size: 2.06rem;
+        }
+        .text-lg {
+            font-size: 1.24rem;
+        }
+        .text-xl {
+            font-size: 1.375rem;
+        }
+        p, div {
+            font-size: 1.1em;
+        }
+        /* Compact layout for flowchart */
+        .compact-flowchart .flowchart-item {
+            padding: 8px;
+            margin-bottom: 6px;
+        }
+        .compact-flowchart .flowchart-arrow {
+            margin: 0;
+        }
+        .compact-flowchart p {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-8 py-8">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-6">
+<div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+<div class="text-sm text-gray-500">2</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-3">차익실현, 언제가 적기일까?</h1>
+<div class="title-underline mb-5"></div>
+<!-- Introduction -->
+<div class="mt-4 mb-5">
+<div class="quote-box">
+<p class="text-lg font-medium">"삼성전자가 50% 올랐습니다. 팔아야 할까요, 말아야 할까요?"</p>
+<p class="text-gray-600 mt-1">"더 중요한 질문 - 팔고 나서 그 돈을 어디에 둘 건가요?"</p>
+</div>
+</div>
+<!-- Flowchart -->
+<div class="mt-4">
+<h3 class="font-bold text-lg mb-2">매도 후 딜레마 플로우차트</h3>
+<div class="flowchart-box p-3 bg-gray-50 compact-flowchart">
+<div class="flowchart-item shadow-sm">
+<div class="font-bold text-red-600">1. 매도 결정:</div>
+<div>"삼성전자 50% 올라서 팔았다!"</div>
+</div>
+<div class="flowchart-arrow">
+<i class="fas fa-arrow-down"></i>
+</div>
+<div class="flowchart-item shadow-sm">
+<div class="font-bold text-red-600">2. 현금 보유 상태 → 연 8~10% 기회비용</div>
+<div>"다시 사기엔 너무 비싸고..."</div>
+</div>
+<div class="flowchart-arrow">
+<i class="fas fa-arrow-down"></i>
+</div>
+<div class="flowchart-item shadow-sm">
+<div class="font-bold text-red-600">3. 핵심 질문: 재진입 시점은?</div>
+<div>대부분의 투자자가 빠지는 함정</div>
+<div class="mt-1 text-sm">
+주가 오르기 전: "아직 더 떨어지겠지..."<br/>
+주가 오른 후: "이제 너무 올랐어..."
+</div>
+</div>
+<div class="flowchart-arrow">
+<i class="fas fa-arrow-down"></i>
+</div>
+<div class="flowchart-item shadow-sm">
+<div class="font-bold text-red-600">4. Larry Linger 상태: 영원히 재진입 X</div>
+<div>"아, 시장 더 떨어지겠지... 조금만 더 기다리자..."</div>
+</div>
+</div>
+</div>
+<!-- Key Message -->
+<div class="mt-6 process-box p-3">
+<p class="font-bold">"차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는 Larry처럼 현금으로 머물다 기회를 상실하게 됩니다."</p>
+</div>
+<!-- Bottom Question -->
+<div class="highlight-box p-3 mt-5">
+<div class="flex">
+<div class="mr-3 text-blue-500">
+<i class="fas fa-question-circle text-xl"></i>
+</div>
+<div>
+<h3 class="font-medium">자기 점검</h3>
+<p class="text-gray-700 text-sm">수익률 좋을 때 팔고 나서, 언제 다시 살지 정하신 적 있나요? 그리고 기회를 놓치고 올라가는 시장만 바라보셨던 적 혹시 없으신가요?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

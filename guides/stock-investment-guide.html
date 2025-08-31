@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>타이밍보다 원칙: 개인투자자 주식 가이드 | 금융 꿀Tip단지</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FBJWQ0KHB8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FBJWQ0KHB8');
+</script>
+
+<style>
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #f8fafc;
+        color: #1a202c;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    .guide-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .page-section {
+        width: 100%;
+        min-height: 100vh;
+        padding: 2rem;
+        border-bottom: 2px solid #e5e7eb;
+    }
+    .page-section:last-child {
+        border-bottom: none;
+    }
+    
+    /* Navigation */
+    .sticky-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        z-index: 100;
+        padding: 1rem 2rem;
+    }
+    .nav-link {
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #6b7280;
+        font-size: 0.875rem;
+        transition: all 0.2s;
+    }
+    .nav-link:hover, .nav-link.active {
+        background-color: #ed2e38;
+        color: white;
+    }
+    
+    /* CTA Buttons */
+    .cta-section {
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        color: white;
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .cta-primary {
+        background: linear-gradient(135deg, #0ea5e9, #0284c7);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        margin: 8px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s;
+    }
+    .cta-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(14, 165, 233, 0.4);
+    }
+    .cta-secondary {
+        background: #1e293b;
+        color: #38bdf8;
+        border: 1px solid #334155;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px;
+        font-size: 0.875rem;
+        transition: all 0.3s;
+    }
+    .cta-secondary:hover {
+        background: #334155;
+        transform: translateY(-1px);
+    }
+
+    /* Guide-specific styles - Combined from all pages */
+    .red-bar {
+        background-color: #ED2E38;
+        height: 14px;
+        width: 88px;
+    }
+    .title-highlight {
+        color: #ED2E38;
+        font-weight: 800;
+    }
+    .title-underline {
+        width: 60px;
+        height: 4px;
+        background-color: #ED2E38;
+    }
+    .header-bar {
+        background-color: #ED2E38;
+        height: 8px;
+    }
+    .blue-header-bar {
+        background-color: #0047AB;
+        height: 8px;
+    }
+    .blue-title-underline {
+        width: 60px;
+        height: 4px;
+        background-color: #0047AB;
+    }
+    
+    /* Page 1 styles */
+    .guide-number {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        color: #f0f0f0;
+        font-size: 66px;
+        font-weight: 900;
+        opacity: 0.6;
+    }
+    .bottom-texture {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 320px;
+        background-color: #f8fafc;
+        clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+        z-index: 1;
+    }
+    .year-badge {
+        background-color: #ED2E38;
+        color: white;
+        display: inline-block;
+        padding: 7px 18px;
+        border-radius: 22px;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    .mobile-badge {
+        background-color: #2D3748;
+        color: white;
+        display: inline-block;
+        padding: 7px 18px;
+        border-radius: 22px;
+        font-weight: 600;
+        margin-left: 8px;
+        font-size: 1.1rem;
+    }
+    
+    /* Strategy boxes */
+    .strategy-box {
+        border-left: 3px solid;
+        border-radius: 0 4px 4px 0;
+        padding: 8px;
+        margin-bottom: 8px;
+    }
+    .best-strategy {
+        border-color: #10B981;
+        background-color: #ECFDF5;
+    }
+    .good-strategy {
+        border-color: #3B82F6;
+        background-color: #EFF6FF;
+    }
+    .average-strategy {
+        border-color: #F59E0B;
+        background-color: #FEF3C7;
+    }
+    .worst-strategy {
+        border-color: #EF4444;
+        background-color: #FEF2F2;
+    }
+    
+    /* Feature icons */
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #FEF2F2;
+        color: #ED2E38;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    /* Highlight boxes */
+    .highlight-box {
+        background-color: #F9FAFB;
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+    }
+    .process-box {
+        border-left: 3px solid #ED2E38;
+        background-color: #FEF2F2;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    /* Warning/Success/Tip boxes */
+    .warning-box {
+        border: 2px solid #FECACA;
+        background-color: #FEF2F2;
+        border-radius: 8px;
+    }
+    .success-box {
+        border: 2px solid #BFDBFE;
+        background-color: #EFF6FF;
+        border-radius: 8px;
+    }
+    .tip-box {
+        border: 2px solid #D1FAE5;
+        background-color: #ECFDF5;
+        border-radius: 8px;
+    }
+    
+    /* Flowchart styles */
+    .flowchart-box {
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+    }
+    .flowchart-item {
+        position: relative;
+        padding: 8px;
+        background: white;
+        border: 1px solid #E5E7EB;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+    .flowchart-arrow {
+        display: block;
+        text-align: center;
+        color: #ED2E38;
+        font-size: 16px;
+        margin: 2px 0;
+    }
+    .quote-box {
+        border-left: 4px solid #ED2E38;
+        padding-left: 16px;
+        margin: 14px 0;
+    }
+    
+    /* Step styles for page 5 */
+    .step-number {
+        background-color: #0047AB;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .step-card {
+        border-left: 4px solid #0047AB;
+        transition: transform 0.2s;
+    }
+    .step-card:hover {
+        transform: translateX(5px);
+    }
+    .action-box {
+        background-color: #EFF6FF;
+        border-radius: 8px;
+    }
+    .disclaimer-box {
+        background-color: #FEF3F2;
+        border: 1px solid #FCA5A5;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 16px;
+    }
+</style>
+</head>
+
+<body>
+<div class="guide-container">
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <a href="/" class="text-lg font-bold text-gray-800">금융 꿀Tip단지</a>
+        <div class="flex">
+          <a href="#cover" class="nav-link">커버</a>
+          <a href="#performance" class="nav-link">성과비교</a>
+          <a href="#timing" class="nav-link">매도타이밍</a>
+          <a href="#rules" class="nav-link">투자룰</a>
+          <a href="#summary" class="nav-link">요약</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page 1: Cover -->
+  <section id="cover" class="page-section" style="position: relative; min-height: 1280px;">
+    <div class="guide-number">01</div>
+    <div class="bottom-texture"></div>
+    <div class="content" style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 4rem 2rem;">
+      <div class="top-section pt-20">
+        <div class="red-bar mb-6"></div>
+        <h1 style="font-size: 3.3rem; font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem;">
+          <span class="title-highlight">타이밍보다 원칙:</span><br/>
+          개인투자자 주식 가이드
+        </h1>
+        <p style="font-size: 1.38rem; font-weight: 500; margin-top: 2rem; color: #374151;">
+          실패를 피하고 오래 살아남기 위한<br/>주식투자 룰
+        </p>
+      </div>
+      
+      <div class="middle-section my-24">
+        <p style="font-size: 1.24rem; color: #6b7280;">
+          데이터와 실제 사례로 정리한<br/>
+          <span class="font-bold">개인투자자 생존 지침서.</span>
+        </p>
+      </div>
+      
+      <div class="bottom-section mb-16">
+        <div style="display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 16px;">
+          <div style="font-size: 1.1rem; color: #4A5568; margin-bottom: 5px; font-style: italic;">
+            <i class="fas fa-shield-alt" style="margin-right: 3px;"></i> 실제 세미나 자료 기반
+          </div>
+          <div style="font-size: 1.1rem; font-weight: 600; color: #2D3748; margin-bottom: 5px;">
+            👤 염민수
+          </div>
+          <div style="font-size: 1.1rem; color: #4A5568;">
+            🌐 <a href="https://fintips.netlify.app/" target="_blank" style="color: #4A5568; text-decoration: none; border-bottom: 1px dotted #4A5568;">https://fintips.netlify.app/</a>
+          </div>
+        </div>
+        
+        <div class="flex">
+          <div class="year-badge">2025 최신판</div>
+          <div class="mobile-badge">
+            <i class="fas fa-mobile-alt mr-1"></i> 모바일 최적화
+          </div>
+        </div>
+        
+        <div class="flex items-center mt-4">
+          <div class="w-10 h-1 bg-gray-300"></div>
+          <p class="ml-3 text-sm text-gray-500">금융 꿀Tip단지 가이드 01</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Section after cover -->
+    <div class="cta-section">
+      <h3 class="text-xl font-bold mb-3">💡 더 많은 금융 가이드가 궁금하시다면?</h3>
+      <p class="mb-4 opacity-90">CPF 변화와 절세 전략까지, 3가지 실전 가이드를 모두 확인해보세요!</p>
+      <div>
+        <a href="https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=stock_guide&expert_referral=yeom_minsu" 
+           class="cta-primary" target="_blank" onclick="gtag('event', 'cta_click', {cta_type: 'primary', campaign: 'arki_visit'})">
+          🏦 Arki Finance 전문가 상담
+        </a>
+        <a href="https://www.linkedin.com/company/arkifinance" 
+           class="cta-secondary" target="_blank" onclick="gtag('event', 'cta_click', {cta_type: 'tertiary', campaign: 'linkedin_follow'})">
+          💼 LinkedIn 팔로우
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 2: Performance Comparison -->
+  <section id="performance" class="page-section">
+    <div class="header-bar mb-8"></div>
+    
+    <div class="flex justify-between items-center mb-6">
+      <div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+      <div class="text-sm text-gray-500">1</div>
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4">성과 비교: Buy&Hold vs 매도타이밍</h1>
+    <div class="title-underline mb-6"></div>
+    
+    <div class="mb-6">
+      <p class="text-xl font-medium mb-2">Schwab 연구: 2005~2024년 S&P 500 투자 시뮬레이션</p>
+      <p class="text-gray-600"><strong style="background-color: rgb(249, 237, 163); color: rgb(225, 83, 76);">매년 $2,000씩 20년 동안 투자</strong>, 다섯 가지 다른 매수 방법 비교</p>
+    </div>
+    
+    <!-- Strategy Comparison -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div class="strategy-box best-strategy">
+        <div class="flex items-center">
+          <div class="feature-icon bg-green-50 text-green-600">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold">매년 최저점 매수</h3>
+            <span class="text-xl font-bold text-green-600">$186,077</span>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-box good-strategy">
+        <div class="flex items-center">
+          <div class="feature-icon bg-blue-50 text-blue-600">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold">첫 거래일 즉시 매수</h3>
+            <span class="text-xl font-bold text-blue-600">$170,555</span>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-box average-strategy">
+        <div class="flex items-center">
+          <div class="feature-icon bg-yellow-50 text-yellow-600">
+            <i class="fas fa-thumbs-down"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold">매년 최고점 매수</h3>
+            <span class="text-xl font-bold text-yellow-600">$151,343</span>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-box worst-strategy">
+        <div class="flex items-center">
+          <div class="feature-icon bg-red-50 text-red-600">
+            <i class="fas fa-hand-paper"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold">미투자(현금보유)</h3>
+            <span class="text-xl font-bold text-red-600">$47,357</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chart -->
+    <div class="mb-6">
+      <h3 class="font-medium text-lg mb-4">20년간 투자 성과 비교</h3>
+      <div class="chart-container" style="position: relative; height:300px;">
+        <canvas id="performanceChart"></canvas>
+      </div>
+    </div>
+    
+    <!-- Key Points -->
+    <div class="space-y-4 mb-6">
+      <div class="flex items-start">
+        <div class="feature-icon">
+          <i class="fas fa-exclamation text-lg"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg">완벽한 타이밍 vs 즉시 투자: 차이는 $15K에 불과</h3>
+          <p class="text-gray-600 mt-2">최고의 타이밍과 즉시 투자의 차이는 크지 않음</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <div class="feature-icon">
+          <i class="fas fa-clock text-lg"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg">최악의 타이밍도 괜찮습니다</h3>
+          <p class="text-gray-600 mt-2">매년 최고점 투자도 미투자보다 3.2배 높은 수익</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Quote Box -->
+    <div class="highlight-box p-4">
+      <div class="flex">
+        <div class="mr-3 text-blue-500">
+          <i class="fas fa-quote-left text-lg"></i>
+        </div>
+        <div>
+          <p class="text-gray-700">"마켓 타이밍이 아니라, 시장에 오래 남아있는 것(Time in the Market)이 성과를 결정합니다."</p>
+          <p class="text-xs text-gray-500 mt-2">출처: Schwab 연구 (https://www.schwab.com/learn/story/does-market-timing-work)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 3: Timing Dilemma -->
+  <section id="timing" class="page-section">
+    <div class="header-bar mb-8"></div>
+    
+    <div class="flex justify-between items-center mb-6">
+      <div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+      <div class="text-sm text-gray-500">2</div>
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4">차익실현, 언제가 적기일까?</h1>
+    <div class="title-underline mb-6"></div>
+    
+    <div class="quote-box mb-6">
+      <p class="text-xl font-medium">"삼성전자가 50% 올랐습니다. 팔아야 할까요, 말아야 할까요?"</p>
+      <p class="text-gray-600 mt-2">"더 중요한 질문 - 팔고 나서 그 돈을 어디에 둘 건가요?"</p>
+    </div>
+    
+    <!-- Flowchart -->
+    <div>
+      <h3 class="font-bold text-lg mb-4">매도 후 딜레마 플로우차트</h3>
+      <div class="flowchart-box p-4 bg-gray-50">
+        <div class="flowchart-item shadow-sm">
+          <div class="font-bold text-red-600">1. 매도 결정:</div>
+          <div>"삼성전자 50% 올라서 팔았다!"</div>
+        </div>
+        <div class="flowchart-arrow">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="flowchart-item shadow-sm">
+          <div class="font-bold text-red-600">2. 현금 보유 상태 → 연 8~10% 기회비용</div>
+          <div>"다시 사기엔 너무 비싸고..."</div>
+        </div>
+        <div class="flowchart-arrow">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="flowchart-item shadow-sm">
+          <div class="font-bold text-red-600">3. 핵심 질문: 재진입 시점은?</div>
+          <div>대부분의 투자자가 빠지는 함정</div>
+          <div class="mt-2 text-sm">
+            주가 오르기 전: "아직 더 떨어지겠지..."<br/>
+            주가 오른 후: "이제 너무 올랐어..."
+          </div>
+        </div>
+        <div class="flowchart-arrow">
+          <i class="fas fa-arrow-down"></i>
+        </div>
+        <div class="flowchart-item shadow-sm">
+          <div class="font-bold text-red-600">4. Larry Linger 상태: 영원히 재진입 X</div>
+          <div>"아, 시장 더 떨어지겠지... 조금만 더 기다리자..."</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Key Message -->
+    <div class="process-box p-4 mt-6 mb-6">
+      <p class="font-bold">"차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는 Larry처럼 현금으로 머물다 기회를 상실하게 됩니다."</p>
+    </div>
+    
+    <!-- Self Check -->
+    <div class="highlight-box p-4">
+      <div class="flex">
+        <div class="mr-3 text-blue-500">
+          <i class="fas fa-question-circle text-xl"></i>
+        </div>
+        <div>
+          <h3 class="font-medium text-lg">자기 점검</h3>
+          <p class="text-gray-700 text-sm mt-2">수익률 좋을 때 팔고 나서, 언제 다시 살지 정하신 적 있나요? 그리고 기회를 놓치고 올라가는 시장만 바라보셨던 적 혹시 없으신가요?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4: Investment Rules -->
+  <section id="rules" class="page-section">
+    <div class="header-bar mb-8"></div>
+    
+    <div class="flex justify-between items-center mb-6">
+      <div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+      <div class="text-sm text-gray-500">3</div>
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4">개인 투자자를 위한 최소한의 주식투자 룰</h1>
+    <div class="title-underline mb-6"></div>
+    
+    <p class="text-xl font-medium mb-6">투자의 성공은 완벽한 타이밍이 아닌 간단한 룰을 지키는 것</p>
+    
+    <!-- Rule 1: Goal-based Exit -->
+    <div class="warning-box p-6 mb-6">
+      <h3 class="flex items-center font-bold text-xl text-red-600 mb-3">
+        <i class="fas fa-flag-checkered mr-3"></i>
+        1. 필요에 의한 매도 (Goal-based Exit)
+      </h3>
+      <div class="space-y-2">
+        <div class="flex items-start">
+          <div class="text-red-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">투자 기여분 목표에 도달하면 → 매도</span></p>
+        </div>
+        <div class="flex items-start">
+          <div class="text-red-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">그 숫자가 주식 비중 상한선</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Rule 2: Safety Belt Rule -->
+    <div class="success-box p-6 mb-6">
+      <h3 class="flex items-center font-bold text-xl text-blue-600 mb-3">
+        <i class="fas fa-shield-alt mr-3"></i>
+        2. 안전벨트 룰 (비중 조절)
+      </h3>
+      <div class="space-y-2">
+        <div class="flex items-start">
+          <div class="text-blue-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">전체 금융자산 최대손실률 -20% 제한</span></p>
+        </div>
+        <div class="flex items-start">
+          <div class="text-blue-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">주식 비중 30~40% 이내로 유지</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Rule 3: Scaling Out -->
+    <div class="tip-box p-6 mb-6">
+      <h3 class="flex items-center font-bold text-xl text-green-600 mb-3">
+        <i class="fas fa-balance-scale mr-3"></i>
+        3. 원금 회수 전략 (Scaling Out)
+      </h3>
+      <div class="space-y-2">
+        <div class="flex items-start">
+          <div class="text-green-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">+100% 수익률 달성 시 → 절반 매도</span></p>
+        </div>
+        <div class="flex items-start">
+          <div class="text-green-500 mr-3 mt-1 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+          <p class="text-lg"><span class="font-medium">원금(안전), House Money(모험)</span></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Key Summary -->
+    <div class="process-box p-6 mb-6">
+      <h3 class="font-bold text-xl mb-3">핵심 실천 포인트</h3>
+      <div class="flex items-start">
+        <div class="mr-4 text-red-500 mt-1 flex-shrink-0"><i class="fas fa-chart-line text-2xl"></i></div>
+        <div>
+          <p class="font-medium text-lg mb-3">투자의 성공은 완벽한 타이밍이 아니라 간단한 룰을 지키는 것입니다.</p>
+          <ol class="text-gray-600 space-y-1 list-decimal pl-6">
+            <li>Larry처럼 시장을 떠나지 마세요</li>
+            <li>매도할 때는 다음 계획을 가지고 하세요</li>
+            <li>여러분만의 기준선을 정하세요</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Quote -->
+    <div class="text-center italic text-gray-600">
+      <p class="text-lg">"차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는<br/>Larry처럼 현금으로 머물다 기회를 상실하게 됩니다."</p>
+      <p class="text-sm mt-2">- 2025년 8월 28일 제2차 금융세미나 중</p>
+    </div>
+  </section>
+
+  <!-- Page 5: Summary & Action Plan -->
+  <section id="summary" class="page-section">
+    <div class="blue-header-bar mb-8"></div>
+    
+    <div class="flex justify-between items-center mb-8">
+      <div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+      <div class="text-sm text-gray-500">5</div>
+    </div>
+    
+    <h1 class="text-4xl font-bold mb-4">요약 및 실전 액션 플랜</h1>
+    <div class="blue-title-underline mb-6"></div>
+    
+    <p class="text-xl text-gray-700 mb-6">
+      "투자의 성공은 완벽한 타이밍이 아니라 간단한 룰을 지키는 것입니다."
+    </p>
+    
+    <!-- Action Steps -->
+    <div class="action-box p-6 mb-8">
+      <h2 class="font-bold text-2xl mb-3">주식투자 성공 전략 체크리스트</h2>
+      <p class="text-gray-600">
+        Schwab 연구(2005~2024년)가 증명하듯, 매년 최고점에 투자해도($151,343) 현금만 보유($47,357)보다 훨씬 높은 수익을 냈습니다.
+      </p>
+    </div>
+    
+    <!-- Step by Step Guide -->
+    <div class="relative">
+      <!-- Step 1 -->
+      <div class="flex mb-8 relative">
+        <div class="step-number z-10">1</div>
+        <div class="step-card ml-6 p-4 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+          <h3 class="font-bold text-xl">Larry처럼 시장을 떠나지 마세요</h3>
+          <p class="text-gray-600 mt-2">진짜 실패는 시장에 안 들어가는 것입니다. 현금만 보유한 Larry와 최악 타이밍의 Rosie의 차이는 3.2배입니다.</p>
+        </div>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="flex mb-8 relative">
+        <div class="step-number z-10">2</div>
+        <div class="step-card ml-6 p-4 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+          <h3 class="font-bold text-xl">매도할 때는 다음 계획을 가지고 하세요</h3>
+          <p class="text-gray-600 mt-2">차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는 기회를 상실하게 됩니다.</p>
+        </div>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="flex mb-8 relative">
+        <div class="step-number z-10">3</div>
+        <div class="step-card ml-6 p-4 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+          <h3 class="font-bold text-xl">필요에 의한 매도 전략(Goal-based Exit)</h3>
+          <p class="text-gray-600 mt-2">투자 목표에 도달하면 매도하고, 그 숫자를 주식 비중 상한선으로 두세요.</p>
+        </div>
+      </div>
+      
+      <!-- Step 4 -->
+      <div class="flex mb-8 relative">
+        <div class="step-number z-10">4</div>
+        <div class="step-card ml-6 p-4 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+          <h3 class="font-bold text-xl">안전벨트 룰 & 원금 회수 전략</h3>
+          <p class="text-gray-600 mt-2">주식 비중 30~40% 이내로 제한하고, 수익 100% 달성 시 절반 매도로 원금을 회수하세요.</p>
+        </div>
+      </div>
+      
+      <!-- Step 5 -->
+      <div class="flex mb-8 relative">
+        <div class="step-number z-10">5</div>
+        <div class="step-card ml-6 p-4 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+          <h3 class="font-bold text-xl">여러분만의 '잠 못 이루는 기준선'을 정하세요</h3>
+          <p class="text-gray-600 mt-2">몇 % 빠지면 잠 못 이루시나요? -20%? -40%? 자신의 위험 허용 범위를 명확히 설정하세요.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Final Note -->
+    <div class="pt-4 border-t border-gray-200 mb-8">
+      <div class="flex items-start">
+        <div class="text-blue-500 mr-4 mt-1">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <p class="text-gray-600">
+          "마켓 타이밍이 아니라, 시장에 오래 남아있는 것(Time in the Market)이 성과를 결정합니다." Schwab 연구 결과, 완벽한 타이밍과 최악의 타이밍의 차이는 단 $35K에 불과합니다.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Final CTA Section -->
+    <div class="cta-section">
+      <h3 class="text-xl font-bold mb-3">🎯 다음 단계: 전문가와 함께하세요!</h3>
+      <p class="mb-4 opacity-90">이제 원칙을 알았으니, 개인 상황에 맞는 구체적인 실행 계획을 세워보세요.</p>
+      <div>
+        <a href="https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=stock_guide_completed&expert_referral=yeom_minsu" 
+           class="cta-primary" target="_blank" onclick="gtag('event', 'guide_completed', {guide_type: 'stock_investment'})">
+          🏦 Arki Finance 1:1 상담 신청
+        </a>
+      </div>
+    </div>
+    
+    <!-- Disclaimer Section -->
+    <div class="disclaimer-box">
+      <div class="flex items-start">
+        <div class="text-red-500 mr-4 mt-1">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-2">법적 고지사항 (Disclaimer)</h3>
+          <p class="text-sm text-gray-700">
+            본 가이드의 내용은 작성자 염민수 개인의 의견이며, 어떠한 경우에도 소속 회사(Arki Finance)를 대표하지 않습니다. 본 자료는 투자 조언이나 투자 권유가 아니며, 투자의 수익이나 원금을 보장하지 않습니다. 투자는 원금 손실의 위험을 수반하며, 투자 결정 전 반드시 전문가와 상담하시기 바랍니다. 본 자료는 참고용으로만 제공되며, 특정 금융상품 매매를 권장하지 않습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+// Chart.js implementation
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('performanceChart');
+    if (ctx) {
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['최저점 매수', '즉시 매수', '분할 매수', '최고점 매수', '미투자'],
+                datasets: [{
+                    label: '20년 후 금액 (매년 $2,000 투자)',
+                    data: [186077, 170555, 166591, 151343, 47357],
+                    backgroundColor: [
+                        '#10B981',
+                        '#3B82F6',
+                        '#3B82F6',
+                        '#F59E0B',
+                        '#EF4444'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            },
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    }
+});
+
+// Smooth scrolling navigation
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Update active nav
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+
+// Update active nav on scroll
+window.addEventListener('scroll', function() {
+    const sections = ['cover', 'performance', 'timing', 'rules', 'summary'];
+    const scrollPosition = window.scrollY + 100;
+    
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>

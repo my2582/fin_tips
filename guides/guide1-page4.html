@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>개인 투자자를 위한 최소한의 주식투자 룰</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 720px;
+            min-height: 1280px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #ED2E38;
+            height: 8px;
+        }
+        .title-underline {
+            width: 60px;
+            height: 4px;
+            background-color: #ED2E38;
+        }
+        .process-item {
+            position: relative;
+            padding-left: 24px;
+        }
+        .process-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #ED2E38;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -12px;
+            margin-top: 12px;
+        }
+        .process-line {
+            position: absolute;
+            left: 0;
+            top: 36px;
+            bottom: -12px;
+            width: 2px;
+            background-color: #e5e7eb;
+            z-index: 0;
+        }
+        .process-box {
+            border-left: 3px solid #ED2E38;
+            background-color: #FEF2F2;
+            border-radius: 0 4px 4px 0;
+        }
+        .highlight-box {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        .warning-box {
+            border: 2px solid #FECACA;
+            background-color: #FEF2F2;
+            border-radius: 8px;
+        }
+        .success-box {
+            border: 2px solid #BFDBFE;
+            background-color: #EFF6FF;
+            border-radius: 8px;
+        }
+        .tip-box {
+            border: 2px solid #D1FAE5;
+            background-color: #ECFDF5;
+            border-radius: 8px;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #FEF2F2;
+            color: #ED2E38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-10 py-8">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-6">
+<div class="text-base text-gray-500">금융 꿀Tip단지 가이드 01</div>
+<div class="text-base text-gray-500">3</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-3">개인 투자자를 위한 최소한의 주식투자 룰</h1>
+<div class="title-underline mb-4"></div>
+<!-- Introduction -->
+<div class="mt-3 mb-4">
+<p class="text-lg font-medium">투자의 성공은 완벽한 타이밍이 아닌 간단한 룰을 지키는 것</p>
+</div>
+<!-- Rule 1: Goal-based Exit -->
+<div class="warning-box p-4 mb-4">
+<h3 class="flex items-center font-bold text-lg text-red-600">
+<i class="fas fa-flag-checkered mr-2"></i>
+                1. 필요에 의한 매도 (Goal-based Exit)
+            </h3>
+<div class="mt-1 space-y-1">
+<div class="flex items-start">
+<div class="text-red-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">투자 기여분 목표에 도달하면 → 매도</span></p>
+</div>
+<div class="flex items-start">
+<div class="text-red-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">그 숫자가 주식 비중 상한선</span></p>
+</div>
+</div>
+</div>
+<!-- Rule 2: Safety Belt Rule -->
+<div class="success-box p-4 mb-4">
+<h3 class="flex items-center font-bold text-lg text-blue-600">
+<i class="fas fa-shield-alt mr-2"></i>
+                2. 안전벨트 룰 (비중 조절)
+            </h3>
+<div class="mt-1 space-y-1">
+<div class="flex items-start">
+<div class="text-blue-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">전체 금융자산 최대손실률 -20% 제한</span></p>
+</div>
+<div class="flex items-start">
+<div class="text-blue-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">주식 비중 30~40% 이내로 유지</span></p>
+</div>
+</div>
+</div>
+<!-- Rule 3: Scaling Out -->
+<div class="tip-box p-4 mb-4">
+<h3 class="flex items-center font-bold text-lg text-green-600">
+<i class="fas fa-balance-scale mr-2"></i>
+                3. 원금 회수 전략 (Scaling Out)
+            </h3>
+<div class="mt-1 space-y-1">
+<div class="flex items-start">
+<div class="text-green-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">+100% 수익률 달성 시 → 절반 매도</span></p>
+</div>
+<div class="flex items-start">
+<div class="text-green-500 mr-2 mt-0.5 flex-shrink-0"><i class="fas fa-arrow-right"></i></div>
+<p class="text-base"><span class="font-medium">원금(안전), House Money(모험)</span></p>
+</div>
+</div>
+</div>
+<!-- Key Summary -->
+<div class="process-box p-4 mt-4">
+<h3 class="font-bold text-lg mb-1">핵심 실천 포인트</h3>
+<div class="flex items-start">
+<div class="mr-3 text-red-500 mt-1 flex-shrink-0"><i class="fas fa-chart-line text-xl"></i></div>
+<div>
+<p class="font-medium text-base">투자의 성공은 완벽한 타이밍이 아니라 간단한 룰을 지키는 것입니다.</p>
+<ol class="text-sm text-gray-600 mt-2 space-y-0.5 list-decimal pl-5">
+<li>Larry처럼 시장을 떠나지 마세요</li>
+<li>매도할 때는 다음 계획을 가지고 하세요</li>
+<li>여러분만의 기준선을 정하세요</li>
+</ol>
+</div>
+</div>
+</div>
+<!-- Bottom Quote -->
+<div class="mt-5 text-center italic text-gray-600">
+<p class="text-sm">"차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는<br/>Larry처럼 현금으로 머물다 기회를 상실하게 됩니다."</p>
+<p class="text-xs mt-1">- 2025년 8월 28일 제2차 금융세미나 중</p>
+</div>
+</div>
+</div>
+</body>
+</html>
