@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CPF 계정 구조 변화</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 720px;
+            min-height: 1280px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #ED2E38;
+            height: 8px;
+        }
+        .title-underline {
+            width: 60px;
+            height: 4px;
+            background-color: #ED2E38;
+        }
+        .account-box {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .account-box.oa {
+            border-left: 5px solid #3B82F6;
+        }
+        .account-box.sa {
+            border-left: 5px solid #10B981;
+        }
+        .account-box.ma {
+            border-left: 5px solid #F59E0B;
+        }
+        .account-box.ra {
+            border-left: 5px solid #EC4899;
+        }
+        .transfer-arrow {
+            color: #ED2E38;
+            position: relative;
+        }
+        .highlight-box {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+        }
+        .age-badge {
+            background-color: #ED2E38;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        /* 글자 크기 10% 증가 */
+        h1 {
+            font-size: 2.2rem;  /* 10% 증가 */
+        }
+        h2 {
+            font-size: 1.43rem; /* 10% 증가 */
+        }
+        h3 {
+            font-size: 1.1rem;  /* 10% 증가 */
+        }
+        p, li {
+            font-size: 1.1rem;  /* 10% 증가 */
+        }
+        .text-sm {
+            font-size: 0.88rem; /* 10% 증가 */
+        }
+        .text-xs {
+            font-size: 0.77rem; /* 10% 증가 */
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-10 py-8">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-6">
+<div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 02</div>
+<div class="text-sm text-gray-500">2</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-2">CPF 계정 구조 변화</h1>
+<div class="title-underline mb-6"></div>
+<!-- Before 55 Section -->
+<div class="mb-6">
+<div class="flex items-center mb-3">
+<div class="age-badge mr-3">55세 이전</div>
+<h2 class="text-xl font-bold">3개 계정 개별 운영</h2>
+</div>
+<div class="grid grid-cols-3 gap-3 mb-4">
+<div class="account-box oa p-3">
+<div class="flex items-center mb-1">
+<i class="fas fa-home text-blue-500 mr-2"></i>
+<h3 class="font-bold">OA</h3>
+</div>
+<p class="text-xs text-gray-600">Ordinary Account</p>
+<div class="mt-2 text-xs">
+<p class="mb-1"><i class="fas fa-check text-blue-500 mr-1"></i> 이자율: 2.5%</p>
+<p class="mb-1"><i class="fas fa-check text-blue-500 mr-1"></i> 주택 구매</p>
+<p><i class="fas fa-check text-blue-500 mr-1"></i> 교육, 투자</p>
+</div>
+</div>
+<div class="account-box sa p-3">
+<div class="flex items-center mb-1">
+<i class="fas fa-piggy-bank text-green-500 mr-2"></i>
+<h3 class="font-bold">SA</h3>
+</div>
+<p class="text-xs text-gray-600">Special Account</p>
+<div class="mt-2 text-xs">
+<p class="mb-1"><i class="fas fa-check text-green-500 mr-1"></i> 이자율: 4%</p>
+<p class="mb-1"><i class="fas fa-check text-green-500 mr-1"></i> 은퇴 준비</p>
+<p><i class="fas fa-check text-green-500 mr-1"></i> 투자 가능</p>
+</div>
+</div>
+<div class="account-box ma p-3">
+<div class="flex items-center mb-1">
+<i class="fas fa-heartbeat text-amber-500 mr-2"></i>
+<h3 class="font-bold">MA</h3>
+</div>
+<p class="text-xs text-gray-600">MediSave Account</p>
+<div class="mt-2 text-xs">
+<p class="mb-1"><i class="fas fa-check text-amber-500 mr-1"></i> 이자율: 4%</p>
+<p class="mb-1"><i class="fas fa-check text-amber-500 mr-1"></i> 의료비 지출</p>
+<p><i class="fas fa-check text-amber-500 mr-1"></i> 건강 보험료</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Transition Arrow -->
+<div class="flex justify-center my-5">
+<div class="text-center">
+<i class="fas fa-arrow-down text-3xl transfer-arrow"></i>
+<p class="font-bold mt-1 text-red-600 text-sm">55세 생일에 자동 변환</p>
+</div>
+</div>
+<!-- After 55 Section -->
+<div class="mb-6">
+<div class="flex items-center mb-3">
+<div class="age-badge mr-3">55세 이후</div>
+<h2 class="text-xl font-bold">RA 자동 개설 + 3개 기존 계정</h2>
+</div>
+<div class="grid grid-cols-4 gap-2 mb-4">
+<div class="account-box oa p-2">
+<div class="flex items-center mb-1">
+<i class="fas fa-home text-blue-500 mr-1"></i>
+<h3 class="font-bold text-sm">OA</h3>
+</div>
+<p class="text-xs text-gray-600">변화 후 잔액</p>
+</div>
+<div class="account-box sa p-2">
+<div class="flex items-center mb-1">
+<i class="fas fa-piggy-bank text-green-500 mr-1"></i>
+<h3 class="font-bold text-sm">SA</h3>
+</div>
+<p class="text-xs text-gray-600">변화 후 잔액</p>
+</div>
+<div class="account-box ma p-2">
+<div class="flex items-center mb-1">
+<i class="fas fa-heartbeat text-amber-500 mr-1"></i>
+<h3 class="font-bold text-sm">MA</h3>
+</div>
+<p class="text-xs text-gray-600">유지됨</p>
+</div>
+<div class="account-box ra p-2">
+<div class="flex items-center mb-1">
+<i class="fas fa-wallet text-pink-500 mr-1"></i>
+<h3 class="font-bold text-sm">RA</h3>
+</div>
+<p class="text-xs text-gray-600">신규 생성</p>
+</div>
+</div>
+</div>
+<!-- RA Transfer Process -->
+<div class="highlight-box p-4 mb-6">
+<h3 class="font-bold mb-2 text-sm">RA(Retirement Account) 자동 이전 프로세스</h3>
+<ol class="space-y-2">
+<li class="flex items-start">
+<div class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 text-xs">1</div>
+<div>
+<p class="font-medium text-sm">SA에서 우선 이전</p>
+<p class="text-xs text-gray-600">Special Account의 자금이 FRS까지 우선적으로 RA로 이전</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 text-xs">2</div>
+<div>
+<p class="font-medium text-sm">SA 부족 시 OA에서 추가 이전</p>
+<p class="text-xs text-gray-600">SA 자금이 부족할 경우, OA에서 부족분 추가 이전</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2 flex-shrink-0 text-xs">3</div>
+<div>
+<p class="font-medium text-sm">FRS 목표액 채우기</p>
+<p class="text-xs text-gray-600">2025년 기준 FRS(Full Retirement Sum) $213,000 목표</p>
+</div>
+</li>
+</ol>
+</div>
+<!-- Key Points -->
+<div class="border-l-4 border-red-500 bg-red-50 p-3">
+<h3 class="font-bold mb-1 flex items-center text-sm">
+<i class="fas fa-lightbulb text-red-500 mr-2"></i>
+        핵심 포인트
+    </h3>
+<ul class="text-xs space-y-1 pl-1">
+<li><i class="fas fa-circle text-xs text-red-500 mr-1"></i>MA 계정은 의료용으로 별도 유지, 변화 없음</li>
+<li><i class="fas fa-circle text-xs text-red-500 mr-1"></i>RA는 4% 이자, 은퇴 생활비 준비 전용</li>
+<li><i class="fas fa-circle text-xs text-red-500 mr-1"></i>55세 이후에도 RSTU를 통해 RA에 ERS 금액까지 계속 자발적 추가 불입 가능</li>
+<li><i class="fas fa-circle text-xs text-red-500 mr-1"></i>FRS 초과분은 인출 가능 (55세 이후)</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

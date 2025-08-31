@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>55세 RA 생성 시 자금 이동</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 720px;
+            min-height: 1280px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #ED2E38;
+            height: 8px;
+        }
+        .title-underline {
+            width: 60px;
+            height: 4px;
+            background-color: #ED2E38;
+        }
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #FEF2F2;
+            color: #ED2E38;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+        .case-box {
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+        .case-a {
+            background-color: #FEF3C7;
+            border: 1px solid #F59E0B;
+        }
+        .case-b {
+            background-color: #DCFCE7;
+            border: 1px solid #10B981;
+        }
+        .account-box {
+            border-radius: 6px;
+            padding: 8px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .oa-box {
+            background-color: #EFF6FF;
+        }
+        .sa-box {
+            background-color: #EDE9FE;
+        }
+        .ra-box {
+            background-color: #FEF2F2;
+        }
+        .ma-box {
+            background-color: #F0FDF4;
+        }
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #CBD5E1;
+            margin: 8px auto;
+        }
+        .rules-box {
+            background-color: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+        /* 글자 크기 10% 증가 - 레이아웃 최적화를 위해 일부 조정 */
+        h1 {
+            font-size: 2.2rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+        }
+        h4 {
+            font-size: 1.05rem;
+        }
+        p, li {
+            font-size: 1.05rem;
+        }
+        .text-sm {
+            font-size: 0.88rem;
+        }
+        .text-lg {
+            font-size: 1.16rem;
+        }
+        .text-xl {
+            font-size: 1.27rem;
+        }
+        .text-xs {
+            font-size: 0.77rem;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-8 py-8">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-4">
+<div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 02</div>
+<div class="text-sm text-gray-500">3</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-2">55세 RA 생성 시 자금 이동</h1>
+<div class="title-underline mb-3"></div>
+<!-- Introduction -->
+<div class="mb-3">
+<p class="text-gray-700 text-sm">FRS는 매년 인플레이션에 맞춰 상향 조정됩니다. 현재 FRS $213,000이지만 10년 후 FRS $280,000로 예상됩니다.</p>
+</div>
+<!-- Cases Comparison -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Case A -->
+<div class="case-box case-a">
+<h3 class="font-bold text-lg">Case A — 부족(Below FRS)</h3>
+<div class="text-sm text-gray-600 mb-2">10년 후 FRS = $280K</div>
+<div class="before-55">
+<h4 class="font-medium mb-1 text-sm">Before 55</h4>
+<div class="account-box sa-box">
+<span class="text-sm">SA</span>
+<span class="font-bold text-sm">$65K</span>
+</div>
+<div class="account-box oa-box">
+<span class="text-sm">OA</span>
+<span class="font-bold text-sm">$180K</span>
+</div>
+<div class="account-box ma-box">
+<span class="text-sm">MA</span>
+<span class="font-bold text-sm">$84K</span>
+</div>
+<div class="text-xs text-gray-600 mt-1">OA+SA = $245K (&lt; $280K)</div>
+</div>
+<div class="arrow-down"></div>
+<div class="after-55">
+<h4 class="font-medium mb-1 text-sm">After 55</h4>
+<div class="account-box ra-box">
+<span class="text-sm">RA</span>
+<span class="font-bold text-sm">$245K (87.5% of FRS)</span>
+</div>
+<div class="account-box oa-box">
+<span class="text-sm">OA</span>
+<span class="font-bold text-sm">$0 (모두 이체됨)</span>
+</div>
+<div class="account-box ma-box">
+<span class="text-sm">MA</span>
+<span class="font-bold text-sm">$84K (변화 없음)</span>
+</div>
+<div class="bg-white border border-yellow-500 rounded-md p-2 mt-2">
+<span class="font-medium text-sm">즉시 인출 가능:</span>
+<span class="font-bold text-sm"> 최대 $5K</span>
+<div class="text-xs text-gray-600">(FRS 미달이므로 초과 인출 불가)</div>
+</div>
+</div>
+</div>
+<!-- Case B -->
+<div class="case-box case-b">
+<h3 class="font-bold text-lg">Case B — 충분(Above FRS)</h3>
+<div class="text-sm text-gray-600 mb-2">10년 후 FRS = $280K</div>
+<div class="before-55">
+<h4 class="font-medium mb-1 text-sm">Before 55</h4>
+<div class="account-box sa-box">
+<span class="text-sm">SA</span>
+<span class="font-bold text-sm">$80K</span>
+</div>
+<div class="account-box oa-box">
+<span class="text-sm">OA</span>
+<span class="font-bold text-sm">$240K</span>
+</div>
+<div class="account-box ma-box">
+<span class="text-sm">MA</span>
+<span class="font-bold text-sm">$100K</span>
+</div>
+<div class="text-xs text-gray-600 mt-1">OA+SA = $320K (&gt; $280K)</div>
+</div>
+<div class="arrow-down"></div>
+<div class="after-55">
+<h4 class="font-medium mb-1 text-sm">After 55</h4>
+<div class="account-box ra-box">
+<span class="text-sm">RA</span>
+<span class="font-bold text-sm">$280K (100% of FRS)</span>
+</div>
+<div class="account-box oa-box">
+<span class="text-sm">OA</span>
+<span class="font-bold text-sm">$40K (FRS 초과분)</span>
+</div>
+<div class="account-box ma-box">
+<span class="text-sm">MA</span>
+<span class="font-bold text-sm">$100K (변화 없음)</span>
+</div>
+<div class="bg-white border border-green-500 rounded-md p-2 mt-2">
+<span class="font-medium text-sm">즉시 인출 가능:</span>
+<span class="font-bold text-sm"> $40K</span>
+<div class="text-xs text-gray-600">(FRS 초과분 인출 가능)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Key Rules -->
+<div class="rules-box mt-4">
+<h3 class="font-bold text-md mb-2">핵심 규칙 & 주의사항</h3>
+<ul class="text-gray-700 list-disc pl-5 space-y-1">
+<li><span class="font-medium text-sm">이전 순서:</span> <span class="text-sm">SA → RA 먼저, 부족분 OA → RA</span></li>
+<li><span class="font-medium text-sm">인출 규칙:</span> <span class="text-sm">누구나 $5K는 55세부터 인출 가능, FRS 충족 시 초과분 인출 가능</span></li>
+<li><span class="font-medium text-sm">MA는 별개:</span> <span class="text-sm">RA 이전과 관계없이 BHS 범위 내 유지</span></li>
+</ul>
+<div class="text-sm text-gray-500 mt-3 text-right">2025년 8월 28일 제2차 금융세미나 중</div>
+</div>
+</div>
+</div>
+</body>
+</html>

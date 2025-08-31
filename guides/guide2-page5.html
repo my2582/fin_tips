@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ko" style="">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Top-up 전략 한눈에</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            margin: 0;
+            padding: 0;
+        }
+        .slide-container {
+            width: 720px;
+            min-height: 1280px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header-bar {
+            background-color: #ED2E38;
+            height: 8px;
+        }
+        .title-underline {
+            width: 60px;
+            height: 4px;
+            background-color: #ED2E38;
+        }
+        .strategy-box {
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            background-color: #F9FAFB;
+            position: relative;
+        }
+        .strategy-box-left {
+            border-left: 4px solid #3B82F6;
+        }
+        .strategy-box-right {
+            border-left: 4px solid #ED2E38;
+        }
+        .age-tag {
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+        .tag-blue {
+            background-color: #3B82F6;
+        }
+        .tag-red {
+            background-color: #ED2E38;
+        }
+        .benefit-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+        .highlight-box {
+            background-color: #FEF2F2;
+            border: 1px solid #FECACA;
+            border-radius: 8px;
+            border-left: 4px solid #ED2E38;
+        }
+        /* 글자 크기 10% 증가 - 레이아웃에 맞게 조정 */
+        h1 {
+            font-size: 2.2rem;
+        }
+        h3 {
+            font-size: 1.1rem;
+        }
+        p {
+            font-size: 1.05rem;
+        }
+        .text-sm {
+            font-size: 0.88rem;
+        }
+        .text-lg {
+            font-size: 1.21rem;
+        }
+        .text-xs {
+            font-size: 0.77rem;
+        }
+        ul.space-y-1 li {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body style="">
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-8 py-6">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-4">
+<div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 02</div>
+<div class="text-sm text-gray-500">4</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-2">Top-up 전략 한눈에</h1>
+<div class="title-underline mb-3"></div>
+<!-- Introduction -->
+<div class="mt-3 mb-4">
+<p class="text-lg font-medium">55세 전후로 달라지는 CPF Top-up 전략</p>
+<p class="text-gray-600">가장 효율적인 소득공제와 자산증식 방법</p>
+</div>
+<!-- Before 55 Strategy Box -->
+<div class="strategy-box strategy-box-left p-4 mt-4 mb-5 relative">
+<div class="age-tag tag-blue">55세 이전</div>
+<div class="mt-2">
+<div class="flex items-start mb-3">
+<div class="benefit-icon bg-blue-500 mr-2">
+<i class="fas fa-piggy-bank"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg">SA에 Top-up (RSTU)</h3>
+<ul class="mt-1 text-gray-600 space-y-1 list-inside">
+<li><i class="fas fa-check text-blue-500 mr-1"></i>연간 $8,000 소득공제</li>
+<li><i class="fas fa-check text-blue-500 mr-1"></i>가족 Top-up 추가 $8,000 공제</li>
+<li><i class="fas fa-check text-blue-500 mr-1"></i>SA 4% 확정 복리</li>
+</ul>
+</div>
+</div>
+<div class="flex items-start">
+<div class="benefit-icon bg-green-500 mr-2">
+<i class="fas fa-procedures"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg">MA에 Top-up (VC-MA)</h3>
+<ul class="mt-1 text-gray-600 space-y-1 list-inside">
+<li><i class="fas fa-check text-green-500 mr-1"></i>BHS까지 적립 (2025년: $75,500)</li>
+<li><i class="fas fa-check text-green-500 mr-1"></i>4% 확정 복리, 의료/보험료 용도</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- After 55 Strategy Box -->
+<div class="strategy-box strategy-box-right p-4 mb-5 relative">
+<div class="age-tag tag-red">55세 이후</div>
+<div class="mt-2">
+<div class="flex items-start mb-3">
+<div class="benefit-icon bg-red-500 mr-2">
+<i class="fas fa-wallet"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg">RA에 Top-up</h3>
+<ul class="mt-1 text-gray-600 space-y-1 list-inside">
+<li><i class="fas fa-check text-red-500 mr-1"></i>FRS $213,000 달성 목표</li>
+<li><i class="fas fa-check text-red-500 mr-1"></i>연간 $8,000 공제 유지</li>
+<li><i class="fas fa-check text-red-500 mr-1"></i>4% 확정 복리</li>
+</ul>
+</div>
+</div>
+<div class="flex items-start">
+<div class="benefit-icon bg-purple-500 mr-2">
+<i class="fas fa-hand-holding-usd"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg">RA 초과분 전략</h3>
+<ul class="mt-1 text-gray-600 space-y-1 list-inside">
+<li><i class="fas fa-check text-purple-500 mr-1"></i>ERS까지 추가 적립 가능</li>
+<li><i class="fas fa-check text-purple-500 mr-1"></i>FRS 초과분 현금화 (인출)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Tax vs Interest Comparison -->
+<div class="mt-4">
+<h3 class="font-bold text-lg mb-2">소득공제 vs 4% 복리 혜택</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-blue-50 rounded-lg">
+<h4 class="font-medium text-blue-600 mb-1">소득공제 혜택</h4>
+<ul class="text-sm text-gray-700 space-y-1">
+<li><i class="fas fa-calculator mr-1 text-blue-500"></i>$8,000×15% = $1,200 절세</li>
+<li><i class="fas fa-calculator mr-1 text-blue-500"></i>$8,000×22% = $1,760 절세</li>
+</ul>
+</div>
+<div class="p-3 bg-red-50 rounded-lg">
+<h4 class="font-medium text-red-600 mb-1">4% 복리 효과</h4>
+<ul class="text-sm text-gray-700 space-y-1">
+<li><i class="fas fa-chart-line mr-1 text-red-500"></i>10년: $8,000→$11,851</li>
+<li><i class="fas fa-chart-line mr-1 text-red-500"></i>20년: $8,000→$17,550</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Tips Box -->
+<div class="highlight-box p-3 mt-4">
+<div class="flex">
+<div class="mr-2 text-red-500">
+<i class="fas fa-lightbulb text-lg"></i>
+</div>
+<div>
+<h3 class="font-medium mb-1">전략적 Top-up 팁</h3>
+<p class="text-sm text-gray-700">55세 전에 SA Top-up 완료가 소득공제와 복리 효과를 극대화합니다. OA→SA 이체는 소득공제는 없지만 이자율 증가(2.5%→4%). <span class="font-bold">55세 직전 완료가 핵심!</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

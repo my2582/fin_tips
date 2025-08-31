@@ -142,10 +142,10 @@
       </button>
       
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_cpf_srs'); return false;">
+        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_stock_guide'); return false;">
           🏦 Arki Finance 방문
         </a>
-        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_rookie90'); return false;">
+        <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'investment_consultation'); return false;">
           💼 투자 전문가 상담
         </a>
       </div>
@@ -178,19 +178,13 @@
       <nav class="guide-nav">
         <ul class="guide-nav-list">
           <li class="guide-nav-item">
-            <a href="#guide-cpf-srs" class="guide-nav-link active" onclick="showGuide('cpf-srs', this)">CPF & SRS 완전정복</a>
+            <a href="#guide-stock-guide" class="guide-nav-link active" onclick="showGuide('stock-guide', this)">주식투자 원칙 가이드</a>
           </li>
           <li class="guide-nav-item">
-            <a href="#guide-rookie90" class="guide-nav-link" onclick="showGuide('rookie90', this)">신입 90일 체크리스트</a>
+            <a href="#guide-cpf55-guide" class="guide-nav-link" onclick="showGuide('cpf55-guide', this)">55세 CPF 변화 가이드</a>
           </li>
           <li class="guide-nav-item">
-            <a href="#guide-pr-roadmap" class="guide-nav-link" onclick="showGuide('pr-roadmap', this)">PR 로드맵</a>
-          </li>
-          <li class="guide-nav-item">
-            <a href="#guide-cpf50plus" class="guide-nav-link" onclick="showGuide('cpf50plus', this)">CPF 50+ 환급</a>
-          </li>
-          <li class="guide-nav-item">
-            <a href="#guide-equity-rules" class="guide-nav-link" onclick="showGuide('equity-rules', this)">주식투자 5원칙</a>
+            <a href="#guide-tax-save-guide" class="guide-nav-link" onclick="showGuide('tax-save-guide', this)">CPF·SRS 절세 가이드</a>
           </li>
         </ul>
       </nav>
@@ -367,45 +361,31 @@
   <script>
     // Guide data
     const GUIDES = {
-      'cpf-srs': {
-        title: 'CPF & SRS 완전정복 가이드',
-        description: 'CPF와 SRS를 활용한 은퇴 준비 완벽 가이드입니다. 세금 혜택부터 투자 전략까지 모든 것을 담았습니다.',
-        filename: 'SG_FinTips_Guide01_CPF_SRS_Complete.pdf',
-        slug: 'cpf_srs',
-        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=cpf_srs&expert_referral=yeom_minsu'
+      'stock-guide': {
+        title: '타이밍보다 원칙: 개인투자자 주식 가이드',
+        description: 'Schwab 연구 기반 Buy&Hold vs 매도타이밍 전략. 개인투자자를 위한 실전 주식투자 원칙과 3가지 핵심 룰을 제공합니다.',
+        filename: '금융_꿀Tip단지_가이드01_주식투자원칙.html',
+        slug: 'stock_guide',
+        arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=stock_guide&expert_referral=yeom_minsu'
       },
-      'rookie90': {
-        title: '신입 90일 체크리스트',
-        description: '싱가포르 이민 후 첫 90일 동안 반드시 해야 할 금융 업무들을 단계별로 안내합니다.',
-        filename: 'SG_FinTips_Guide02_Rookie90_Checklist.pdf',
-        slug: 'rookie90',
-        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=rookie90&expert_referral=yeom_minsu'
+      'cpf55-guide': {
+        title: '55세 CPF 변화 실전가이드',
+        description: '55세 CPF 제도 변화와 FRS 달성 전략. CPF Board 출처 기반 정확한 정보와 Case A/B 시나리오를 상세히 안내합니다.',
+        filename: '금융_꿀Tip단지_가이드02_CPF55세변화.html',
+        slug: 'cpf55_guide',
+        arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=cpf55_guide&expert_referral=yeom_minsu'
       },
-      'pr-roadmap': {
-        title: 'PR 취득 로드맵',
-        description: '영주권 취득을 위한 체계적인 준비 과정과 필요한 금융 조건들을 상세히 설명합니다.',
-        filename: 'SG_FinTips_Guide03_PR_Roadmap.pdf',
-        slug: 'pr_roadmap',
-        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=pr_roadmap&expert_referral=yeom_minsu'
-      },
-      'cpf50plus': {
-        title: 'CPF 50+ 환급 가이드',
-        description: '50세 이후 CPF 환급 조건과 절차, 최적 타이밍에 대한 실전 가이드입니다.',
-        filename: 'SG_FinTips_Guide04_CPF_50plus_Refund.pdf',
-        slug: 'cpf50plus',
-        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=cpf50plus&expert_referral=yeom_minsu'
-      },
-      'equity-rules': {
-        title: '주식투자 5가지 원칙',
-        description: '싱가포르에서의 안전하고 효율적인 주식 투자를 위한 핵심 원칙들을 정리했습니다.',
-        filename: 'SG_FinTips_Guide05_Equity_Rules.pdf',
-        slug: 'equity_rules',
-        arki_link: 'https://arkifinance.com?utm_source=pdf&utm_medium=guide&utm_campaign=equity_rules&expert_referral=yeom_minsu'
+      'tax-save-guide': {
+        title: 'CPF·SRS 절세 가이드',
+        description: '소득구간별 절세 효과($1,000당 $70~$220)와 CPF·SRS 실전 활용법. 세금 혜택을 최대한 활용하는 전략을 제공합니다.',
+        filename: '금융_꿀Tip단지_가이드03_절세전략.html',
+        slug: 'tax_save_guide',
+        arki_link: 'https://arkifinance.com?utm_source=guide&utm_medium=website&utm_campaign=tax_save_guide&expert_referral=yeom_minsu'
       }
     };
 
     // Current active guide
-    let currentGuide = 'cpf-srs';
+    let currentGuide = 'stock-guide';
 
     // Modal functions
     function openGuideModal() {
@@ -438,7 +418,7 @@
           <p class="guide-description">${guide.description}</p>
           <div class="guide-actions">
             <button class="guide-download-btn" onclick="downloadGuide('${guideId}')">
-              📥 PDF 다운로드
+              📖 가이드 보기
             </button>
             <a href="${guide.arki_link}" class="cta-secondary" onclick="trackCTA('secondary', '${guide.slug}')" target="_blank" rel="noopener">
               🏦 Arki Finance 방문
@@ -448,15 +428,26 @@
       `;
     }
 
-    // Download function (simulated - would need actual PDF files)
+    // View guide function - opens in new tab
     function downloadGuide(guideId) {
       const guide = GUIDES[guideId];
       
-      // Track download event
+      // Track view event
       trackEbookDownload(guide.slug, guide.filename);
       
-      // In production, this would trigger actual file download
-      alert(`"${guide.title}" PDF 다운로드가 곧 시작됩니다.\n\n파일명: ${guide.filename}\n\n실제 구현 시에는 PDF 파일이 다운로드됩니다.`);
+      // Open guide in new tab
+      const guideUrls = {
+        'stock-guide': '/guides/stock-investment-guide.html',
+        'cpf55-guide': '/guides/cpf55-changes-guide.html', 
+        'tax-save-guide': '/guides/tax-saving-guide.html'
+      };
+      
+      const url = guideUrls[guideId];
+      if (url) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } else {
+        alert(`"${guide.title}" 가이드가 곧 준비됩니다!\n\n현재 페이지별 HTML로 변환 중입니다.`);
+      }
     }
 
     // CTA tracking function
@@ -587,7 +578,7 @@
 
     // Initialize default guide content
     document.addEventListener('DOMContentLoaded', function() {
-      showGuide('cpf-srs');
+      showGuide('stock-guide');
     });
   </script>
 </body>

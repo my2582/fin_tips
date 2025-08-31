@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인출 옵션 & 타이밍 - Guide 2 Page 6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #3B82F6;
+            border-radius: 50%;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 1.375rem;
+            top: 1.25rem;
+            width: 2px;
+            height: calc(100% - 1.25rem);
+            background: #E5E7EB;
+        }
+        .option-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .option-card:hover {
+            border-color: #3B82F6;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-blue-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../src/index.html" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </a>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">55세 CPF 변화 실전가이드</h1>
+                        <p class="text-sm text-gray-600">Page 6: 인출 옵션 & 타이밍</p>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-500">6/8</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-8">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">인출 옵션 & 타이밍</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                CPF 자금을 언제, 어떻게 인출할지 전략적으로 계획하여 최적의 은퇴 준비를 하세요
+            </p>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-clock text-blue-600 mr-3"></i>
+                인출 타이밍 가이드
+            </h3>
+            
+            <div class="relative">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item mb-8">
+                    <div class="bg-blue-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold text-blue-900 mb-3">55세: 첫 번째 기회</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                <span>RA FRS 초과 금액 인출 가능</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                <span>의료비 목적 Medisave 인출 검토</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-orange-500 mt-1 mr-2"></i>
+                                <span>성급한 인출보다는 신중한 계획 필요</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="bg-green-50 rounded-xl p-6">
+                        <h4 class="text-xl font-semibold text-green-900 mb-3">65세: 본격적인 인출</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                <span>CPF LIFE 월 연금 수령 시작</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                <span>추가 일시금 인출 옵션 활용</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                <span>안정적인 은퇴 소득 확보</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Withdrawal Options -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-coins text-yellow-600 mr-3"></i>
+                주요 인출 옵션
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Option 1 -->
+                <div class="option-card bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
+                    <div class="text-center mb-4">
+                        <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-piggy-bank text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-blue-900">RA FRS 초과분</h4>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>55세부터 인출 가능</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>FRS 달성 후 초과 금액</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                            <span>즉시 현금 활용 가능</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="option-card bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
+                    <div class="text-center mb-4">
+                        <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-check text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-green-900">CPF LIFE 월 연금</h4>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                            <span>65세부터 월 정기 지급</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                            <span>평생 보장 소득</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                            <span>인플레이션 보정</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Option 3 -->
+                <div class="option-card bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
+                    <div class="text-center mb-4">
+                        <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heartbeat text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-purple-900">의료비 인출</h4>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                            <span>Medisave 계좌에서</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                            <span>승인된 의료비용</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                            <span>가족 의료비 포함</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Withdrawal Methods -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-chess text-indigo-600 mr-3"></i>
+                전략적 인출 방법
+            </h3>
+            
+            <div class="space-y-6">
+                <div class="border-l-4 border-blue-500 pl-6">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">1. 단계적 인출 전략</h4>
+                    <p class="text-gray-700 mb-3">
+                        55세에 모든 금액을 인출하지 말고, 필요에 따라 단계적으로 인출하여 세금 부담을 최소화합니다.
+                    </p>
+                    <div class="bg-blue-50 rounded-lg p-4">
+                        <p class="text-sm text-blue-800">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            팁: 연간 소득 구간을 고려하여 최적의 인출 타이밍을 계획하세요.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-green-500 pl-6">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">2. 투자 재배치 전략</h4>
+                    <p class="text-gray-700 mb-3">
+                        인출한 자금을 더 높은 수익률의 투자 상품으로 재배치하여 장기적인 수익을 추구합니다.
+                    </p>
+                    <div class="bg-green-50 rounded-lg p-4">
+                        <p class="text-sm text-green-800">
+                            <i class="fas fa-chart-line mr-2"></i>
+                            주의: 투자 위험을 충분히 고려하여 안전한 포트폴리오를 구성하세요.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-l-4 border-orange-500 pl-6">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">3. 응급자금 확보 전략</h4>
+                    <p class="text-gray-700 mb-3">
+                        일부 자금은 응급상황에 대비한 현금 유동성을 확보하는 용도로 활용합니다.
+                    </p>
+                    <div class="bg-orange-50 rounded-lg p-4">
+                        <p class="text-sm text-orange-800">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            권장: 월 생활비의 6-12개월분을 응급자금으로 유지하세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8 border-t border-gray-200">
+            <a href="guide2-page5.html" class="flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                <i class="fas fa-chevron-left mr-2"></i>
+                이전 페이지
+            </a>
+            
+            <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+            </div>
+            
+            <a href="guide2-page7.html" class="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                다음 페이지
+                <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center">
+            <p class="text-gray-600 mb-4">
+                본 가이드는 일반적인 정보 제공 목적이며, 개인별 상황에 맞는 전문 상담을 권장합니다.
+            </p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="../src/index.html" class="hover:text-blue-600 transition-colors">메인으로</a>
+                <span>•</span>
+                <a href="guide2-cover.html" class="hover:text-blue-600 transition-colors">가이드 처음으로</a>
+                <span>•</span>
+                <a href="#" class="hover:text-blue-600 transition-colors">문의하기</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
