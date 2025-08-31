@@ -57,6 +57,22 @@
             text-align: center;
             border-bottom: 1px solid #f1f1f1;
         }
+        
+        /* Navigation link styles matching Guide 1 */
+        .nav-link {
+            padding: 0.5rem 0.75rem;
+            margin: 0 0.125rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            background-color: #ed2e38;
+            color: white;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
@@ -64,20 +80,22 @@
     <nav id="guide-nav" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 border-b-2 border-red-100">
         <div class="max-w-6xl mx-auto px-4 py-3">
             <div class="flex items-center justify-between">
-                <a href="../index.html" class="flex items-center space-x-3 text-red-600 hover:text-red-800 transition-colors">
+              <div class="flex items-center space-x-4">
+                <a href="../index.html" class="flex items-center space-x-2 text-red-600 hover:text-red-800 transition-colors">
                     <i class="fas fa-arrow-left"></i>
                     <span class="font-semibold">메인으로</span>
                 </a>
-                <div class="hidden md:flex space-x-4 text-sm">
-                    <a href="#section-0" class="nav-link px-3 py-2 rounded-lg transition-colors">커버</a>
-                    <a href="#section-1" class="nav-link px-3 py-2 rounded-lg transition-colors">개요</a>
-                    <a href="#section-2" class="nav-link px-3 py-2 rounded-lg transition-colors">계좌변화</a>
-                    <a href="#section-3" class="nav-link px-3 py-2 rounded-lg transition-colors">FRS이해</a>
-                    <a href="#section-4" class="nav-link px-3 py-2 rounded-lg transition-colors">달성전략</a>
-                    <a href="#section-5" class="nav-link px-3 py-2 rounded-lg transition-colors">인출옵션</a>
-                    <a href="#section-6" class="nav-link px-3 py-2 rounded-lg transition-colors">SRS비교</a>
-                    <a href="#section-7" class="nav-link px-3 py-2 rounded-lg transition-colors">실행계획</a>
+                <div class="flex space-x-2 text-sm">
+                    <a href="#section-0" class="nav-link px-2 py-1 rounded transition-colors">커버</a>
+                    <a href="#section-1" class="nav-link px-2 py-1 rounded transition-colors">개요</a>
+                    <a href="#section-2" class="nav-link px-2 py-1 rounded transition-colors">계좌변화</a>
+                    <a href="#section-3" class="nav-link px-2 py-1 rounded transition-colors">FRS이해</a>
+                    <a href="#section-4" class="nav-link px-2 py-1 rounded transition-colors">달성전략</a>
+                    <a href="#section-5" class="nav-link px-2 py-1 rounded transition-colors">인출옵션</a>
+                    <a href="#section-6" class="nav-link px-2 py-1 rounded transition-colors">SRS비교</a>
+                    <a href="#section-7" class="nav-link px-2 py-1 rounded transition-colors">실행계획</a>
                 </div>
+              </div>
             </div>
         </div>
     </nav>
