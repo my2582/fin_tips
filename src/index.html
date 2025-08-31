@@ -145,7 +145,7 @@
         <a href="#" class="cta-secondary" onclick="trackCTA('secondary', 'arki_stock_guide'); return false;">
           🏦 Arki Finance 방문
         </a>
-        <a href="#" class="cta-secondary" onclick="openSeminarSurvey(); trackCTA('secondary', 'seminar_survey'); return false;">
+        <a href="https://forms.office.com/r/ysKrqYZdJ5" class="cta-secondary" onclick="openSeminarSurvey(); trackCTA('secondary', 'seminar_survey'); return false;" target="_blank" rel="noopener">
           📋 다음 세미나 주제 제안하기
         </a>
       </div>
@@ -804,17 +804,17 @@
     
     // Seminar survey function - opens Microsoft Forms
     function openSeminarSurvey() {
-      // TODO: Replace with actual Microsoft Forms URL
-      const formsUrl = 'https://forms.office.com/your-actual-form-url';
+      const formsUrl = 'https://forms.office.com/r/ysKrqYZdJ5';
       
-      // For now, show alert with instructions
-      alert(`📋 세미나 주제 제안 설문\n\n다음 세미나에서 다루었으면 하는 주제를 제안해 주세요!\n\n• 이름과 이메일 주소\n• 관심 있는 금융 주제\n• 현재 투자 상황\n• 가장 궁금한 점\n\n곧 Microsoft Forms 링크로 연결됩니다.`);
-      
-      // Track survey interest
+      // Track survey interest before opening
       trackUserScore('seminar_survey_interest', 20, {
         survey_type: 'seminar_topic_suggestion',
-        user_action: 'survey_clicked'
+        user_action: 'survey_opened',
+        forms_url: formsUrl
       });
+      
+      // Open Microsoft Forms in new tab
+      window.open(formsUrl, '_blank', 'noopener,noreferrer');
     }
   </script>
 </body>
