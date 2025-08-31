@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="ko" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>요약 및 실전 액션 플랜</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        background-color: #f8fafc;
+        color: #1a202c;
+        margin: 0;
+        padding: 0;
+    }
+    .slide-container {
+        width: 720px;
+        min-height: 1280px;
+        background-color: white;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header-bar {
+        background-color: #0047AB;
+        height: 8px;
+    }
+    .title-underline {
+        width: 60px;
+        height: 4px;
+        background-color: #0047AB;
+    }
+    .step-number {
+        background-color: #0047AB;
+        color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .step-card {
+        border-left: 4px solid #0047AB;
+        transition: transform 0.2s;
+    }
+    .step-card:hover {
+        transform: translateX(5px);
+    }
+    .step-progress {
+        position: absolute;
+        left: 45px;
+        top: 36px;
+        bottom: 0;
+        width: 2px;
+        background-color: #e5e7eb;
+        z-index: 0;
+    }
+    .action-box {
+        background-color: #EFF6FF;
+        border-radius: 8px;
+    }
+    /* Font size increase by 10% */
+    .text-lg {
+        font-size: 1.21rem;
+    }
+    .text-3xl {
+        font-size: 2.09rem;
+    }
+    .font-lg {
+        font-size: 1.21rem;
+    }
+    .text-sm {
+        font-size: 0.935rem;
+    }
+    p {
+        line-height: 1.6;
+    }
+    .disclaimer-box {
+        background-color: #FEF3F2;
+        border: 1px solid #FCA5A5;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 16px;
+    }
+</style>
+</head>
+<body style="">
+<div class="slide-container mx-auto">
+<div class="header-bar"></div>
+<div class="content px-10 py-10">
+<!-- Top Navigation -->
+<div class="flex justify-between items-center mb-8">
+<div class="text-sm text-gray-500">금융 꿀Tip단지 가이드 01</div>
+<div class="text-sm text-gray-500">5</div>
+</div>
+<!-- Title Section -->
+<h1 class="text-3xl font-bold mb-3">요약 및 실전 액션 플랜</h1>
+<div class="title-underline mb-6"></div>
+<!-- Introduction -->
+<div class="mb-5">
+<p class="text-lg text-gray-700">
+                "투자의 성공은 완벽한 타이밍이 아니라 간단한 룰을 지키는 것입니다."
+            </p>
+</div>
+<!-- Action Steps -->
+<div class="action-box p-5 mb-6">
+<h2 class="font-bold text-xl mb-2">주식투자 성공 전략 체크리스트</h2>
+<p class="text-gray-600 text-sm">
+                Schwab 연구(2005~2024년)가 증명하듯, 매년 최고점에 투자해도($151,343) 현금만 보유($47,357)보다 훨씬 높은 수익을 냈습니다.
+            </p>
+</div>
+<!-- Step by Step Guide -->
+<div class="relative mt-8">
+<div class="step-progress"></div>
+<!-- Step 1 -->
+<div class="flex mb-8 relative">
+<div class="step-number z-10">1</div>
+<div class="step-card ml-4 p-3 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+<h3 class="font-bold text-lg">Larry처럼 시장을 떠나지 마세요</h3>
+<p class="text-gray-600 mt-1">진짜 실패는 시장에 안 들어가는 것입니다. 현금만 보유한 Larry와 최악 타이밍의 Rosie의 차이는 3.2배입니다.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex mb-8 relative">
+<div class="step-number z-10">2</div>
+<div class="step-card ml-4 p-3 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+<h3 class="font-bold text-lg">매도할 때는 다음 계획을 가지고 하세요</h3>
+<p class="text-gray-600 mt-1">차익실현 자체는 잘못이 아닙니다. 하지만 재진입 전략이 없는 매도는 기회를 상실하게 됩니다.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex mb-8 relative">
+<div class="step-number z-10">3</div>
+<div class="step-card ml-4 p-3 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+<h3 class="font-bold text-lg">필요에 의한 매도 전략(Goal-based Exit)</h3>
+<p class="text-gray-600 mt-1">투자 목표에 도달하면 매도하고, 그 숫자를 주식 비중 상한선으로 두세요.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex mb-8 relative">
+<div class="step-number z-10">4</div>
+<div class="step-card ml-4 p-3 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+<h3 class="font-bold text-lg">안전벨트 룰 & 원금 회수 전략</h3>
+<p class="text-gray-600 mt-1">주식 비중 30~40% 이내로 제한하고, 수익 100% 달성 시 절반 매도로 원금을 회수하세요.</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex mb-5 relative">
+<div class="step-number z-10">5</div>
+<div class="step-card ml-4 p-3 bg-gray-50 rounded-r-lg shadow-sm flex-1">
+<h3 class="font-bold text-lg">여러분만의 '잠 못 이루는 기준선'을 정하세요</h3>
+<p class="text-gray-600 mt-1">몇 % 빠지면 잠 못 이루시나요? -20%? -40%? 자신의 위험 허용 범위를 명확히 설정하세요.</p>
+</div>
+</div>
+</div>
+<!-- Final Note -->
+<div class="mt-8 pt-3 border-t border-gray-200">
+<div class="flex items-start">
+<div class="text-blue-500 mr-3 mt-1">
+<i class="fas fa-chart-line"></i>
+</div>
+<p class="text-sm text-gray-600">
+                    "마켓 타이밍이 아니라, 시장에 오래 남아있는 것(Time in the Market)이 성과를 결정합니다." Schwab 연구 결과, 완벽한 타이밍과 최악의 타이밍의 차이는 단 $35K에 불과합니다.
+                </p>
+</div>
+</div>
+<!-- Disclaimer Section -->
+<div class="disclaimer-box mt-6">
+<div class="flex items-start">
+<div class="text-red-500 mr-3 mt-1">
+<i class="fas fa-exclamation-circle"></i>
+</div>
+<div>
+<h3 class="font-bold text-sm mb-1">법적 고지사항 (Disclaimer)</h3>
+<p class="text-xs text-gray-700">
+본 가이드의 내용은 작성자 염민수 개인의 의견이며, 어떠한 경우에도 소속 회사(Arki Finance)를 대표하지 않습니다. 본 자료는 투자 조언이나 투자 권유가 아니며, 투자의 수익이나 원금을 보장하지 않습니다. 투자는 원금 손실의 위험을 수반하며, 투자 결정 전 반드시 전문가와 상담하시기 바랍니다. 본 자료는 참고용으로만 제공되며, 특정 금융상품 매매를 권장하지 않습니다.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRS vs CPF 비교 - Guide 2 Page 7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .comparison-table {
+            font-size: 0.9rem;
+        }
+        .comparison-table th {
+            background-color: #FEF2F2;
+            color: #DC2626;
+            text-align: center;
+            padding: 8px 6px;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 8px 6px;
+            text-align: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .highlight-srs {
+            background-color: #E0F2FE;
+            border-left: 3px solid #0284C7;
+            padding: 4px 8px;
+            border-radius: 0 6px 6px 0;
+            display: inline-block;
+        }
+        .highlight-cpf {
+            background-color: #FEF2F2;
+            border-left: 3px solid #DC2626;
+            padding: 4px 8px;
+            border-radius: 0 6px 6px 0;
+            display: inline-block;
+        }
+        .feature-box {
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: 1px solid #E5E7EB;
+        }
+        .feature-srs {
+            background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
+            border-left: 4px solid #0284C7;
+        }
+        .feature-cpf {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FEF7F7 100%);
+            border-left: 4px solid #DC2626;
+        }
+        .strategy-card {
+            transition: all 0.3s ease;
+        }
+        .strategy-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .comparison-row:nth-child(even) {
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-blue-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../src/index.html" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </a>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">55세 CPF 변화 실전가이드</h1>
+                        <p class="text-sm text-gray-600">Page 7: SRS vs CPF 비교</p>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-500">7/8</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-8">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">SRS vs CPF 비교</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                PR 전 SRS, PR 이후 CPF 불입 전략 비교 - 영주권 전후 최적 절세 및 자산관리 선택을 위한 가이드
+            </p>
+        </div>
+
+        <!-- Status-based Strategy Overview -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-route text-purple-600 mr-3"></i>
+                PR 상태별 최적 전략
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="strategy-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-university text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">PR 취득 전: <span class="highlight-srs">SRS 중심</span></h4>
+                            <p class="text-sm text-gray-600">외국인도 개설·소득공제 가능, 투자 자유도 높음</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="strategy-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">PR 취득 후: <span class="highlight-cpf">CPF 병행</span></h4>
+                            <p class="text-sm text-gray-600">CPF 자동가입 및 기여금 납부(37%), 절세 극대화</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Comparison Table -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-balance-scale text-green-600 mr-3"></i>
+                상세 비교표
+            </h3>
+            
+            <div class="overflow-x-auto">
+                <table class="comparison-table w-full border border-gray-200 rounded-lg overflow-hidden">
+                    <thead>
+                        <tr>
+                            <th class="w-1/4 border-r border-gray-200">비교 항목</th>
+                            <th class="w-3/8 bg-blue-50 border-r border-gray-200">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-university text-blue-600 mr-2"></i>
+                                    SRS
+                                </div>
+                            </th>
+                            <th class="w-3/8">
+                                <div class="flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-red-600 mr-2"></i>
+                                    CPF
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">가입 대상</td>
+                            <td class="border-r border-gray-200">모든 거주자 <br><small class="text-green-600">✓ 외국인 포함</small></td>
+                            <td>PR 이상만 가능 <br><small class="text-orange-600">⚠ 제한적</small></td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">세제 혜택</td>
+                            <td class="border-r border-gray-200">불입액 소득공제<br><span class="text-red-600">인출 시 50% 과세</span></td>
+                            <td>불입액 소득공제<br><span class="text-green-600">인출 시 무과세</span></td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">연간 한도</td>
+                            <td class="border-r border-gray-200">
+                                <div class="text-sm">
+                                    <div>PR/시민권: <strong>$15,300</strong></div>
+                                    <div>외국인: <strong>$35,700</strong></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="text-sm">
+                                    <div>Top-up: <strong>$8,000</strong>(본인)</div>
+                                    <div>+ <strong>$8,000</strong>(가족)</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">수익률</td>
+                            <td class="border-r border-gray-200">투자 상품에 따라 변동<br><small class="text-blue-600">높은 자유도</small></td>
+                            <td>
+                                <div class="text-sm">
+                                    <div>OA: 2.5%, SA/MA/RA: 4%</div>
+                                    <div>첫 $60K +1%, 55세↑ +2%</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">인출 조건</td>
+                            <td class="border-r border-gray-200">62세 이후 10년 분할<br><span class="text-red-600">50% 과세</span></td>
+                            <td>55세 이후 인출 가능<br>65세부터 월 $1,700</td>
+                        </tr>
+                        <tr class="comparison-row">
+                            <td class="font-semibold bg-gray-50 border-r border-gray-200">유동성</td>
+                            <td class="border-r border-gray-200"><span class="text-orange-600">제한적</span><br>조기 인출 불가</td>
+                            <td><span class="text-orange-600">제한적</span><br>특정 조건하 인출</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Strategic Recommendations -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                <i class="fas fa-chess text-indigo-600 mr-3"></i>
+                상황별 우선순위 전략
+            </h3>
+            
+            <div class="space-y-6">
+                <div class="feature-box feature-srs strategy-card">
+                    <div class="flex items-start">
+                        <div class="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                            <i class="fas fa-user-tie text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-blue-900 mb-2">외국인/EP 홀더 전략</h4>
+                            <p class="text-gray-700 mb-3">
+                                SRS를 주력으로 활용하되, 별도 투자도 병행하여 유동성 확보
+                            </p>
+                            <div class="bg-blue-100 rounded-lg p-4">
+                                <h5 class="font-semibold text-blue-800 mb-2">추천 배분:</h5>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• SRS: 연 $35,700 (소득공제 최대 활용)</li>
+                                    <li>• 별도 투자: 유동성 자금 (주식, ETF, 부동산 등)</li>
+                                    <li>• 현금: 응급자금 (월 생활비 6개월분)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box feature-cpf strategy-card">
+                    <div class="flex items-start">
+                        <div class="bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                            <i class="fas fa-passport text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-red-900 mb-2">PR/시민권자 전략</h4>
+                            <p class="text-gray-700 mb-3">
+                                CPF Top-up을 최우선으로, 여유 자금으로 SRS 병행
+                            </p>
+                            <div class="bg-red-100 rounded-lg p-4">
+                                <h5 class="font-semibold text-red-800 mb-2">추천 배분:</h5>
+                                <ul class="text-sm text-red-700 space-y-1">
+                                    <li>• 1순위: CPF Top-up $8,000 (본인) + $8,000 (가족)</li>
+                                    <li>• 2순위: SRS $15,300 (추가 절세 원할 경우)</li>
+                                    <li>• 3순위: 별도 투자 (고수익 추구시)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Tips -->
+        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 mb-12 border border-yellow-200">
+            <div class="flex items-start">
+                <div class="bg-yellow-500 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fas fa-lightbulb text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">전략적 TIP</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 border border-yellow-200">
+                            <h4 class="font-bold text-gray-800 mb-2">절세 효과 계산법</h4>
+                            <p class="text-gray-700 mb-2">
+                                <strong>절세 효과 = 불입액 × 본인 소득세율</strong>
+                            </p>
+                            <div class="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                                <p class="text-sm text-gray-700">
+                                    <strong>예시:</strong> 한계세율 15%인 경우, $1,000 불입 시 $150 절세 효과
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-4 border border-yellow-200">
+                            <h4 class="font-bold text-gray-800 mb-2">전환 시점 고려사항</h4>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• PR 신청 중: SRS 계속 활용</li>
+                                <li>• PR 승인 직후: CPF 우선 전략으로 전환</li>
+                                <li>• 기존 SRS: 62세까지 유지 (조기 인출 불가)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8 border-t border-gray-200">
+            <a href="guide2-page6.html" class="flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                <i class="fas fa-chevron-left mr-2"></i>
+                이전 페이지
+            </a>
+            
+            <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+            </div>
+            
+            <a href="guide2-page8.html" class="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                다음 페이지
+                <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center">
+            <p class="text-gray-600 mb-4">
+                본 가이드는 일반적인 정보 제공 목적이며, 개인별 상황에 맞는 전문 상담을 권장합니다.
+            </p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="../src/index.html" class="hover:text-blue-600 transition-colors">메인으로</a>
+                <span>•</span>
+                <a href="guide2-cover.html" class="hover:text-blue-600 transition-colors">가이드 처음으로</a>
+                <span>•</span>
+                <a href="#" class="hover:text-blue-600 transition-colors">문의하기</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

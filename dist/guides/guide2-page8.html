@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요약 및 실전 액션 - Guide 2 Page 8</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .step-number {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+        .step-card {
+            border-left: 4px solid #DC2626;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+        }
+        .step-card:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left-color: #7C3AED;
+        }
+        .step-progress {
+            position: absolute;
+            left: 23px;
+            top: 48px;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #DC2626 0%, #E5E7EB 100%);
+            z-index: 0;
+        }
+        .action-summary-box {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FDF2F8 100%);
+            border: 2px solid #F472B6;
+            border-radius: 16px;
+        }
+        .completion-badge {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-blue-100">
+        <div class="max-w-4xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="../src/index.html" class="text-blue-600 hover:text-blue-800 transition-colors">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </a>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">55세 CPF 변화 실전가이드</h1>
+                        <p class="text-sm text-gray-600">Page 8: 요약 및 실전 액션</p>
+                    </div>
+                </div>
+                <div class="completion-badge">
+                    <i class="fas fa-check-circle mr-2"></i>완료
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-8">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">요약 및 실전 액션</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                55세 CPF 제도 변화를 이해하고 은퇴 재정을 효과적으로 관리하기 위한 핵심 가이드입니다.
+            </p>
+        </div>
+
+        <!-- Action Summary Box -->
+        <div class="action-summary-box p-8 mb-12">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-3 flex items-center justify-center">
+                    <i class="fas fa-clipboard-check text-pink-600 mr-3"></i>
+                    CPF 55세 변화 실행 체크리스트
+                </h2>
+                <p class="text-gray-700">
+                    5단계 액션 플랜으로 55세 이후 CPF 변화에 효과적으로 대응하세요.
+                </p>
+            </div>
+        </div>
+
+        <!-- Step by Step Guide -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+            <div class="relative">
+                <div class="step-progress"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex mb-8 relative">
+                    <div class="step-number z-10">1</div>
+                    <div class="step-card ml-6 p-6 rounded-r-xl shadow-sm flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">55세 구조 변화 정확히 파악하기</h3>
+                        <p class="text-gray-700 mb-4">RA 계좌 자동 생성, SA/OA→RA 자금 이동, 계정별 용도 변화를 이해하세요.</p>
+                        <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+                            <p class="text-sm text-blue-800">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                55세가 되면 자동으로 RA(Retirement Account) 계좌가 생성됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex mb-8 relative">
+                    <div class="step-number z-10">2</div>
+                    <div class="step-card ml-6 p-6 rounded-r-xl shadow-sm flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">FRS/BRS/ERS 중 본인 목표 설정</h3>
+                        <p class="text-gray-700 mb-4">FRS($213,000)로 월 $1,700, BRS는 $106,500, ERS는 $426,000입니다 (2025년).</p>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="bg-orange-50 p-3 rounded-lg text-center">
+                                <div class="font-bold text-orange-800">BRS</div>
+                                <div class="text-sm text-orange-600">$106,500</div>
+                            </div>
+                            <div class="bg-green-50 p-3 rounded-lg text-center">
+                                <div class="font-bold text-green-800">FRS</div>
+                                <div class="text-sm text-green-600">$213,000</div>
+                            </div>
+                            <div class="bg-purple-50 p-3 rounded-lg text-center">
+                                <div class="font-bold text-purple-800">ERS</div>
+                                <div class="text-sm text-purple-600">$426,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex mb-8 relative">
+                    <div class="step-number z-10">3</div>
+                    <div class="step-card ml-6 p-6 rounded-r-xl shadow-sm flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Top-up 타이밍 & 한도 활용</h3>
+                        <p class="text-gray-700 mb-4">55세 전 SA Top-up으로 소득공제와 4% 복리 혜택을 최대화하세요.</p>
+                        <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                            <p class="text-sm text-yellow-800">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                Top-up 한도: 본인 $8,000 + 가족 $8,000 (연간)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex mb-8 relative">
+                    <div class="step-number z-10">4</div>
+                    <div class="step-card ml-6 p-6 rounded-r-xl shadow-sm flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">CPF LIFE 수령 시점 최적화</h3>
+                        <p class="text-gray-700 mb-4">65세부터 시작되는 CPF LIFE 연금 수령 시점을 은퇴 계획에 맞게 조정하세요.</p>
+                        <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+                            <p class="text-sm text-green-800">
+                                <i class="fas fa-money-check-alt mr-2"></i>
+                                FRS 달성 시 월 $1,700 평생 연금 보장
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="flex mb-8 relative">
+                    <div class="step-number z-10">5</div>
+                    <div class="step-card ml-6 p-6 rounded-r-xl shadow-sm flex-1">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">상황 변화 시 전문가 상담 추천</h3>
+                        <p class="text-gray-700 mb-4">귀국/주택 소유 변화/투자 목표 조정 시 전문가와 CPF 전략을 재점검하세요.</p>
+                        <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
+                            <p class="text-sm text-purple-800">
+                                <i class="fas fa-user-tie mr-2"></i>
+                                개인별 상황에 맞는 맞춤 전략 수립이 중요합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Insights -->
+        <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 mb-12 border border-yellow-200">
+            <div class="flex items-start">
+                <div class="bg-yellow-500 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <i class="fas fa-lightbulb text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">핵심 포인트</h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        55세는 CPF 제도 내 가장 중요한 전환점입니다. FRS($213,000) 달성으로 월 $1,700의 안정적인 평생 연금을 확보하세요.
+                    </p>
+                    <div class="bg-white rounded-lg p-4 border border-yellow-200">
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">🎯 즉시 실행</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• 현재 CPF 잔액 확인</li>
+                                    <li>• FRS 달성을 위한 부족분 계산</li>
+                                    <li>• Top-up 가능 한도 확인</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">📅 계획 수립</h4>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• 55세까지 연간 Top-up 계획</li>
+                                    <li>• 인출 시점 및 금액 전략</li>
+                                    <li>• 다른 투자와의 균형 조정</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">더 자세한 정보가 필요하신가요?</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://arkifinance.com/?utm_source=fintips&utm_medium=guide2&utm_campaign=cpf_guide" 
+                   target="_blank" 
+                   class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold block">
+                    <i class="fas fa-external-link-alt mr-2"></i>
+                    Arki Finance 방문하기
+                </a>
+                <a href="https://linkedin.com/company/arki-finance" 
+                   target="_blank" 
+                   class="bg-gray-100 text-gray-700 px-8 py-4 rounded-lg hover:bg-gray-200 transition-colors font-semibold block">
+                    <i class="fab fa-linkedin mr-2"></i>
+                    LinkedIn 팔로우
+                </a>
+            </div>
+        </div>
+
+        <!-- Legal Disclaimer -->
+        <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-12">
+            <div class="flex items-start">
+                <div class="text-red-500 mr-3 mt-1">
+                    <i class="fas fa-exclamation-circle text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-red-800 mb-3">법적 고지사항 (Disclaimer)</h3>
+                    <p class="text-sm text-red-700 leading-relaxed">
+                        본 가이드의 내용은 작성자 염민수 개인의 의견이며, 어떠한 경우에도 소속 회사(Arki Finance)를 대표하지 않습니다. 
+                        본 자료는 투자 조언이나 투자 권유가 아니며, 투자의 수익이나 원금을 보장하지 않습니다. 
+                        투자는 원금 손실의 위험을 수반하며, 투자 결정 전 반드시 전문가와 상담하시기 바랍니다. 
+                        본 자료는 참고용으로만 제공되며, 특정 금융상품 매매를 권장하지 않습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center pt-8 border-t border-gray-200">
+            <a href="guide2-page7.html" class="flex items-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
+                <i class="fas fa-chevron-left mr-2"></i>
+                이전 페이지
+            </a>
+            
+            <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+            </div>
+            
+            <a href="guide2-cover.html" class="flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+                가이드 완료
+                <i class="fas fa-check ml-2"></i>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-6 py-8 text-center">
+            <div class="completion-badge mb-4">
+                <i class="fas fa-trophy mr-2"></i>
+                Guide 2 완료! 수고하셨습니다!
+            </div>
+            <p class="text-gray-600 mb-4">
+                55세 CPF 변화 실전가이드를 완주하셨습니다. 이제 실전에 적용해 보세요!
+            </p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                <a href="../src/index.html" class="hover:text-blue-600 transition-colors">메인으로</a>
+                <span>•</span>
+                <a href="guide2-cover.html" class="hover:text-blue-600 transition-colors">가이드 처음으로</a>
+                <span>•</span>
+                <a href="#" class="hover:text-blue-600 transition-colors">다른 가이드 보기</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GA4 Tracking for Guide Completion -->
+    <script>
+        // Track guide completion
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'guide_completion', {
+                'guide_name': 'CPF 55세 변화 실전가이드',
+                'guide_id': 'guide2',
+                'completion_page': 'page8'
+            });
+            
+            // Enhanced tracking: Guide completion with high score
+            gtag('event', 'user_engagement_score', {
+                'action': 'guide_completion',
+                'score': 50,
+                'guide_id': 'guide2',
+                'guide_name': 'CPF 55세 변화 실전가이드',
+                'completion_page': 'page8',
+                'user_segment': 'interested_min', // At least interested segment
+                'engagement_time_msec': 2000
+            });
+        }
+        
+        // Store completion in localStorage for parent window tracking
+        try {
+            if (window.opener && !window.opener.closed) {
+                // If opened from main site, update parent tracking
+                let userScore = parseInt(localStorage.getItem('user_engagement_score') || '0');
+                userScore += 50; // Guide completion bonus
+                localStorage.setItem('user_engagement_score', userScore.toString());
+                
+                // Send message to parent window if available
+                window.opener.postMessage({
+                    type: 'guide_completion',
+                    guideId: 'guide2',
+                    score: 50,
+                    totalScore: userScore
+                }, '*');
+            }
+        } catch (error) {
+            // Ignore cross-origin errors
+            console.log('Guide completion tracked locally');
+        }
+    </script>
+</body>
+</html>

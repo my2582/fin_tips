@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF 은퇴 준비 완전 가이드 - 55세 변화 실전편</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .section-divider {
+            border-top: 3px solid #DC2626;
+            margin: 4rem 0;
+            position: relative;
+        }
+        .section-number {
+            background: #DC2626;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            top: -20px;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #3B82F6;
+            border-radius: 50%;
+        }
+        .comparison-table th {
+            background-color: #FEF2F2;
+            color: #DC2626;
+            text-align: center;
+            padding: 8px 6px;
+            font-weight: 600;
+        }
+        .comparison-table td {
+            padding: 8px 6px;
+            text-align: center;
+            border-bottom: 1px solid #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <!-- Navigation -->
+    <nav id="guide-nav" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 border-b-2 border-red-100">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <a href="../src/index.html" class="flex items-center space-x-3 text-red-600 hover:text-red-800 transition-colors">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="font-semibold">메인으로</span>
+                </a>
+                <div class="hidden md:flex space-x-4 text-sm">
+                    <a href="#section-0" class="nav-link px-3 py-2 rounded-lg transition-colors">커버</a>
+                    <a href="#section-1" class="nav-link px-3 py-2 rounded-lg transition-colors">개요</a>
+                    <a href="#section-2" class="nav-link px-3 py-2 rounded-lg transition-colors">계좌변화</a>
+                    <a href="#section-3" class="nav-link px-3 py-2 rounded-lg transition-colors">FRS이해</a>
+                    <a href="#section-4" class="nav-link px-3 py-2 rounded-lg transition-colors">달성전략</a>
+                    <a href="#section-5" class="nav-link px-3 py-2 rounded-lg transition-colors">인출옵션</a>
+                    <a href="#section-6" class="nav-link px-3 py-2 rounded-lg transition-colors">SRS비교</a>
+                    <a href="#section-7" class="nav-link px-3 py-2 rounded-lg transition-colors">실행계획</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <!-- Section 0: Cover -->
+        <section id="section-0" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-pink-100">
+            <div class="max-w-4xl mx-auto text-center px-6 py-16">
+                <div class="absolute top-20 right-10 text-8xl font-black text-gray-200 opacity-30">02</div>
+                
+                <div class="bg-red-600 h-4 w-24 mx-auto mb-8 rounded"></div>
+                
+                <h1 class="text-6xl font-black mb-6">
+                    <span class="text-red-600">55세 CPF</span><br/>
+                    <span class="text-gray-900">변화 실전가이드</span>
+                </h1>
+                
+                <p class="text-2xl text-gray-700 mb-8 leading-relaxed">
+                    55세가 되면서 바뀌는 CPF 제도를<br/>
+                    완벽하게 이해하고 준비하세요
+                </p>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+                    <h2 class="text-xl font-bold text-red-800 mb-4">
+                        <i class="fas fa-list-check mr-2"></i>
+                        이 가이드에서 배울 내용
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4 text-left">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>55세 CPF 계좌 구조 변화</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>FRS/BRS/ERS 완벽 이해</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>Top-up 전략과 계산법</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                            <span>SRS vs CPF 전략 비교</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="bg-red-600 text-white px-6 py-3 rounded-full font-semibold">
+                        <i class="fas fa-calendar-alt mr-2"></i>2025 최신판
+                    </span>
+                    <span class="bg-gray-800 text-white px-6 py-3 rounded-full font-semibold">
+                        <i class="fas fa-mobile-alt mr-2"></i>모바일 최적화
+                    </span>
+                </div>
+                
+                <div class="text-gray-600 mb-8">
+                    <p class="mb-2">작성자: <strong>염민수</strong></p>
+                    <p>금융 꿀Tip단지 가이드 02</p>
+                </div>
+                
+                <a href="#section-1" class="inline-flex items-center px-8 py-4 bg-red-600 text-white text-lg font-semibold rounded-xl hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-play mr-3"></i>
+                    가이드 시작하기
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 1: CPF 55세 변화 개요 -->
+        <section id="section-1" class="min-h-screen">
+            <div class="section-divider">
+                <div class="section-number">1</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">CPF 55세 변화 개요</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-900 mb-4">
+                            <i class="fas fa-birthday-cake text-blue-600 mr-3"></i>
+                            55세 이전
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
+                                <span>OA, SA, Medisave 3개 계좌</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
+                                <span>자유로운 투자 및 사용</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-circle text-blue-600 text-xs mt-2 mr-3"></i>
+                                <span>주택 구매 가능</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-600">
+                        <h3 class="text-2xl font-bold text-red-900 mb-4">
+                            <i class="fas fa-arrow-right text-red-600 mr-3"></i>
+                            55세 이후
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-red-600 text-xs mt-2 mr-3"></i>
+                                <span>RA (Retirement Account) 자동 생성</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-red-600 text-xs mt-2 mr-3"></i>
+                                <span>SA/OA 자금이 RA로 이동</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-red-600 text-xs mt-2 mr-3"></i>
+                                <span>인출 조건 변화</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-8 border border-yellow-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                        <i class="fas fa-exclamation-triangle text-yellow-600 mr-3"></i>
+                        핵심 포인트
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4">
+                        55세는 CPF 제도에서 가장 중요한 전환점입니다. 이때부터 은퇴 준비가 본격적으로 시작되며, 
+                        FRS(Full Retirement Sum) 달성 여부에 따라 향후 연금 수령액이 결정됩니다.
+                    </p>
+                    <div class="bg-white rounded-lg p-4">
+                        <p class="font-semibold text-gray-800">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            2025년 FRS 기준: $213,000 → 월 $1,700 평생 연금
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 계좌 구조 변화 -->
+        <section id="section-2" class="min-h-screen bg-gray-50">
+            <div class="section-divider">
+                <div class="section-number">2</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">계좌 구조 변화 상세</h2>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-exchange-alt text-purple-600 mr-3"></i>
+                        자금 이동 과정
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center justify-between bg-blue-50 p-6 rounded-lg">
+                            <div class="text-center">
+                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-piggy-bank text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-blue-900">SA (Special Account)</h4>
+                                <p class="text-sm text-gray-600">4% 복리</p>
+                            </div>
+                            <i class="fas fa-arrow-right text-2xl text-gray-400 mx-4"></i>
+                            <div class="text-center">
+                                <div class="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                                    <i class="fas fa-home text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-red-900">RA (Retirement Account)</h4>
+                                <p class="text-sm text-gray-600">은퇴 전용 계좌</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6">
+                            <h4 class="font-bold text-yellow-800 mb-3">이동 우선순위</h4>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li>SA 계좌 전액이 먼저 RA로 이동</li>
+                                <li>SA 잔액이 FRS에 못 미치면 OA에서 부족분 이동</li>
+                                <li>총합이 FRS를 넘으면 초과분은 OA에 잔류</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-calculator text-green-600 mr-3"></i>
+                        실제 계산 예시
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <h4 class="font-bold text-green-900 mb-4">Case A: FRS 달성</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>SA 잔액:</span>
+                                    <span class="font-semibold">$150,000</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>OA 잔액:</span>
+                                    <span class="font-semibold">$100,000</span>
+                                </div>
+                                <div class="border-t border-green-300 pt-2">
+                                    <div class="flex justify-between">
+                                        <span>RA로 이동:</span>
+                                        <span class="font-bold text-green-700">$213,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>OA 잔류:</span>
+                                        <span class="font-semibold">$37,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-6">
+                            <h4 class="font-bold text-orange-900 mb-4">Case B: FRS 미달</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span>SA 잔액:</span>
+                                    <span class="font-semibold">$80,000</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>OA 잔액:</span>
+                                    <span class="font-semibold">$50,000</span>
+                                </div>
+                                <div class="border-t border-orange-300 pt-2">
+                                    <div class="flex justify-between">
+                                        <span>RA로 이동:</span>
+                                        <span class="font-bold text-orange-700">$130,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>부족분:</span>
+                                        <span class="font-semibold text-red-600">$83,000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: FRS/BRS/ERS 이해 -->
+        <section id="section-3" class="min-h-screen">
+            <div class="section-divider">
+                <div class="section-number">3</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">FRS/BRS/ERS 완벽 이해</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-orange-500">
+                        <div class="text-center mb-4">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-star text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-orange-900">BRS</h3>
+                            <p class="text-sm text-gray-600">Basic Retirement Sum</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-600 mb-2">$106,500</div>
+                            <p class="text-sm text-gray-600">월 약 $850</p>
+                            <p class="text-xs text-gray-500 mt-2">주택담보 조건</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-green-500">
+                        <div class="text-center mb-4">
+                            <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-900">FRS</h3>
+                            <p class="text-sm text-gray-600">Full Retirement Sum</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">$213,000</div>
+                            <p class="text-sm text-gray-600">월 약 $1,700</p>
+                            <p class="text-xs text-green-500 mt-2">권장 목표</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-t-4 border-purple-500">
+                        <div class="text-center mb-4">
+                            <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-crown text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-purple-900">ERS</h3>
+                            <p class="text-sm text-gray-600">Enhanced Retirement Sum</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">$426,000</div>
+                            <p class="text-sm text-gray-600">월 약 $3,400</p>
+                            <p class="text-xs text-purple-500 mt-2">최대 연금</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-6">
+                        <i class="fas fa-chart-line text-blue-600 mr-3"></i>
+                        연금 수령액 비교 (2025년 기준)
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-orange-500 rounded"></div>
+                                <span class="font-semibold">BRS ($106,500)</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-orange-600">월 $850</div>
+                                <div class="text-sm text-gray-500">연 $10,200</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between bg-white p-4 rounded-lg border-2 border-green-200">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-green-500 rounded"></div>
+                                <span class="font-semibold">FRS ($213,000) ⭐</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-green-600">월 $1,700</div>
+                                <div class="text-sm text-gray-500">연 $20,400</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between bg-white p-4 rounded-lg">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-purple-500 rounded"></div>
+                                <span class="font-semibold">ERS ($426,000)</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-purple-600">월 $3,400</div>
+                                <div class="text-sm text-gray-500">연 $40,800</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-yellow-100 rounded-lg">
+                        <p class="text-sm text-yellow-800">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            <strong>권장:</strong> 대부분의 사람들에게 FRS($213,000) 달성을 권장합니다. 
+                            월 $1,700는 싱가포르에서 기본적인 생활을 유지할 수 있는 수준입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: FRS 달성 전략 -->
+        <section id="section-4" class="min-h-screen bg-gray-50">
+            <div class="section-divider">
+                <div class="section-number">4</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">FRS 달성 전략</h2>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-rocket text-blue-600 mr-3"></i>
+                        Top-up 전략과 계산법
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-blue-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-blue-900 mb-4">연간 Top-up 한도</h4>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span>본인 계좌:</span>
+                                        <span class="font-bold text-blue-700">$8,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>가족 계좌:</span>
+                                        <span class="font-bold text-blue-700">$8,000</span>
+                                    </div>
+                                    <div class="border-t border-blue-200 pt-2">
+                                        <div class="flex justify-between font-bold">
+                                            <span>총 한도:</span>
+                                            <span class="text-blue-800">$16,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-green-900 mb-4">절세 효과</h4>
+                                <p class="text-sm text-green-700 mb-3">
+                                    Top-up 금액은 100% 소득공제 가능
+                                </p>
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between">
+                                        <span>소득세율 15%:</span>
+                                        <span class="font-semibold">$1,000당 $150 절세</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>소득세율 20%:</span>
+                                        <span class="font-semibold">$1,000당 $200 절세</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-lg border border-yellow-200">
+                            <h4 class="font-bold text-orange-900 mb-4">
+                                <i class="fas fa-calculator mr-2"></i>
+                                실전 계산 예시
+                            </h4>
+                            
+                            <div class="space-y-4 text-sm">
+                                <div class="bg-white p-4 rounded border">
+                                    <div class="font-semibold mb-2">현재 상황</div>
+                                    <div class="space-y-1">
+                                        <div>나이: 50세</div>
+                                        <div>현재 SA+OA: $150,000</div>
+                                        <div>FRS 목표: $213,000</div>
+                                        <div class="font-bold text-red-600">부족분: $63,000</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-4 rounded border">
+                                    <div class="font-semibold mb-2">Top-up 계획</div>
+                                    <div class="space-y-1">
+                                        <div>연간 본인 Top-up: $8,000</div>
+                                        <div>5년간 총 Top-up: $40,000</div>
+                                        <div>4% 복리 효과: 약 $6,000</div>
+                                        <div class="font-bold text-green-600">55세 예상 잔액: $196,000</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-orange-100 p-3 rounded">
+                                    <div class="font-bold text-orange-800">
+                                        남은 부족분: $17,000
+                                    </div>
+                                    <div class="text-xs text-orange-600 mt-1">
+                                        추가 Top-up 또는 투자 수익 필요
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                        Top-up 전략 팁
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-bold text-blue-900">1. 타이밍 최적화</h4>
+                                <p class="text-sm text-gray-600">
+                                    55세 이전에 Top-up하면 SA 계좌에서 4% 복리 혜택을 받을 수 있습니다.
+                                </p>
+                            </div>
+                            
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-bold text-green-900">2. 가족 계좌 활용</h4>
+                                <p class="text-sm text-gray-600">
+                                    배우자나 부모 계좌에 Top-up하여 연간 한도를 2배로 늘릴 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold text-purple-900">3. 세금 계획</h4>
+                                <p class="text-sm text-gray-600">
+                                    소득이 높은 연도에 Top-up하면 더 큰 절세 효과를 얻을 수 있습니다.
+                                </p>
+                            </div>
+                            
+                            <div class="border-l-4 border-orange-500 pl-4">
+                                <h4 class="font-bold text-orange-900">4. 현금 유동성</h4>
+                                <p class="text-sm text-gray-600">
+                                    Top-up은 55세 이후에만 인출 가능하므로 현금 유동성을 고려하세요.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 인출 옵션 & 타이밍 -->
+        <section id="section-5" class="min-h-screen">
+            <div class="section-divider">
+                <div class="section-number">5</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">인출 옵션 & 타이밍</h2>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-clock text-blue-600 mr-3"></i>
+                        인출 타이밍 가이드
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div class="timeline-item">
+                            <div class="bg-blue-50 rounded-xl p-6">
+                                <h4 class="text-xl font-semibold text-blue-900 mb-3">55세: 첫 번째 기회</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                        <span>RA FRS 초과 금액 인출 가능</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                        <span>의료비 목적 Medisave 인출 검토</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exclamation-triangle text-orange-500 mt-1 mr-2"></i>
+                                        <span>성급한 인출보다는 신중한 계획 필요</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="bg-green-50 rounded-xl p-6">
+                                <h4 class="text-xl font-semibold text-green-900 mb-3">65세: 본격적인 인출</h4>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                        <span>CPF LIFE 월 연금 수령 시작</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                        <span>추가 일시금 인출 옵션 활용</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check text-green-600 mt-1 mr-2"></i>
+                                        <span>안정적인 은퇴 소득 확보</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-coins text-yellow-600 mr-3"></i>
+                        주요 인출 옵션
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                            <div class="text-center mb-4">
+                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-piggy-bank text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-semibold text-blue-900">RA FRS 초과분</h4>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                                    <span>55세부터 인출 가능</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                                    <span>FRS 달성 후 초과 금액</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-blue-600 mt-1 mr-2 text-xs"></i>
+                                    <span>즉시 현금 활용 가능</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                            <div class="text-center mb-4">
+                                <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-calendar-check text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-semibold text-green-900">CPF LIFE 월 연금</h4>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                                    <span>65세부터 월 정기 지급</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                                    <span>평생 보장 소득</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-green-600 mt-1 mr-2 text-xs"></i>
+                                    <span>인플레이션 보정</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                            <div class="text-center mb-4">
+                                <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-heartbeat text-2xl"></i>
+                                </div>
+                                <h4 class="text-xl font-semibold text-purple-900">의료비 인출</h4>
+                            </div>
+                            <ul class="space-y-2 text-gray-700 text-sm">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                                    <span>Medisave 계좌에서</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                                    <span>승인된 의료비용</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mt-1 mr-2 text-xs"></i>
+                                    <span>가족 의료비 포함</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: SRS vs CPF 비교 -->
+        <section id="section-6" class="min-h-screen bg-gray-50">
+            <div class="section-divider">
+                <div class="section-number">6</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">SRS vs CPF 비교</h2>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8">
+                        <i class="fas fa-balance-scale text-green-600 mr-3"></i>
+                        상세 비교표
+                    </h3>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="comparison-table w-full border border-gray-200 rounded-lg overflow-hidden">
+                            <thead>
+                                <tr>
+                                    <th class="w-1/4 border-r border-gray-200">비교 항목</th>
+                                    <th class="w-3/8 bg-blue-50 border-r border-gray-200">SRS</th>
+                                    <th class="w-3/8">CPF</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50 border-r border-gray-200">가입 대상</td>
+                                    <td class="border-r border-gray-200">모든 거주자<br><small class="text-green-600">✓ 외국인 포함</small></td>
+                                    <td>PR 이상만 가능<br><small class="text-orange-600">⚠ 제한적</small></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50 border-r border-gray-200">세제 혜택</td>
+                                    <td class="border-r border-gray-200">불입액 소득공제<br><span class="text-red-600">인출 시 50% 과세</span></td>
+                                    <td>불입액 소득공제<br><span class="text-green-600">인출 시 무과세</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50 border-r border-gray-200">연간 한도</td>
+                                    <td class="border-r border-gray-200">PR/시민권: $15,300<br>외국인: $35,700</td>
+                                    <td>Top-up: $8,000(본인)<br>+ $8,000(가족)</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50 border-r border-gray-200">수익률</td>
+                                    <td class="border-r border-gray-200">투자 상품에 따라 변동<br><small class="text-blue-600">높은 자유도</small></td>
+                                    <td>OA: 2.5%, SA/MA/RA: 4%<br>첫 $60K +1%, 55세↑ +2%</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold bg-gray-50 border-r border-gray-200">인출 조건</td>
+                                    <td class="border-r border-gray-200">62세 이후 10년 분할<br><span class="text-red-600">50% 과세</span></td>
+                                    <td>55세 이후 인출 가능<br>65세부터 월 $1,700</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                        <h4 class="text-xl font-bold text-blue-900 mb-4">
+                            <i class="fas fa-user-tie text-blue-600 mr-2"></i>
+                            외국인/EP 홀더 전략
+                        </h4>
+                        <p class="text-gray-700 mb-4">
+                            SRS를 주력으로 활용하되, 별도 투자도 병행하여 유동성 확보
+                        </p>
+                        <div class="bg-blue-100 rounded-lg p-4">
+                            <h5 class="font-semibold text-blue-800 mb-2">추천 배분:</h5>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>• SRS: 연 $35,700 (소득공제 최대 활용)</li>
+                                <li>• 별도 투자: 유동성 자금 (주식, ETF, 부동산 등)</li>
+                                <li>• 현금: 응급자금 (월 생활비 6개월분)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+                        <h4 class="text-xl font-bold text-red-900 mb-4">
+                            <i class="fas fa-passport text-red-600 mr-2"></i>
+                            PR/시민권자 전략
+                        </h4>
+                        <p class="text-gray-700 mb-4">
+                            CPF Top-up을 최우선으로, 여유 자금으로 SRS 병행
+                        </p>
+                        <div class="bg-red-100 rounded-lg p-4">
+                            <h5 class="font-semibold text-red-800 mb-2">추천 배분:</h5>
+                            <ul class="text-sm text-red-700 space-y-1">
+                                <li>• 1순위: CPF Top-up $8,000 (본인) + $8,000 (가족)</li>
+                                <li>• 2순위: SRS $15,300 (추가 절세 원할 경우)</li>
+                                <li>• 3순위: 별도 투자 (고수익 추구시)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: 요약 및 실전 액션 -->
+        <section id="section-7" class="min-h-screen">
+            <div class="section-divider">
+                <div class="section-number">7</div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 py-16">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">요약 및 실전 액션</h2>
+                
+                <div class="bg-gradient-to-r from-pink-50 to-red-50 rounded-2xl p-8 mb-12 border border-pink-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                        <i class="fas fa-clipboard-check text-pink-600 mr-3"></i>
+                        CPF 55세 변화 실행 체크리스트
+                    </h3>
+                    <p class="text-center text-gray-700 mb-8">
+                        5단계 액션 플랜으로 55세 이후 CPF 변화에 효과적으로 대응하세요.
+                    </p>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-6">
+                        <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">55세 구조 변화 정확히 파악하기</h4>
+                            <p class="text-gray-700 mb-4">RA 계좌 자동 생성, SA/OA→RA 자금 이동, 계정별 용도 변화를 이해하세요.</p>
+                            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+                                <p class="text-sm text-blue-800">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    55세가 되면 자동으로 RA(Retirement Account) 계좌가 생성됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">FRS/BRS/ERS 중 본인 목표 설정</h4>
+                            <p class="text-gray-700 mb-4">FRS($213,000)로 월 $1,700, BRS는 $106,500, ERS는 $426,000입니다 (2025년).</p>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-orange-50 p-3 rounded-lg text-center">
+                                    <div class="font-bold text-orange-800">BRS</div>
+                                    <div class="text-sm text-orange-600">$106,500</div>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded-lg text-center border-2 border-green-200">
+                                    <div class="font-bold text-green-800">FRS ⭐</div>
+                                    <div class="text-sm text-green-600">$213,000</div>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-lg text-center">
+                                    <div class="font-bold text-purple-800">ERS</div>
+                                    <div class="text-sm text-purple-600">$426,000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Top-up 타이밍 & 한도 활용</h4>
+                            <p class="text-gray-700 mb-4">55세 전 SA Top-up으로 소득공제와 4% 복리 혜택을 최대화하세요.</p>
+                            <div class="bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                                <p class="text-sm text-yellow-800">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    Top-up 한도: 본인 $8,000 + 가족 $8,000 (연간)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">CPF LIFE 수령 시점 최적화</h4>
+                            <p class="text-gray-700 mb-4">65세부터 시작되는 CPF LIFE 연금 수령 시점을 은퇴 계획에 맞게 조정하세요.</p>
+                            <div class="bg-green-50 rounded-lg p-4 border-l-4 border-green-400">
+                                <p class="text-sm text-green-800">
+                                    <i class="fas fa-money-check-alt mr-2"></i>
+                                    FRS 달성 시 월 $1,700 평생 연금 보장
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">5</div>
+                        <div class="bg-white rounded-xl p-6 shadow-lg flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">상황 변화 시 전문가 상담 추천</h4>
+                            <p class="text-gray-700 mb-4">귀국/주택 소유 변화/투자 목표 조정 시 전문가와 CPF 전략을 재점검하세요.</p>
+                            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
+                                <p class="text-sm text-purple-800">
+                                    <i class="fas fa-user-tie mr-2"></i>
+                                    개인별 상황에 맞는 맞춤 전략 수립이 중요합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 mt-12 border border-yellow-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                            핵심 포인트
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-6">
+                            55세는 CPF 제도 내 가장 중요한 전환점입니다.<br/>
+                            FRS($213,000) 달성으로 월 $1,700의 안정적인 평생 연금을 확보하세요.
+                        </p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-white rounded-lg p-6">
+                                <h4 class="font-bold text-gray-800 mb-3">🎯 즉시 실행</h4>
+                                <ul class="text-sm text-gray-700 space-y-2 text-left">
+                                    <li>• 현재 CPF 잔액 확인</li>
+                                    <li>• FRS 달성을 위한 부족분 계산</li>
+                                    <li>• Top-up 가능 한도 확인</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white rounded-lg p-6">
+                                <h4 class="font-bold text-gray-800 mb-3">📅 계획 수립</h4>
+                                <ul class="text-sm text-gray-700 space-y-2 text-left">
+                                    <li>• 55세까지 연간 Top-up 계획</li>
+                                    <li>• 인출 시점 및 금액 전략</li>
+                                    <li>• 다른 투자와의 균형 조정</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Section -->
+                <div class="text-center mt-12">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">더 자세한 정보가 필요하신가요?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <a href="https://arkifinance.com/?utm_source=fintips&utm_medium=guide2&utm_campaign=cpf_guide" 
+                           target="_blank" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            Arki Finance 방문하기
+                        </a>
+                        <a href="https://linkedin.com/company/arki-finance" 
+                           target="_blank" 
+                           class="inline-flex items-center justify-center px-8 py-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-semibold">
+                            <i class="fab fa-linkedin mr-2"></i>
+                            LinkedIn 팔로우
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Legal Disclaimer -->
+                <div class="bg-red-50 border border-red-200 rounded-xl p-6 mt-12">
+                    <div class="flex items-start">
+                        <div class="text-red-500 mr-3 mt-1">
+                            <i class="fas fa-exclamation-circle text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-red-800 mb-3">법적 고지사항 (Disclaimer)</h3>
+                            <p class="text-sm text-red-700 leading-relaxed">
+                                본 가이드의 내용은 작성자 염민수 개인의 의견이며, 어떠한 경우에도 소속 회사(Arki Finance)를 대표하지 않습니다. 
+                                본 자료는 투자 조언이나 투자 권유가 아니며, 투자의 수익이나 원금을 보장하지 않습니다. 
+                                투자는 원금 손실의 위험을 수반하며, 투자 결정 전 반드시 전문가와 상담하시기 바랍니다. 
+                                본 자료는 참고용으로만 제공되며, 특정 금융상품 매매를 권장하지 않습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Smooth scrolling navigation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Active section highlighting
+            const sections = document.querySelectorAll('section[id^="section-"]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            function updateActiveNavigation() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('bg-red-100', 'text-red-700');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('bg-red-100', 'text-red-700');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNavigation);
+            updateActiveNavigation(); // Initial call
+            
+            // Track guide completion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'guide_completion', {
+                    'guide_name': 'CPF 55세 변화 실전가이드',
+                    'guide_id': 'guide2',
+                    'completion_page': 'complete'
+                });
+                
+                // Enhanced tracking
+                gtag('event', 'user_engagement_score', {
+                    'action': 'guide_completion',
+                    'score': 50,
+                    'guide_id': 'cpf_retirement_guide',
+                    'guide_name': 'CPF 은퇴 준비 완전 가이드',
+                    'completion_page': 'complete',
+                    'user_segment': 'interested_min',
+                    'engagement_time_msec': 2000
+                });
+            }
+            
+            // Cross-window completion tracking
+            try {
+                if (window.opener && !window.opener.closed) {
+                    let userScore = parseInt(localStorage.getItem('user_engagement_score') || '0');
+                    userScore += 50;
+                    localStorage.setItem('user_engagement_score', userScore.toString());
+                    
+                    window.opener.postMessage({
+                        type: 'guide_completion',
+                        guideId: 'cpf_retirement_guide',
+                        score: 50,
+                        totalScore: userScore
+                    }, '*');
+                }
+            } catch (error) {
+                console.log('Guide completion tracked locally');
+            }
+        });
+    </script>
+</body>
+</html>
