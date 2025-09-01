@@ -145,26 +145,153 @@
     .cta-tertiary:hover { color: var(--accent); border-color: var(--accent); }
     
     /* Guide Modal Styles */
-    .guide-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; overflow-y: auto; }
+    .guide-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: 1000; overflow-y: auto; }
     .guide-modal.show { display: flex; align-items: flex-start; justify-content: center; padding: 20px; }
-    .guide-content { background: var(--bg); border: 1px solid #334155; border-radius: 16px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; margin-top: 20px; }
-    .guide-header { padding: 20px; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; }
-    .guide-title { font-size: 18px; font-weight: 600; color: var(--fg); }
-    .guide-close { background: none; border: none; color: var(--muted); font-size: 24px; cursor: pointer; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; }
-    .guide-close:hover { color: var(--fg); }
-    .guide-nav { padding: 0 20px; border-bottom: 1px solid #334155; }
-    .guide-nav-list { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
-    .guide-nav-item { margin: 0; }
-    .guide-nav-link { display: block; padding: 12px 16px; color: var(--muted); text-decoration: none; font-size: 14px; transition: all 0.3s ease; border-bottom: 2px solid transparent; }
-    .guide-nav-link.active, .guide-nav-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
-    .guide-body { padding: 20px; }
-    .guide-item { margin-bottom: 32px; }
-    .guide-item:last-child { margin-bottom: 0; }
-    .guide-item h3 { color: var(--accent); font-size: 16px; margin-bottom: 16px; }
-    .guide-item .guide-description { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
-    .guide-item .guide-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .guide-download-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--accent); color: var(--bg); border: none; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
-    .guide-download-btn:hover { background: #0284c7; transform: translateY(-1px); }
+    .guide-content { background: var(--bg); border: 1px solid #334155; border-radius: 20px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; margin-top: 20px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); }
+    .guide-header { padding: 24px; border-bottom: 1px solid #334155; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #0f172a, #1e293b); border-radius: 20px 20px 0 0; }
+    .guide-title { font-size: 22px; font-weight: 700; color: var(--fg); display: flex; align-items: center; gap: 12px; }
+    .guide-close { background: rgba(255,255,255,0.1); border: none; color: var(--muted); font-size: 20px; cursor: pointer; padding: 8px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 8px; transition: all 0.3s ease; }
+    .guide-close:hover { color: var(--fg); background: rgba(255,255,255,0.2); }
+    
+    /* Guide Gallery Layout */
+    .guide-gallery { padding: 32px; display: grid; grid-template-columns: 1fr; gap: 24px; }
+    
+    /* Guide Card Styles */
+    .guide-card { 
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
+      border: 2px solid #334155; 
+      border-radius: 16px; 
+      padding: 28px; 
+      transition: all 0.4s ease; 
+      cursor: pointer; 
+      position: relative; 
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .guide-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3b82f6, #06d6a0, #ffd60a);
+    }
+    
+    .guide-card:hover { 
+      transform: translateY(-8px); 
+      border-color: var(--accent);
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+    }
+    
+    .guide-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .guide-icon {
+      background: linear-gradient(135deg, var(--accent), #0284c7);
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    }
+    
+    .guide-card-content {
+      flex: 1;
+    }
+    
+    .guide-card-title { 
+      color: var(--fg); 
+      font-size: 20px; 
+      font-weight: 700; 
+      margin-bottom: 12px; 
+      line-height: 1.3;
+    }
+    
+    .guide-card-description { 
+      color: var(--muted); 
+      font-size: 15px; 
+      line-height: 1.6; 
+      margin-bottom: 24px; 
+    }
+    
+    .guide-card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    
+    .guide-feature-tag {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    
+    .guide-card-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .guide-view-btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 10px; 
+      padding: 14px 28px; 
+      background: linear-gradient(135deg, var(--accent), #0284c7); 
+      color: white; 
+      border: none; 
+      border-radius: 12px; 
+      text-decoration: none; 
+      font-size: 15px; 
+      font-weight: 600; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    
+    .guide-view-btn:hover { 
+      background: linear-gradient(135deg, #0284c7, #0369a1); 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+    }
+    
+    .guide-status {
+      color: #10b981;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (min-width: 768px) {
+      .guide-gallery { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    
+    @media (max-width: 640px) {
+      .guide-card { padding: 20px; }
+      .guide-card-header { flex-direction: column; align-items: center; text-align: center; }
+      .guide-icon { width: 56px; height: 56px; font-size: 24px; }
+      .guide-card-title { font-size: 18px; }
+      .guide-view-btn { width: 100%; justify-content: center; }
+    }
     
     @media (min-width: 640px) {
       header { grid-template-columns: 1fr; }
@@ -231,21 +358,71 @@
   <div class="guide-modal" id="guideModal">
     <div class="guide-content">
       <div class="guide-header">
-        <h2 class="guide-title">📈 핵심정보 모아보기</h2>
+        <h2 class="guide-title">
+          <span>📈</span>
+          <span>핵심정보 모아보기</span>
+        </h2>
         <button class="guide-close" onclick="closeGuideModal()">&times;</button>
       </div>
-      <nav class="guide-nav">
-        <ul class="guide-nav-list">
-          <li class="guide-nav-item">
-            <a href="guides/stock-investment-guide.html" class="guide-nav-link active" onclick="trackGuideClick('stock-guide')">주식투자 원칙 가이드</a>
-          </li>
-          <li class="guide-nav-item">
-            <a href="guides/cpf-retirement-guide.html" class="guide-nav-link" onclick="trackGuideClick('cpf55-guide')">55세 CPF 변화 가이드</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="guide-body" id="guideBody">
-        <!-- Guide content will be loaded here -->
+      
+      <div class="guide-gallery">
+        <!-- Stock Investment Guide Card -->
+        <div class="guide-card" onclick="openGuide('stock-guide')">
+          <div class="guide-card-header">
+            <div class="guide-icon">📊</div>
+            <div class="guide-card-content">
+              <h3 class="guide-card-title">주식투자 원칙 가이드</h3>
+              <div class="guide-card-features">
+                <span class="guide-feature-tag">타이밍 vs 원칙</span>
+                <span class="guide-feature-tag">Buy&Hold 전략</span>
+                <span class="guide-feature-tag">3가지 핵심 룰</span>
+              </div>
+            </div>
+          </div>
+          <p class="guide-card-description">
+            개인투자자를 위한 실전 주식투자 원칙과 매도타이밍 전략 비교분석. 
+            감정에 휘둘리지 않는 투자 원칙으로 장기 수익을 실현하세요.
+          </p>
+          <div class="guide-card-action">
+            <button class="guide-view-btn" onclick="event.stopPropagation(); downloadGuide('stock-guide')">
+              <span>📈</span>
+              <span>가이드 보기</span>
+            </button>
+            <div class="guide-status">
+              <span>✅</span>
+              <span>바로 확인 가능</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CPF Guide Card -->
+        <div class="guide-card" onclick="openGuide('cpf55-guide')">
+          <div class="guide-card-header">
+            <div class="guide-icon">🏦</div>
+            <div class="guide-card-content">
+              <h3 class="guide-card-title">55세 CPF 변화 가이드</h3>
+              <div class="guide-card-features">
+                <span class="guide-feature-tag">FRS $213,000</span>
+                <span class="guide-feature-tag">Top-up 전략</span>
+                <span class="guide-feature-tag">Case A/B 분석</span>
+              </div>
+            </div>
+          </div>
+          <p class="guide-card-description">
+            55세 CPF 제도 변화와 FRS 달성 전략을 실제 시나리오로 분석. 
+            CPF Board 출처 기반 정확한 정보로 은퇴 준비를 완벽하게 하세요.
+          </p>
+          <div class="guide-card-action">
+            <button class="guide-view-btn" onclick="event.stopPropagation(); downloadGuide('cpf55-guide')">
+              <span>🏦</span>
+              <span>가이드 보기</span>
+            </button>
+            <div class="guide-status">
+              <span>✅</span>
+              <span>바로 확인 가능</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -453,12 +630,11 @@
     // Modal functions
     function openGuideModal() {
       document.getElementById('guideModal').classList.add('show');
-      showGuide(currentGuide);
       trackCTA('primary', 'guide_modal_open');
       
       // Enhanced tracking: Guide modal opened
       trackUserScore('guide_modal_open', 15, {
-        modal_type: 'guide_selection',
+        modal_type: 'guide_gallery',
         available_guides: Object.keys(GUIDES).length
       });
     }
@@ -467,37 +643,30 @@
       document.getElementById('guideModal').classList.remove('show');
     }
 
-    function showGuide(guideId, linkElement) {
-      currentGuide = guideId;
-      const guide = GUIDES[guideId];
+    // New function for guide card interaction
+    function openGuide(guideId) {
+      // Track guide card click
+      trackGuideClick(guideId);
       
-      // Update active nav link
-      document.querySelectorAll('.guide-nav-link').forEach(link => {
-        link.classList.remove('active');
+      // Visual feedback for card interaction
+      const cards = document.querySelectorAll('.guide-card');
+      cards.forEach(card => {
+        if (card.onclick.toString().includes(guideId)) {
+          card.style.transform = 'translateY(-4px) scale(1.02)';
+          card.style.borderColor = 'var(--accent)';
+          setTimeout(() => {
+            card.style.transform = '';
+            card.style.borderColor = '';
+          }, 300);
+        }
       });
-      if (linkElement) {
-        linkElement.classList.add('active');
-      }
+    }
 
-      // Update guide content
-      const guideBody = document.getElementById('guideBody');
-      guideBody.innerHTML = `
-        <div class="guide-item">
-          <h3>${guide.title}</h3>
-          <p class="guide-description">${guide.description}</p>
-          <div class="guide-actions">
-            <button class="guide-download-btn" onclick="downloadGuide('${guideId}')">
-              📈 핵심정보 보기
-            </button>
-            <div style="margin-top: 12px; padding: 12px; background-color: #f8fafc; border-radius: 8px; border-left: 4px solid #0ea5e9;">
-              <p style="margin: 0 0 8px 0; font-size: 13px; color: #475569; font-weight: 500;">더 많은 정보를 얻으시려면 저의 LinkedIn을 팔로우 해 주세요</p>
-              <a href="https://www.linkedin.com/in/msyeom/" class="cta-secondary" onclick="trackCTA('secondary', 'linkedin_follow')" target="_blank" rel="noopener">
-                💼 LinkedIn 팔로우
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
+    // Legacy function (kept for compatibility but simplified)
+    function showGuide(guideId, linkElement) {
+      // This function is no longer needed with the new gallery layout
+      // but kept for any remaining references
+      trackGuideClick(guideId);
     }
 
     // View guide function - opens in new tab
