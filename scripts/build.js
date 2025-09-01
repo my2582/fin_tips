@@ -164,6 +164,18 @@ function readExcelToData() {
 
     ensureDir(OUT_DIR);
     fs.writeFileSync(OUT_HTML, out, 'utf8');
+    
+    // Copy SEO files to dist directory
+    const seoFiles = ['robots.txt', 'sitemap.xml'];
+    seoFiles.forEach(file => {
+      const srcFile = path.join(ROOT, file);
+      const destFile = path.join(OUT_DIR, file);
+      if (fs.existsSync(srcFile)) {
+        fs.copyFileSync(srcFile, destFile);
+        log(`✔ Copied SEO file: ${file}`);
+      }
+    });
+    
     log(`✔ Build done: ${OUT_HTML}`);
   } catch (e) {
     log('✖ Build failed');
