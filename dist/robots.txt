@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://fintips.netlify.app/sitemap.xml
+
+# Crawl delay (optional, 1 second)
+Crawl-delay: 1
+
+# Block access to sensitive directories (if any)
+# Disallow: /admin/
+# Disallow: /.netlify/
