@@ -154,19 +154,23 @@
     .guide-close:hover { color: var(--fg); background: rgba(255,255,255,0.2); }
     
     /* Guide Gallery Layout */
-    .guide-gallery { padding: 32px; display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .guide-gallery { padding: 40px; display: grid; grid-template-columns: 1fr; gap: 32px; }
     
-    /* Guide Card Styles */
+    /* Guide Card Styles - Now Acting as Large Buttons */
     .guide-card { 
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); 
-      border: 2px solid #334155; 
-      border-radius: 16px; 
-      padding: 28px; 
-      transition: all 0.4s ease; 
+      border: 3px solid #334155; 
+      border-radius: 20px; 
+      padding: 36px; 
+      transition: all 0.3s ease; 
       cursor: pointer; 
       position: relative; 
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     
     .guide-card::before {
@@ -175,14 +179,35 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
+      height: 6px;
       background: linear-gradient(90deg, #3b82f6, #06d6a0, #ffd60a);
     }
     
+    .guide-card::after {
+      content: '클릭하여 가이드 보기 →';
+      position: absolute;
+      bottom: 20px;
+      right: 24px;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
     .guide-card:hover { 
-      transform: translateY(-8px); 
+      transform: translateY(-12px) scale(1.02); 
       border-color: var(--accent);
-      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 20px 60px rgba(59, 130, 246, 0.4);
+      background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    }
+    
+    .guide-card:hover::after {
+      opacity: 1;
+    }
+    
+    .guide-card:active {
+      transform: translateY(-8px) scale(0.98);
     }
     
     .guide-card-header {
@@ -195,15 +220,21 @@
     .guide-icon {
       background: linear-gradient(135deg, var(--accent), #0284c7);
       color: white;
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
+      font-size: 36px;
       flex-shrink: 0;
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .guide-card:hover .guide-icon {
+      transform: scale(1.1);
+      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.7);
     }
     
     .guide-card-content {
@@ -212,85 +243,76 @@
     
     .guide-card-title { 
       color: var(--fg); 
-      font-size: 20px; 
-      font-weight: 700; 
-      margin-bottom: 12px; 
-      line-height: 1.3;
+      font-size: 24px; 
+      font-weight: 800; 
+      margin-bottom: 16px; 
+      line-height: 1.2;
     }
     
     .guide-card-description { 
       color: var(--muted); 
-      font-size: 15px; 
+      font-size: 16px; 
       line-height: 1.6; 
-      margin-bottom: 24px; 
+      margin-bottom: 0; 
     }
     
     .guide-card-features {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
+      gap: 10px;
+      margin-bottom: 20px;
     }
     
     .guide-feature-tag {
-      background: rgba(59, 130, 246, 0.15);
+      background: rgba(59, 130, 246, 0.2);
       color: var(--accent);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-    }
-    
-    .guide-card-action {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .guide-view-btn { 
-      display: inline-flex; 
-      align-items: center; 
-      gap: 10px; 
-      padding: 14px 28px; 
-      background: linear-gradient(135deg, var(--accent), #0284c7); 
-      color: white; 
-      border: none; 
-      border-radius: 12px; 
-      text-decoration: none; 
-      font-size: 15px; 
-      font-weight: 600; 
-      cursor: pointer; 
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-    }
-    
-    .guide-view-btn:hover { 
-      background: linear-gradient(135deg, #0284c7, #0369a1); 
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
-    }
-    
-    .guide-status {
-      color: #10b981;
+      padding: 8px 16px;
+      border-radius: 25px;
       font-size: 13px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-weight: 700;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      transition: all 0.3s ease;
+    }
+    
+    .guide-card:hover .guide-feature-tag {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-color: rgba(255, 255, 255, 0.3);
     }
     
     /* Mobile Responsiveness */
     @media (min-width: 768px) {
-      .guide-gallery { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .guide-gallery { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
     
     @media (max-width: 640px) {
-      .guide-card { padding: 20px; }
-      .guide-card-header { flex-direction: column; align-items: center; text-align: center; }
-      .guide-icon { width: 56px; height: 56px; font-size: 24px; }
-      .guide-card-title { font-size: 18px; }
-      .guide-view-btn { width: 100%; justify-content: center; }
+      .guide-gallery { padding: 24px; gap: 24px; }
+      .guide-card { 
+        padding: 24px; 
+        min-height: 240px;
+      }
+      .guide-card-header { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 16px;
+      }
+      .guide-icon { 
+        width: 64px; 
+        height: 64px; 
+        font-size: 28px; 
+      }
+      .guide-card-title { 
+        font-size: 20px; 
+        text-align: center;
+      }
+      .guide-card-description {
+        text-align: center;
+        font-size: 14px;
+      }
+      .guide-card::after {
+        display: none; /* Hide "click" text on mobile */
+      }
     }
     
     @media (min-width: 640px) {
@@ -367,7 +389,7 @@
       
       <div class="guide-gallery">
         <!-- Stock Investment Guide Card -->
-        <div class="guide-card" onclick="openGuide('stock-guide')">
+        <div class="guide-card" onclick="downloadGuide('stock-guide')">
           <div class="guide-card-header">
             <div class="guide-icon">📊</div>
             <div class="guide-card-content">
@@ -383,20 +405,10 @@
             개인투자자를 위한 실전 주식투자 원칙과 매도타이밍 전략 비교분석. 
             감정에 휘둘리지 않는 투자 원칙으로 장기 수익을 실현하세요.
           </p>
-          <div class="guide-card-action">
-            <button class="guide-view-btn" onclick="event.stopPropagation(); downloadGuide('stock-guide')">
-              <span>📈</span>
-              <span>가이드 보기</span>
-            </button>
-            <div class="guide-status">
-              <span>✅</span>
-              <span>바로 확인 가능</span>
-            </div>
-          </div>
         </div>
 
         <!-- CPF Guide Card -->
-        <div class="guide-card" onclick="openGuide('cpf55-guide')">
+        <div class="guide-card" onclick="downloadGuide('cpf55-guide')">
           <div class="guide-card-header">
             <div class="guide-icon">🏦</div>
             <div class="guide-card-content">
@@ -412,16 +424,6 @@
             55세 CPF 제도 변화와 FRS 달성 전략을 실제 시나리오로 분석. 
             CPF Board 출처 기반 정확한 정보로 은퇴 준비를 완벽하게 하세요.
           </p>
-          <div class="guide-card-action">
-            <button class="guide-view-btn" onclick="event.stopPropagation(); downloadGuide('cpf55-guide')">
-              <span>🏦</span>
-              <span>가이드 보기</span>
-            </button>
-            <div class="guide-status">
-              <span>✅</span>
-              <span>바로 확인 가능</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -643,31 +645,8 @@
       document.getElementById('guideModal').classList.remove('show');
     }
 
-    // New function for guide card interaction
-    function openGuide(guideId) {
-      // Track guide card click
-      trackGuideClick(guideId);
-      
-      // Visual feedback for card interaction
-      const cards = document.querySelectorAll('.guide-card');
-      cards.forEach(card => {
-        if (card.onclick.toString().includes(guideId)) {
-          card.style.transform = 'translateY(-4px) scale(1.02)';
-          card.style.borderColor = 'var(--accent)';
-          setTimeout(() => {
-            card.style.transform = '';
-            card.style.borderColor = '';
-          }, 300);
-        }
-      });
-    }
-
-    // Legacy function (kept for compatibility but simplified)
-    function showGuide(guideId, linkElement) {
-      // This function is no longer needed with the new gallery layout
-      // but kept for any remaining references
-      trackGuideClick(guideId);
-    }
+    // Simplified: Cards now directly call downloadGuide() 
+    // No need for intermediate functions since cards act as large buttons
 
     // View guide function - opens in new tab
     function downloadGuide(guideId) {
